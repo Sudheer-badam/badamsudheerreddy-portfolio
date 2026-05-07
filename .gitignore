@@ -1,0 +1,9 @@
+node_modules/
+dist/
+.DS_Store
+*.local
+*.mp4
+*.pdf
+*.jpeg
+*.png
+.env
