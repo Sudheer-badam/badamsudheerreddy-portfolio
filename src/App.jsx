@@ -14,20 +14,17 @@ import './App.css';
 function App() {
   return (
     <div className="app-container">
-      {/* Fixed YouTube Video Background */}
+      {/* Fixed Background Image */}
       <div className="yt-bg-wrapper">
-        <video
-          src="/KLU VIDEO 1 COMPRESS.mp4"
-          autoPlay
-          loop
-          muted
-          playsInline
+        <img
+          src="https://images.unsplash.com/photo-1614850523459-c2f4c699c52e?q=80&w=2070&auto=format&fit=crop"
+          alt="Portfolio Background"
           style={{ 
             width: '100%', 
             height: '100%', 
             objectFit: 'cover', 
             pointerEvents: 'none',
-            filter: 'brightness(1.15) saturate(1.4)' // Extra bright and enhanced colors
+            filter: 'brightness(0.6) saturate(1.2)'
           }}
         />
       </div>
@@ -100,12 +97,10 @@ function App() {
         justifyContent: 'center',
         minHeight: '160px',
       }}>
-        {/* Nature Video Background */}
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
+        {/* Footer Background Image */}
+        <img
+          src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=2070&auto=format&fit=crop"
+          alt="Footer Background"
           style={{
             position: 'absolute',
             top: 0,
@@ -116,9 +111,7 @@ function App() {
             zIndex: 0,
             opacity: 0.5,
           }}
-        >
-          <source src="/nature video.mp4" type="video/mp4" />
-        </video>
+        />
         {/* Dark overlay for readability */}
         <div style={{ position: 'absolute', inset: 0, backgroundColor: 'rgba(0,0,0,0.4)', zIndex: 0 }}></div>
 
