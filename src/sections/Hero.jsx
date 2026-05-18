@@ -56,7 +56,7 @@ const Hero = () => {
             fontFamily: '"Lucida Calligraphy", cursive, serif', // User requested Lucida Calligraphy
             textShadow: '0 2px 10px rgba(0,0,0,0.9), 0 0 5px rgba(0,0,0,0.8)', // Strong dark shadow so bright colors pop over bright background
             maxWidth: '800px', // Widened max width to accommodate larger font
-            margin: '0 auto',
+            margin: '40px auto 0', // Pushed down 1cm (40px) for better spacing
             background: 'rgba(0, 0, 0, 0.75)', // Black rectangle background
             padding: '20px 40px', // Padding inside the rectangle
             borderRadius: '15px', // Rounded edges for a premium look
