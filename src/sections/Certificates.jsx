@@ -195,8 +195,7 @@ const otherCertificates = [
     issuer: "Linguva",
     description: "Professional certifications in Communication, Language Proficiency, and Interpersonal Skills.",
     tags: ["Communication", "Soft Skills", "Linguistics"],
-    link: "/Badam Sudheer Reddy.pdf",
-    floatingImage: "/cambridge-logo.png"
+    link: "/Badam Sudheer Reddy.pdf"
   },
   {
     title: "Technical Internship Certificate",
