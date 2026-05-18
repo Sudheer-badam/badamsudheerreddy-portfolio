@@ -24,11 +24,11 @@ const educationTimeline = [
     borderColor: 'rgba(255, 128, 8, 0.4)'
   },
   {
-    level: 'Primary School',
+    level: '5th Standard to 8th Standard',
     school: 'Ravindra Bharathi Public School',
     location: 'Prakash Nagar, Narasaraopet - 522601',
     years: '2015–2018',
-    description: 'Built strong fundamentals in academics, developed early interest in science and mathematics.',
+    description: 'Completed 5th Standard to 8th Standard — built strong fundamentals in academics, developed early interest in science and mathematics.',
     icon: <School size={28} />,
     gradient: 'linear-gradient(135deg, #4ECDC4, #44CF6C)',
     borderColor: 'rgba(78, 205, 196, 0.4)'
