@@ -65,7 +65,6 @@ const Contact = () => {
             { icon: <Github />, label: 'GitHub', link: 'https://github.com/sudh2005/Badam-Sudheer-Reddy', emoji: '🐙', gradient: 'linear-gradient(135deg, #333, #666)' },
             { icon: <Linkedin />, label: 'LinkedIn', link: 'https://linkedin.com/in/badam-sudheer-reddy-3028ab32b', emoji: '💼', gradient: 'linear-gradient(135deg, #0077B5, #00A0DC)' },
             { icon: <Twitter />, label: 'Twitter', link: 'https://x.com/ba77461', emoji: '🐦', gradient: 'linear-gradient(135deg, #1DA1F2, #71C9F8)' },
-            { icon: <Facebook />, label: 'Facebook', link: 'https://www.facebook.com/badampravallika', emoji: '🌐', gradient: 'linear-gradient(135deg, #1877F2, #42A5F5)' },
             { icon: <Whatsapp />, label: 'WhatsApp', link: 'https://wa.me/918688509699', emoji: '💬', gradient: 'linear-gradient(135deg, #25D366, #128C7E)' },
             { icon: <Mail />, label: 'Email', link: 'mailto:badamsudheerreddy@gmail.com', emoji: '💌', gradient: 'linear-gradient(135deg, #EA4335, #FBBC04)' },
             { icon: <Phone />, label: 'Call', link: 'tel:8688509699', emoji: '📱', gradient: 'linear-gradient(135deg, #34A853, #0F9D58)' },
