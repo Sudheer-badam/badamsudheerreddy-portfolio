@@ -4,11 +4,11 @@ import { Baby, School, BookOpen, GraduationCap, University, ExternalLink } from 
 
 const educationTimeline = [
   {
-    level: 'Pre-Primary School',
+    level: 'Nursery to 3rd Class',
     school: 'Sri Viswasanthi Techno School',
     location: 'Nekarikallu, Guntur District - 522615',
-    years: '2008–2015',
-    description: 'Early childhood education — built a strong foundation of learning, curiosity, and discipline.',
+    years: '2008–2014',
+    description: 'Early childhood education from Nursery to 3rd Class — built a strong foundation of learning, curiosity, and discipline.',
     icon: <Baby size={28} />,
     gradient: 'linear-gradient(135deg, #FF6B6B, #FFE66D)',
     borderColor: 'rgba(255, 107, 107, 0.4)'
