@@ -18,6 +18,10 @@ const Facebook = (props) => (
   <svg {...props} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
 );
 
+const Whatsapp = (props) => (
+  <svg {...props} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/><path d="M14 2v4h4"/><path d="M14 2 18 6"/></svg>
+);
+
 const Contact = () => {
   return (
     <section id="contact">
@@ -29,6 +33,8 @@ const Contact = () => {
         display: 'flex',
         flexDirection: 'column',
         gap: '2rem',
+        position: 'relative',
+        overflow: 'hidden'
       }}>
         {/* Colorful animated title */}
         <motion.h2 
@@ -36,7 +42,7 @@ const Contact = () => {
             color: ['#FF6B6B', '#FFE66D', '#4ECDC4', '#667eea', '#f093fb', '#F09819', '#FF6B6B']
           }}
           transition={{ duration: 6, repeat: Infinity, ease: 'linear' }}
-          style={{ fontSize: '3rem', fontWeight: 900, textShadow: '0 2px 10px rgba(0,0,0,0.5)' }}
+          style={{ fontSize: '3rem', fontWeight: 900, textShadow: '0 2px 10px rgba(0,0,0,0.5)', position: 'relative', zIndex: 1 }}
         >
           Get In Touch
         </motion.h2>
@@ -47,19 +53,20 @@ const Contact = () => {
             color: ['#FF9FF3', '#FECA57', '#54A0FF', '#5F27CD', '#01CBC6', '#FF9FF3']
           }}
           transition={{ duration: 5, repeat: Infinity, ease: 'linear' }}
-          style={{ fontSize: '1.1rem', fontWeight: 600, textShadow: '0 1px 5px rgba(0,0,0,0.4)' }}
+          style={{ fontSize: '1.1rem', fontWeight: 600, textShadow: '0 1px 5px rgba(0,0,0,0.4)', position: 'relative', zIndex: 1 }}
         >
           Interested in working together or just want to say hi?
           <br/>
           Feel free to reach out on any of these platforms!
         </motion.p>
         
-        <div style={{ display: 'flex', justifyContent: 'center', gap: '2rem', flexWrap: 'wrap' }}>
+        <div style={{ display: 'flex', justifyContent: 'center', gap: '2rem', flexWrap: 'wrap', position: 'relative', zIndex: 1 }}>
           {[
             { icon: <Github />, label: 'GitHub', link: 'https://github.com/sudh2005/Badam-Sudheer-Reddy', emoji: '🐙', gradient: 'linear-gradient(135deg, #333, #666)' },
             { icon: <Linkedin />, label: 'LinkedIn', link: 'https://linkedin.com/in/badam-sudheer-reddy-3028ab32b', emoji: '💼', gradient: 'linear-gradient(135deg, #0077B5, #00A0DC)' },
             { icon: <Twitter />, label: 'Twitter', link: 'https://x.com/ba77461', emoji: '🐦', gradient: 'linear-gradient(135deg, #1DA1F2, #71C9F8)' },
             { icon: <Facebook />, label: 'Facebook', link: 'https://www.facebook.com/badampravallika', emoji: '🌐', gradient: 'linear-gradient(135deg, #1877F2, #42A5F5)' },
+            { icon: <Whatsapp />, label: 'WhatsApp', link: 'https://wa.me/918688509699', emoji: '💬', gradient: 'linear-gradient(135deg, #25D366, #128C7E)' },
             { icon: <Mail />, label: 'Email', link: 'mailto:badamsudheerreddy@gmail.com', emoji: '💌', gradient: 'linear-gradient(135deg, #EA4335, #FBBC04)' },
             { icon: <Phone />, label: 'Call', link: 'tel:8688509699', emoji: '📱', gradient: 'linear-gradient(135deg, #34A853, #0F9D58)' },
           ].map((item) => (
