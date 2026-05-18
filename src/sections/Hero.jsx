@@ -31,9 +31,10 @@ const Hero = () => {
             fontSize: '4.5rem', // Slightly larger as calligraphy fonts tend to look smaller
             fontWeight: 800, 
             marginBottom: '1rem', 
-            lineHeight: '1.1',
+            lineHeight: '1.3', // Increased to prevent vertical descender clipping
             fontFamily: '"Lucida Calligraphy", cursive, serif',
-            paddingRight: '20px'
+            paddingRight: '20px',
+            paddingBottom: '15px' // Extra bottom space for cursive font descenders like 'y'
           }}
         >
           Badam Sudheer Reddy
