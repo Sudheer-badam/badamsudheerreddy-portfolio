@@ -125,7 +125,7 @@ function App() {
         {/* Center Text */}
         <div style={{ position: 'relative', zIndex: 1, textAlign: 'center', padding: '0 20px' }}>
           <p className="rainbow-text" style={{ fontSize: '1rem', fontWeight: 600, marginBottom: '8px' }}>
-            © 2026 Badam Sudheer Reddy | Antigravity Theme
+            © 2026 Badam Sudheer Reddy
           </p>
           <p className="rainbow-text" style={{ 
             fontSize: '0.85rem',
