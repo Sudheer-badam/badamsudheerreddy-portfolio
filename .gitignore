@@ -4,8 +4,6 @@ dist/
 *.local
 *.mp4
 *.pdf
-*.jpeg
-*.png
 .env
 
 .vercel
