@@ -3,7 +3,6 @@ dist/
 .DS_Store
 *.local
 *.mp4
-*.pdf
 .env
 
 .vercel
