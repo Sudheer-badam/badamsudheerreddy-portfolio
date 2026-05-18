@@ -14,6 +14,16 @@ const educationTimeline = [
     borderColor: 'rgba(255, 107, 107, 0.4)'
   },
   {
+    level: 'Primary School (4th Standard)',
+    school: 'Oxford School',
+    location: 'Narasaraopet, Guntur District - 522601',
+    years: '2014–2015',
+    description: 'Completed 4th Standard with excellence, developing a solid foundation in core subjects.',
+    icon: <School size={28} />,
+    gradient: 'linear-gradient(135deg, #FF8008, #FFC837)',
+    borderColor: 'rgba(255, 128, 8, 0.4)'
+  },
+  {
     level: 'Primary School',
     school: 'Ravindra Bharathi Public School',
     location: 'Prakash Nagar, Narasaraopet - 522601',
@@ -88,7 +98,7 @@ const Academics = () => {
           top: 0,
           bottom: 0,
           width: '4px',
-          background: 'linear-gradient(180deg, #FF6B6B, #4ECDC4, #667eea, #f093fb, #F09819)',
+          background: 'linear-gradient(180deg, #FF6B6B, #FF8008, #4ECDC4, #667eea, #f093fb, #F09819)',
           borderRadius: '4px'
         }} />
 
