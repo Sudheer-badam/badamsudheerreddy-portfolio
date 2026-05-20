@@ -66,7 +66,7 @@ function App() {
             />
             <div>
               <div style={{ fontFamily: '"Playfair Display", serif', fontSize: '1rem', fontWeight: 700, color: '#FFFFFF' }}>Badam Sudheer Reddy</div>
-              <div style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.7rem', fontWeight: 600, letterSpacing: '1.5px', textTransform: 'uppercase', color: 'rgba(255,255,255,0.45)', marginTop: '2px' }}>CSE · KL University · 2026</div>
+              <div style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.7rem', fontWeight: 600, letterSpacing: '1.5px', textTransform: 'uppercase', color: 'rgba(255,255,255,0.45)', marginTop: '2px' }}>CSE · KL University · 2027</div>
             </div>
           </div>
 

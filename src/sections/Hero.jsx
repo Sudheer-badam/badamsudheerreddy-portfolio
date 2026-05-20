@@ -11,7 +11,7 @@ const Hero = () => {
         </span>
         <span style={{ flex: 1, height: '1px', background: 'rgba(255,255,255,0.15)' }} />
         <span style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.7rem', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', color: 'var(--uo-yellow)' }}>
-          KL University · 2026
+          KL University · 2027
         </span>
       </div>
 
@@ -110,7 +110,7 @@ const Hero = () => {
               {[
                 { num: '8.88', label: 'CGPA' },
                 { num: '4+', label: 'Projects' },
-                { num: '2026', label: 'Graduate' },
+                { num: '2027', label: 'Graduate' },
               ].map(s => (
                 <div key={s.label}>
                   <div style={{ fontFamily: '"Playfair Display", serif', fontSize: '1.8rem', fontWeight: 700, color: 'var(--uo-yellow)', lineHeight: 1 }}>{s.num}</div>
