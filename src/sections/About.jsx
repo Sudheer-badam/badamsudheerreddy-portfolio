@@ -45,7 +45,7 @@ const About = () => {
             <div style={{ background: 'var(--uo-green)', padding: '1.75rem', borderLeft: '5px solid var(--uo-yellow)' }}>
               {[
                 { label: 'Degree', value: 'B.Tech in CSE' },
-                { label: 'CGPA', value: '8.87 / 10.0' },
+                { label: 'CGPA', value: '8.88 / 10.0' },
                 { label: 'Year', value: '4th Year (Final)' },
                 { label: 'Location', value: 'Palnadu, Andhra Pradesh' },
               ].map(item => (
@@ -69,7 +69,7 @@ const About = () => {
               I am a student at <strong style={{ color: 'var(--uo-green)', fontWeight: 700 }}>KL University</strong>, Vaddeswaram, Guntur District, currently pursuing my <strong style={{ color: 'var(--uo-dark)' }}>B.Tech in Computer Science and Engineering</strong>.
             </p>
             <p style={{ fontFamily: 'Inter, sans-serif', fontSize: '1.05rem', lineHeight: 1.85, color: 'var(--uo-grey)' }}>
-              Having completed my 3rd year with a strong academic record and a <span className="highlight-yellow">CGPA of 8.87/10</span>, my passion lies at the intersection of <strong style={{ color: 'var(--uo-green)' }}>Artificial Intelligence</strong> and <strong style={{ color: 'var(--uo-green)' }}>Modern Frontend Development</strong>.
+              Having completed my 3rd year with a strong academic record and a <span className="highlight-yellow">CGPA of 8.88/10</span>, my passion lies at the intersection of <strong style={{ color: 'var(--uo-green)' }}>Artificial Intelligence</strong> and <strong style={{ color: 'var(--uo-green)' }}>Modern Frontend Development</strong>.
             </p>
             <p style={{ fontFamily: 'Inter, sans-serif', fontSize: '1.05rem', lineHeight: 1.85, color: 'var(--uo-grey)' }}>
               I strive to build high-performance, visually stunning web experiences that merge technical precision with creative design — crafting interfaces that are both beautiful and functionally robust.

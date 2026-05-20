@@ -58,7 +58,7 @@ const educationTimeline = [
     school: 'KL University (Koneru Lakshmaiah Education Foundation)',
     location: 'Vaddeswaram, Guntur District, AP',
     years: '2023–2027',
-    grade: 'CGPA: 8.87 / 10.0',
+    grade: 'CGPA: 8.88 / 10.0',
     description: 'Pursuing B.Tech in Computer Science & Engineering. Specialising in AI/ML and Full Stack Development.',
     icon: University,
     current: true,
@@ -68,6 +68,7 @@ const educationTimeline = [
       { label: 'Sem 2.1', url: '/2.1 EXAM RESULT.pdf' },
       { label: 'Sem 2.2', url: '/2.2 EXAM RESULT.pdf' },
       { label: 'Sem 3.1', url: '/3.1 EXAM RESULT.pdf' },
+      { label: 'Sem 3.2', url: '/3.2 SEM END EXAM RESULT.pdf' },
     ]
   },
 ];

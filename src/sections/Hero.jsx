@@ -108,7 +108,7 @@ const Hero = () => {
             {/* Stat row */}
             <div style={{ display: 'flex', gap: '2.5rem', marginTop: '0.5rem' }}>
               {[
-                { num: '8.87', label: 'CGPA' },
+                { num: '8.88', label: 'CGPA' },
                 { num: '4+', label: 'Projects' },
                 { num: '2026', label: 'Graduate' },
               ].map(s => (
