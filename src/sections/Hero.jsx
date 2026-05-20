@@ -86,8 +86,8 @@ const Hero = () => {
               transition={{ delay: 0.7, duration: 0.5 }}
               style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}
             >
-              <a href="#projects" className="btn-primary" id="hero-explore-btn">
-                Explore Projects
+              <a href="#about" className="btn-primary" id="hero-explore-btn">
+                About Me
               </a>
               <a href="#contact" style={{
                 display: 'inline-block', padding: '0.85rem 2.2rem',
@@ -109,7 +109,6 @@ const Hero = () => {
             <div style={{ display: 'flex', gap: '2.5rem', marginTop: '0.5rem' }}>
               {[
                 { num: '8.88', label: 'CGPA' },
-                { num: '4+', label: 'Projects' },
                 { num: '2027', label: 'Graduate' },
               ].map(s => (
                 <div key={s.label}>
