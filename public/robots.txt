@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
 
-# Sitemap will be added once the Vercel domain is configured.
+Sitemap: https://badamsudheeerreddy-protfolio.vercel.app/sitemap.xml
+

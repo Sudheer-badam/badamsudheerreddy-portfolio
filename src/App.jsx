@@ -1,7 +1,6 @@
 import React from 'react';
 import Navbar from './components/Navbar';
 import { MapPin } from 'lucide-react';
-import { motion } from 'framer-motion';
 import Hero from './sections/Hero';
 import About from './sections/About';
 import Academics from './sections/Academics';
@@ -17,21 +16,15 @@ function App() {
     img.src = '/BADAM SUDHEER REDDY .jpeg.png';
     img.onload = () => {
       const canvas = document.createElement('canvas');
-      const size = 128; // High-res favicon size
+      const size = 128;
       canvas.width = size;
       canvas.height = size;
       const ctx = canvas.getContext('2d');
-      
-      // Apply perfect circular crop mask
       ctx.beginPath();
       ctx.arc(size / 2, size / 2, size / 2, 0, Math.PI * 2);
       ctx.closePath();
       ctx.clip();
-      
-      // Draw the image
       ctx.drawImage(img, 0, 0, size, size);
-      
-      // Update or create the tab favicon link dynamically
       let link = document.querySelector("link[rel~='icon']");
       if (!link) {
         link = document.createElement('link');
@@ -45,65 +38,9 @@ function App() {
 
   return (
     <div className="app-container">
-      {/* Fixed Background Image */}
-      <div className="yt-bg-wrapper">
-        <img
-          src="https://images.unsplash.com/photo-1614850523459-c2f4c699c52e?q=80&w=2070&auto=format&fit=crop"
-          alt="Portfolio Background"
-          style={{ 
-            width: '100%', 
-            height: '100%', 
-            objectFit: 'cover', 
-            pointerEvents: 'none',
-            filter: 'brightness(0.6) saturate(1.2)'
-          }}
-        />
-      </div>
-      {/* Dark overlay for readability */}
-      <div className="yt-bg-overlay" />
-
-      {/* Bottom-right Logo Watermark */}
-      <img
-        src="/Screenshot 2023-11-27 185847.png"
-        alt="Logo"
-        style={{
-          position: 'fixed',
-          bottom: '20px',
-          right: '20px',
-          width: '90px',
-          height: 'auto',
-          opacity: 0.85,
-          zIndex: 10,
-          borderRadius: '10px',
-          pointerEvents: 'none',
-          filter: 'drop-shadow(0 0 8px rgba(255,153,51,0.6))',
-        }}
-      />
-
-      {/* Bottom-left Profile Picture */}
-      <img
-        src="/BADAM SUDHEER REDDY .jpeg.png"
-        alt="Badam Sudheer Reddy"
-        style={{
-          position: 'fixed',
-          bottom: '20px',
-          left: '20px',
-          width: '90px',
-          height: '90px',
-          objectFit: 'cover',
-          objectPosition: 'center top',
-          opacity: 0.9,
-          zIndex: 10,
-          borderRadius: '50%',
-          border: '3px solid #FF9933',
-          pointerEvents: 'none',
-          filter: 'drop-shadow(0 0 10px rgba(255,153,51,0.7))',
-        }}
-      />
-
       <Navbar />
-      
-      <main>
+
+      <main style={{ paddingTop: '64px' }}>
         <Hero />
         <About />
         <Academics />
@@ -112,54 +49,47 @@ function App() {
         <Certificates />
         <Contact />
       </main>
-      
-      <footer style={{ 
-        textAlign: 'center', 
-        padding: '40px 20px', 
-        color: 'rgba(255,255,255,0.9)',
-        borderTop: '2px solid var(--glass-border)',
-        marginTop: '40px',
-        position: 'relative',
-        overflow: 'hidden',
-        background: 'rgba(5,5,20,0.7)',
-        backdropFilter: 'blur(10px)',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        minHeight: '160px',
-      }}>
-        {/* Footer Background Image */}
-        <img
-          src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=2070&auto=format&fit=crop"
-          alt="Footer Background"
-          style={{
-            position: 'absolute',
-            top: 0,
-            left: 0,
-            width: '100%',
-            height: '100%',
-            objectFit: 'cover',
-            zIndex: 0,
-            opacity: 0.5,
-          }}
-        />
-        {/* Dark overlay for readability */}
-        <div style={{ position: 'absolute', inset: 0, backgroundColor: 'rgba(0,0,0,0.4)', zIndex: 0 }}></div>
 
-        {/* Center Text */}
-        <div style={{ position: 'relative', zIndex: 1, textAlign: 'center', padding: '0 20px' }}>
-          <p className="rainbow-text" style={{ fontSize: '1rem', fontWeight: 600, marginBottom: '8px' }}>
-            © 2026 Badam Sudheer Reddy
+      {/* ── Footer ── */}
+      <footer style={{
+        background: 'var(--uo-green-dark)',
+        borderTop: '4px solid var(--uo-yellow)',
+        padding: '0',
+      }}>
+        {/* Top row */}
+        <div style={{ padding: '2.5rem 2rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1.5rem', maxWidth: '1100px', margin: '0 auto' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
+            <img
+              src="/BADAM SUDHEER REDDY .jpeg.png"
+              alt="Badam Sudheer Reddy"
+              style={{ width: '48px', height: '48px', borderRadius: '50%', objectFit: 'cover', objectPosition: 'center top', border: '2px solid var(--uo-yellow)' }}
+            />
+            <div>
+              <div style={{ fontFamily: '"Playfair Display", serif', fontSize: '1rem', fontWeight: 700, color: '#FFFFFF' }}>Badam Sudheer Reddy</div>
+              <div style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.7rem', fontWeight: 600, letterSpacing: '1.5px', textTransform: 'uppercase', color: 'rgba(255,255,255,0.45)', marginTop: '2px' }}>CSE · KL University · 2026</div>
+            </div>
+          </div>
+
+          {/* Nav links in footer */}
+          <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap' }}>
+            {['#home', '#about', '#skills', '#projects', '#contact'].map(href => (
+              <a key={href} href={href} style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.72rem', fontWeight: 600, letterSpacing: '1px', textTransform: 'uppercase', color: 'rgba(255,255,255,0.5)', textDecoration: 'none', transition: 'color 0.2s' }}
+                onMouseEnter={e => e.target.style.color = 'var(--uo-yellow)'}
+                onMouseLeave={e => e.target.style.color = 'rgba(255,255,255,0.5)'}
+              >
+                {href.replace('#', '')}
+              </a>
+            ))}
+          </div>
+        </div>
+
+        {/* Divider */}
+        <div style={{ borderTop: '1px solid rgba(255,255,255,0.1)', padding: '1rem 2rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '0.75rem', maxWidth: '1100px', margin: '0 auto' }}>
+          <p style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.75rem', color: 'rgba(255,255,255,0.35)', fontWeight: 500 }}>
+            © 2026 Badam Sudheer Reddy. All rights reserved.
           </p>
-          <p className="rainbow-text" style={{ 
-            fontSize: '0.85rem',
-            display: 'flex', 
-            alignItems: 'center', 
-            justifyContent: 'center', 
-            gap: '5px',
-            fontWeight: 500
-          }}>
-            <MapPin size={14} /> Narasingapadu Village, Nekarikallu Mandal, Palnadu District - 522615
+          <p style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.72rem', color: 'rgba(255,255,255,0.3)', display: 'flex', alignItems: 'center', gap: '5px' }}>
+            <MapPin size={11} /> Narasingapadu · Nekarikallu · Palnadu District — 522615
           </p>
         </div>
       </footer>

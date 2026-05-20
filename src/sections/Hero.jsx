@@ -3,94 +3,125 @@ import { motion } from 'framer-motion';
 
 const Hero = () => {
   return (
-    <section id="home">
-      <div style={{ textAlign: 'center', zIndex: 1 }}>
-        <div style={{
-          width: '180px',
-          height: '180px',
-          margin: '100px auto 2rem', // Pushed down 100px from the top
-          borderRadius: '50%',
-          overflow: 'hidden',
-          border: '4px solid var(--glass-border)',
-          boxShadow: '0 0 30px var(--glow-color)',
-          background: 'var(--glass-bg)'
-        }}>
-          <img 
-            src="/BADAM SUDHEER REDDY .jpeg.png" 
-            alt="Badam Sudheer Reddy" 
-            style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center top' }}
-          />
-        </div>
-
-        <motion.h1 
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-          className="text-gradient"
-          style={{ 
-            fontSize: '4.5rem', // Slightly larger as calligraphy fonts tend to look smaller
-            fontWeight: 800, 
-            marginBottom: '1rem', 
-            lineHeight: '1.3', // Increased to prevent vertical descender clipping
-            fontFamily: '"Lucida Calligraphy", cursive, serif',
-            paddingRight: '20px',
-            paddingBottom: '15px' // Extra bottom space for cursive font descenders like 'y'
-          }}
-        >
-          Badam Sudheer Reddy
-        </motion.h1>
-        
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ 
-            opacity: 1,
-            color: ['#FF9933', '#FFFFFF', '#138808', '#FF9933'] // Indian Tricolor: Saffron, White, Green
-          }}
-          transition={{ 
-            opacity: { delay: 0.5, duration: 1 },
-            color: { duration: 4, repeat: Infinity, ease: 'linear' }
-          }}
-          style={{ 
-            fontSize: '2.2rem', // Increased font size significantly
-            lineHeight: '1.4',
-            fontWeight: 800, // Thicker font for better visibility
-            fontFamily: '"Lucida Calligraphy", cursive, serif', // User requested Lucida Calligraphy
-            textShadow: '0 2px 10px rgba(0,0,0,0.9), 0 0 5px rgba(0,0,0,0.8)', // Strong dark shadow so bright colors pop over bright background
-            maxWidth: '800px', // Widened max width to accommodate larger font
-            margin: '40px auto 0', // Pushed down 1cm (40px) for better spacing
-            background: 'rgba(0, 0, 0, 0.75)', // Black rectangle background
-            padding: '20px 40px', // Padding inside the rectangle
-            borderRadius: '15px', // Rounded edges for a premium look
-            boxShadow: '0 10px 30px rgba(0,0,0,0.5)' // Shadow for the rectangle itself
-          }}
-        >
-          A Future-Ready CSE Student & UI/UX Enthusiast.
-          <br/>
-          Building experiences that defy expectations.
-        </motion.p>
-        
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 1, duration: 0.5 }}
-          style={{ marginTop: '1.5rem' }}
-        >
-          <a href="#projects" className="glass" style={{ 
-            padding: '1rem 2rem', 
-            textDecoration: 'none', 
-            color: '#fff',
-            fontWeight: 600,
-            transition: '0.3s',
-            display: 'inline-block'
-          }}
-          onMouseEnter={(e) => e.target.style.background = 'rgba(255,255,255,0.1)'}
-          onMouseLeave={(e) => e.target.style.background = 'var(--glass-bg)'}
-          >
-            Explore Projects
-          </a>
-        </motion.div>
+    <section id="home" style={{ padding: 0, minHeight: '100vh', display: 'flex', flexDirection: 'column', paddingTop: '64px' }}>
+      {/* ── Top green bar ── */}
+      <div style={{ background: 'var(--uo-green)', padding: '10px 2rem', display: 'flex', alignItems: 'center', gap: '12px' }}>
+        <span style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.7rem', fontWeight: 700, letterSpacing: '3px', textTransform: 'uppercase', color: 'rgba(255,255,255,0.6)' }}>
+          Portfolio · Computer Science & Engineering
+        </span>
+        <span style={{ flex: 1, height: '1px', background: 'rgba(255,255,255,0.15)' }} />
+        <span style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.7rem', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', color: 'var(--uo-yellow)' }}>
+          KL University · 2026
+        </span>
       </div>
 
+      {/* ── Hero Grid ── */}
+      <div style={{ flex: 1, display: 'flex' }}>
+        <div className="hero-grid" style={{ maxWidth: '100%', flex: 1, margin: 0 }}>
+
+          {/* Photo Column */}
+          <div className="hero-photo-col">
+            <img
+              src="/BADAM SUDHEER REDDY .jpeg.png"
+              alt="Badam Sudheer Reddy — CSE Student & UI/UX Enthusiast"
+            />
+            {/* Overlay tag */}
+            <div style={{
+              position: 'absolute', bottom: 0, left: 0, right: 0,
+              padding: '1rem 1.5rem',
+              background: 'linear-gradient(to top, rgba(13,46,33,0.95) 60%, transparent)',
+              fontFamily: 'Inter, sans-serif',
+              fontSize: '0.72rem', fontWeight: 600, letterSpacing: '2px',
+              textTransform: 'uppercase', color: 'var(--uo-yellow)'
+            }}>
+              Narasingapadu · Palnadu · Andhra Pradesh
+            </div>
+          </div>
+
+          {/* Text Column */}
+          <div className="hero-text-col">
+            <span className="section-label" style={{ borderColor: 'var(--uo-yellow)', color: 'rgba(255,255,255,0.7)', marginBottom: '0.5rem' }}>
+              Introduction
+            </span>
+
+            <motion.h1
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7 }}
+              style={{
+                fontFamily: '"Playfair Display", Georgia, serif',
+                fontSize: 'clamp(2.4rem, 4vw, 3.8rem)',
+                fontWeight: 900,
+                color: '#FFFFFF',
+                lineHeight: 1.1,
+                letterSpacing: '-1px',
+              }}
+            >
+              Badam<br />
+              <span style={{ color: 'var(--uo-yellow)' }}>Sudheer</span><br />
+              Reddy
+            </motion.h1>
+
+            <div style={{ width: '50px', height: '3px', background: 'var(--uo-yellow)', margin: '0.25rem 0' }} />
+
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.4, duration: 0.8 }}
+              style={{
+                fontFamily: 'Inter, sans-serif',
+                fontSize: '1rem',
+                lineHeight: 1.75,
+                color: 'rgba(255,255,255,0.8)',
+                fontWeight: 400,
+                maxWidth: '400px',
+              }}
+            >
+              A <strong style={{ color: 'var(--uo-yellow)', fontWeight: 600 }}>Future-Ready CSE Student</strong> &amp; UI/UX Enthusiast at KL University — building experiences that defy expectations at the intersection of AI and Modern Frontend Development.
+            </motion.p>
+
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.7, duration: 0.5 }}
+              style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}
+            >
+              <a href="#projects" className="btn-primary" id="hero-explore-btn">
+                Explore Projects
+              </a>
+              <a href="#contact" style={{
+                display: 'inline-block', padding: '0.85rem 2.2rem',
+                background: 'transparent', color: 'rgba(255,255,255,0.85)',
+                fontFamily: 'Inter, sans-serif', fontSize: '0.85rem',
+                fontWeight: 700, letterSpacing: '1.5px', textTransform: 'uppercase',
+                textDecoration: 'none', border: '2px solid rgba(255,255,255,0.35)',
+                transition: 'border-color 0.25s, color 0.25s',
+              }}
+              onMouseEnter={e => { e.target.style.borderColor = 'var(--uo-yellow)'; e.target.style.color = 'var(--uo-yellow)'; }}
+              onMouseLeave={e => { e.target.style.borderColor = 'rgba(255,255,255,0.35)'; e.target.style.color = 'rgba(255,255,255,0.85)'; }}
+              id="hero-contact-btn"
+              >
+                Get In Touch
+              </a>
+            </motion.div>
+
+            {/* Stat row */}
+            <div style={{ display: 'flex', gap: '2.5rem', marginTop: '0.5rem' }}>
+              {[
+                { num: '8.87', label: 'CGPA' },
+                { num: '4+', label: 'Projects' },
+                { num: '2026', label: 'Graduate' },
+              ].map(s => (
+                <div key={s.label}>
+                  <div style={{ fontFamily: '"Playfair Display", serif', fontSize: '1.8rem', fontWeight: 700, color: 'var(--uo-yellow)', lineHeight: 1 }}>{s.num}</div>
+                  <div style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.65rem', fontWeight: 600, letterSpacing: '2px', textTransform: 'uppercase', color: 'rgba(255,255,255,0.55)', marginTop: '4px' }}>{s.label}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+        </div>
+      </div>
     </section>
   );
 };
