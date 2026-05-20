@@ -5,6 +5,7 @@ import Hero from './sections/Hero';
 import About from './sections/About';
 import Academics from './sections/Academics';
 import Skills from './sections/Skills';
+import Projects from './sections/Projects';
 import Certificates from './sections/Certificates';
 import Contact from './sections/Contact';
 import './App.css';
@@ -44,6 +45,7 @@ function App() {
         <About />
         <Academics />
         <Skills />
+        <Projects />
         <Certificates />
         <Contact />
       </main>
@@ -70,7 +72,7 @@ function App() {
 
           {/* Nav links in footer */}
           <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap' }}>
-            {['#home', '#about', '#skills', '#contact'].map(href => (
+            {['#home', '#about', '#skills', '#projects', '#contact'].map(href => (
               <a key={href} href={href} style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.72rem', fontWeight: 600, letterSpacing: '1px', textTransform: 'uppercase', color: 'rgba(255,255,255,0.5)', textDecoration: 'none', transition: 'color 0.2s' }}
                 onMouseEnter={e => e.target.style.color = 'var(--uo-yellow)'}
                 onMouseLeave={e => e.target.style.color = 'rgba(255,255,255,0.5)'}
