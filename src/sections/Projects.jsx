@@ -49,8 +49,8 @@ const Projects = () => {
         
         {/* Section Heading */}
         <div className="section-heading-bar" style={{ marginBottom: '3.5rem' }}>
-          <span className="section-label" style={{ border: '1px solid var(--uo-green)', color: 'var(--uo-green)' }}>Featured Case Study</span>
-          <h2 style={{ fontSize: 'clamp(2.2rem, 5vw, 3.2rem)', color: 'var(--uo-green)', marginTop: '0.5rem' }}>Core Project</h2>
+          <span className="section-label" style={{ border: '1px solid var(--uo-green)', color: 'var(--uo-green)' }}>Featured Case Studies</span>
+          <h2 style={{ fontSize: 'clamp(2.2rem, 5vw, 3.2rem)', color: 'var(--uo-green)', marginTop: '0.5rem' }}>Core Projects</h2>
           <div className="editorial-divider" />
         </div>
 
@@ -230,6 +230,96 @@ const Projects = () => {
                 </motion.div>
               )}
             </AnimatePresence>
+          </div>
+        </motion.div>
+
+        {/* ── Mart Project Card ── */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.15 }}
+          style={{
+            marginTop: '2.5rem',
+            background: 'var(--uo-green-dark)',
+            color: '#FFFFFF',
+            border: '2px solid var(--uo-yellow)',
+            overflow: 'hidden',
+            boxShadow: '0 20px 40px rgba(13,46,33,0.15)',
+          }}
+        >
+          {/* Top bar */}
+          <div style={{
+            background: 'rgba(255,255,255,0.03)',
+            padding: '1.25rem 2rem',
+            borderBottom: '1px solid rgba(255,255,255,0.08)',
+            display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1rem'
+          }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+              <span className="pulse-dot" style={{ display: 'inline-block', width: '8px', height: '8px', borderRadius: '50%', background: 'var(--uo-yellow)', boxShadow: '0 0 10px var(--uo-yellow)' }} />
+              <span style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.68rem', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', color: 'var(--uo-yellow)' }}>Live / Production Ready</span>
+            </div>
+            <span style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.72rem', fontWeight: 600, letterSpacing: '1px', textTransform: 'uppercase', color: 'rgba(255,255,255,0.4)' }}>E-Commerce / Full-Stack</span>
+          </div>
+
+          <div style={{ padding: '2.5rem 2rem' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: '3fr 2fr', gap: '3rem', alignItems: 'start' }}>
+
+              {/* Left */}
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
+                <div>
+                  <h3 style={{ fontFamily: '"Playfair Display", Georgia, serif', fontSize: 'clamp(2rem, 4vw, 2.75rem)', fontWeight: 900, color: 'var(--uo-yellow)', lineHeight: 1.1 }}>
+                    Badam Mart
+                  </h3>
+                  <div style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.9rem', fontWeight: 600, letterSpacing: '0.5px', color: 'rgba(255,255,255,0.7)', marginTop: '0.5rem' }}>
+                    Modern E-Commerce Store &amp; Product Showcase Platform
+                  </div>
+                </div>
+                <div style={{ width: '60px', height: '3px', background: 'var(--uo-yellow)' }} />
+                <p style={{ fontFamily: 'Inter, sans-serif', fontSize: '1rem', lineHeight: 1.8, color: 'rgba(255,255,255,0.85)' }}>
+                  A fully deployed e-commerce web application featuring a clean product catalogue, responsive UI, and seamless shopping experience. Built and hosted live on Vercel.
+                </p>
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', marginTop: '0.5rem' }}>
+                  {['React', 'Vite', 'CSS', 'Vercel', 'JavaScript'].map(tag => (
+                    <span key={tag} style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.68rem', fontWeight: 700, letterSpacing: '1px', textTransform: 'uppercase', padding: '4px 10px', background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.12)', color: 'rgba(255,255,255,0.8)' }}>{tag}</span>
+                  ))}
+                </div>
+                <div style={{ marginTop: '1rem' }}>
+                  <a
+                    href="https://badamsudheerreddy-mart.vercel.app/"
+                    target="_blank"
+                    rel="noreferrer"
+                    id="mart-live-btn"
+                    style={{
+                      display: 'inline-flex', alignItems: 'center', gap: '8px',
+                      padding: '0.85rem 1.75rem',
+                      background: 'var(--uo-yellow)', color: 'var(--uo-green-dark)',
+                      textDecoration: 'none', fontFamily: 'Inter, sans-serif',
+                      fontSize: '0.8rem', fontWeight: 700, letterSpacing: '1px', textTransform: 'uppercase',
+                    }}
+                  >
+                    Visit Live Site <ExternalLink size={15} />
+                  </a>
+                </div>
+              </div>
+
+              {/* Right — specs */}
+              <div style={{ background: 'rgba(0,0,0,0.15)', padding: '1.75rem', borderLeft: '3px solid var(--uo-yellow)' }}>
+                <div style={{ fontFamily: '"Playfair Display", serif', fontSize: '1.1rem', fontWeight: 700, color: 'var(--uo-yellow)', marginBottom: '1.25rem' }}>Project Specs</div>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
+                  {[
+                    { label: 'Type', value: 'E-Commerce Store' },
+                    { label: 'Hosting', value: 'Vercel (Live)' },
+                    { label: 'Role', value: 'Creator & Developer' },
+                  ].map(m => (
+                    <div key={m.label} style={{ display: 'flex', flexDirection: 'column', borderBottom: '1px solid rgba(255,255,255,0.06)', paddingBottom: '0.75rem' }}>
+                      <span style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.62rem', fontWeight: 600, letterSpacing: '1.5px', textTransform: 'uppercase', color: 'rgba(255,255,255,0.45)' }}>{m.label}</span>
+                      <span style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.9rem', fontWeight: 700, color: '#FFFFFF', marginTop: '2px' }}>{m.value}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
           </div>
         </motion.div>
 

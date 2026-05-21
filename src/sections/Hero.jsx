@@ -86,6 +86,38 @@ const Hero = () => {
               transition={{ delay: 0.7, duration: 0.5 }}
               style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}
             >
+              {/* ── Hire Me — top CTA ── */}
+              <a
+                href="#contact"
+                id="hero-hire-btn"
+                style={{
+                  display: 'inline-flex', alignItems: 'center', gap: '8px',
+                  padding: '0.9rem 2.4rem',
+                  background: 'linear-gradient(135deg, #f5c518 0%, #e6a800 60%, #c88400 100%)',
+                  color: '#0d2e21',
+                  fontFamily: 'Inter, sans-serif', fontSize: '0.88rem',
+                  fontWeight: 800, letterSpacing: '2px', textTransform: 'uppercase',
+                  textDecoration: 'none',
+                  borderRadius: '2px',
+                  boxShadow: '0 4px 20px rgba(245,197,24,0.4)',
+                  transition: 'transform 0.2s, box-shadow 0.2s',
+                  position: 'relative', overflow: 'hidden',
+                }}
+                onMouseEnter={e => {
+                  e.currentTarget.style.transform = 'translateY(-2px)';
+                  e.currentTarget.style.boxShadow = '0 8px 30px rgba(245,197,24,0.6)';
+                }}
+                onMouseLeave={e => {
+                  e.currentTarget.style.transform = 'translateY(0)';
+                  e.currentTarget.style.boxShadow = '0 4px 20px rgba(245,197,24,0.4)';
+                }}
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/>
+                </svg>
+                Hire Me
+              </a>
+
               <a href="#projects" className="btn-primary" id="hero-explore-btn">
                 Explore Projects
               </a>
