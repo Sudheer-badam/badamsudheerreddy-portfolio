@@ -159,6 +159,7 @@ const educationTimeline = [
     grade: '600 / 600 Marks in 10th Standard',
     description: 'Achieved a perfect score in 10th Standard. Excelled in Mathematics & Science.',
     icon: BookOpen,
+    isHighSchool: true,
     pdfs: [
       { label: 'Marks Memo', url: '/SCHOOL OF SECONDARY EDUCATION MARKS MEMO BY DIGILOCKER.pdf' },
       { label: 'Transfer Certificate', url: '/TRANSFER CERTIFICATE FOR 10TH STANDARD.pdf' },
@@ -172,6 +173,7 @@ const educationTimeline = [
     grade: '882 / 1000 Marks — MPC Stream',
     description: 'Studied Maths, Physics, Chemistry. Secured excellent marks and qualified for engineering entrance exams.',
     icon: GraduationCap,
+    isIntermediate: true,
     pdfs: [
       { label: 'Marks Memo', url: '/Class XII Marksheet BY DIGI LOCKER.pdf' },
       { label: 'Transfer Certificate', url: '/TRANSFER CERTIFICATE FOR INTERMEDIATE COURSE.pdf' },
@@ -194,6 +196,275 @@ const sgpaColor = (sgpa) => {
   if (sgpa >= 9.0) return '#22c55e';
   if (sgpa >= 8.5) return '#3b82f6';
   return '#f59e0b';
+};
+
+const HighSchoolDashboard = () => {
+  const [expanded, setExpanded] = useState(false);
+  const subjects = [
+    { name: 'FIRST LANGUAGE TELUGU/SANSKRIT', max: 100, secured: 100 },
+    { name: 'SECOND LANGUAGE HINDI', max: 100, secured: 100 },
+    { name: 'THIRD LANGUAGE ENGLISH', max: 100, secured: 100 },
+    { name: 'MATHEMATICS', max: 100, secured: 100 },
+    { name: 'GENERAL SCIENCE', max: 100, secured: 100 },
+    { name: 'SOCIAL STUDIES', max: 100, secured: 100 },
+  ];
+
+  return (
+    <div style={{ marginTop: '1rem' }}>
+      {/* Short Summary Bar */}
+      <button 
+        onClick={() => setExpanded(!expanded)}
+        style={{
+          width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+          padding: '0.85rem 1.25rem', background: 'var(--uo-green-dark)', border: 'none', cursor: 'pointer',
+          color: '#fff', borderLeft: '3px solid var(--uo-yellow)', textAlign: 'left'
+        }}
+      >
+        <div style={{ display: 'flex', gap: '15px', alignItems: 'center', flexWrap: 'wrap' }}>
+          <span style={{ fontFamily: 'Inter', fontSize: '0.75rem', fontWeight: 700, letterSpacing: '1px', textTransform: 'uppercase', color: 'var(--uo-yellow)' }}>
+            Score: 600 / 600 (100% Perfect Score!)
+          </span>
+          <span style={{ fontFamily: 'Inter', fontSize: '0.7rem', color: 'rgba(255,255,255,0.7)' }}>
+            Roll No: 2115106284
+          </span>
+        </div>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+          <span style={{ fontFamily: 'Inter', fontSize: '0.62rem', fontWeight: 700, background: '#16a34a', color: '#fff', padding: '2px 8px', letterSpacing: '1px', textTransform: 'uppercase' }}>
+            First Division
+          </span>
+          {expanded ? <ChevronUp size={14} /> : <ChevronDown size={14} />}
+        </div>
+      </button>
+
+      <AnimatePresence>
+        {expanded && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.28 }}
+            style={{ overflow: 'hidden' }}
+          >
+            <div style={{ padding: '1.25rem', border: '1px solid var(--uo-border)', background: '#fafafa', borderTop: 'none' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1rem', marginBottom: '1.25rem' }}>
+                {[
+                  { label: 'Medium', value: 'English' },
+                  { label: 'Division', value: 'First Division' },
+                  { label: 'Date of Birth', value: '31/03/2005' },
+                ].map(x => (
+                  <div key={x.label} style={{ display: 'flex', flexDirection: 'column', gap: '2px' }}>
+                    <span style={{ fontFamily: 'Inter', fontSize: '0.6rem', fontWeight: 600, letterSpacing: '1px', textTransform: 'uppercase', color: 'var(--uo-grey)' }}>{x.label}</span>
+                    <span style={{ fontFamily: '"Playfair Display", serif', fontSize: '1.1rem', fontWeight: 700, color: 'var(--uo-green)' }}>{x.value}</span>
+                  </div>
+                ))}
+              </div>
+
+              {/* Marks Table */}
+              <div style={{ overflowX: 'auto', border: '1px solid var(--uo-border)', background: '#fff', marginBottom: '1rem' }}>
+                <table style={{ width: '100%', borderCollapse: 'collapse', fontFamily: 'Inter, sans-serif', fontSize: '0.75rem', color: 'var(--uo-dark)' }}>
+                  <thead>
+                    <tr style={{ background: 'var(--uo-green)', color: '#fff', textAlign: 'left' }}>
+                      <th style={{ padding: '8px 12px', fontSize: '0.62rem', fontWeight: 700, letterSpacing: '1px', textTransform: 'uppercase' }}>Subject Name</th>
+                      <th style={{ padding: '8px 12px', fontSize: '0.62rem', fontWeight: 700, letterSpacing: '1px', textTransform: 'uppercase', textAlign: 'center', width: '100px' }}>Max Marks</th>
+                      <th style={{ padding: '8px 12px', fontSize: '0.62rem', fontWeight: 700, letterSpacing: '1px', textTransform: 'uppercase', textAlign: 'center', width: '120px' }}>Marks Secured</th>
+                      <th style={{ padding: '8px 12px', fontSize: '0.62rem', fontWeight: 700, letterSpacing: '1px', textTransform: 'uppercase', textAlign: 'center', width: '80px' }}>Percentage</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {subjects.map((sub, idx) => (
+                      <tr key={idx} style={{ borderBottom: '1px solid var(--uo-border)', background: idx % 2 === 0 ? 'rgba(0,0,0,0.01)' : 'transparent' }}>
+                        <td style={{ padding: '8px 12px', fontWeight: 600, color: 'var(--uo-green)' }}>{sub.name}</td>
+                        <td style={{ padding: '8px 12px', textAlign: 'center', fontWeight: 600 }}>{sub.max}</td>
+                        <td style={{ padding: '8px 12px', textAlign: 'center', fontWeight: 700, color: '#16a34a' }}>{sub.secured}</td>
+                        <td style={{ padding: '8px 12px', textAlign: 'center', fontWeight: 700 }}>100%</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+
+              {/* PDF Links */}
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
+                {[
+                  { label: 'Marks Memo', url: '/SCHOOL OF SECONDARY EDUCATION MARKS MEMO BY DIGILOCKER.pdf' },
+                  { label: 'Transfer Certificate', url: '/TRANSFER CERTIFICATE FOR 10TH STANDARD.pdf' }
+                ].map(p => (
+                  <a
+                    key={p.label}
+                    href={p.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ display: 'inline-flex', alignItems: 'center', gap: '5px', padding: '6px 14px', border: '1px solid var(--uo-green)', color: 'var(--uo-green)', fontFamily: 'Inter', fontSize: '0.72rem', fontWeight: 600, textDecoration: 'none', transition: 'background 0.2s, color 0.2s', background: '#fff' }}
+                    onMouseEnter={e => { e.currentTarget.style.background = 'var(--uo-green)'; e.currentTarget.style.color = 'var(--uo-yellow)'; }}
+                    onMouseLeave={e => { e.currentTarget.style.background = '#fff'; e.currentTarget.style.color = 'var(--uo-green)'; }}
+                  >
+                    <ExternalLink size={11} /> View SSC {p.label}
+                  </a>
+                ))}
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  );
+};
+
+const IntermediateDashboard = () => {
+  const [expandedYear, setExpandedYear] = useState(null);
+
+  const firstYearSubjects = [
+    { code: '01', name: 'ENGLISH', max: 100, secured: 74 },
+    { code: '17', name: 'SANSKRIT', max: 100, secured: 94 },
+    { code: '31', name: 'MATHEMATICS - A', max: 75, secured: 67 },
+    { code: '32', name: 'MATHEMATICS - B', max: 75, secured: 61 },
+    { code: '41', name: 'PHYSICS', max: 60, secured: 57 },
+    { code: '42', name: 'CHEMISTRY', max: 60, secured: 48 },
+  ];
+
+  const secondYearSubjects = [
+    { code: '02', name: 'ENGLISH', max: 100, secured: 82 },
+    { code: '18', name: 'SANSKRIT', max: 100, secured: 97 },
+    { code: '31', name: 'MATHEMATICS - A', max: 75, secured: 66 },
+    { code: '32', name: 'MATHEMATICS - B', max: 75, secured: 73 },
+    { code: '41', name: 'PHYSICS', max: 60, secured: 56 },
+    { code: '42', name: 'CHEMISTRY', max: 60, secured: 51 },
+    { code: '43', name: 'PHYSICS PRACTICAL', max: 30, secured: 28 },
+    { code: '44', name: 'CHEMISTRY PRACTICAL', max: 30, secured: 28 },
+  ];
+
+  const firstYearTotalSecured = firstYearSubjects.reduce((s, x) => s + x.secured, 0);
+  const firstYearTotalMax = firstYearSubjects.reduce((s, x) => s + x.max, 0);
+  const secondYearTotalSecured = secondYearSubjects.reduce((s, x) => s + x.secured, 0);
+  const secondYearTotalMax = secondYearSubjects.reduce((s, x) => s + x.max, 0);
+
+  const years = [
+    {
+      label: 'First Year (11th Standard)',
+      secured: firstYearTotalSecured,
+      max: firstYearTotalMax,
+      percentage: ((firstYearTotalSecured / firstYearTotalMax) * 100).toFixed(1) + '%',
+      subjects: firstYearSubjects
+    },
+    {
+      label: 'Second Year (12th Standard)',
+      secured: secondYearTotalSecured,
+      max: secondYearTotalMax,
+      percentage: ((secondYearTotalSecured / secondYearTotalMax) * 100).toFixed(1) + '%',
+      subjects: secondYearSubjects
+    }
+  ];
+
+  return (
+    <div style={{ marginTop: '1.5rem' }}>
+      
+      {/* Short Summary Grid */}
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '0.75rem', marginBottom: '1.25rem' }}>
+        {[
+          { label: 'Grand Total', value: '882 / 1000', color: 'var(--uo-yellow)' },
+          { label: 'Overall Grade', value: 'A Grade', color: '#22c55e' },
+          { label: 'MPC Percentage', value: '88.2%', color: '#3b82f6' }
+        ].map(stat => (
+          <div key={stat.label} style={{ background: 'var(--uo-green-dark)', padding: '1rem', borderLeft: `3px solid ${stat.color}`, display: 'flex', flexDirection: 'column', gap: '4px' }}>
+            <span style={{ fontFamily: 'Inter', fontSize: '0.6rem', fontWeight: 700, letterSpacing: '1.5px', textTransform: 'uppercase', color: 'rgba(255,255,255,0.5)' }}>{stat.label}</span>
+            <span style={{ fontFamily: '"Playfair Display", serif', fontSize: '1.3rem', fontWeight: 900, color: '#fff' }}>{stat.value}</span>
+          </div>
+        ))}
+      </div>
+
+      {/* Expandable Years Breakdown */}
+      <div style={{ fontFamily: 'Inter', fontSize: '0.65rem', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', color: 'var(--uo-grey)', marginBottom: '0.75rem' }}>Yearly Breakdown</div>
+      
+      <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', marginBottom: '1rem' }}>
+        {years.map((y, idx) => (
+          <div key={y.label} style={{ border: '1px solid var(--uo-border)', background: 'var(--uo-white)' }}>
+            <button
+              onClick={() => setExpandedYear(expandedYear === idx ? null : idx)}
+              style={{ width: '100%', display: 'flex', alignItems: 'center', gap: '12px', padding: '0.85rem 1.25rem', background: 'none', border: 'none', cursor: 'pointer', textAlign: 'left' }}
+            >
+              <span style={{ fontFamily: 'Inter', fontSize: '0.75rem', fontWeight: 700, color: 'var(--uo-green)', flex: 1 }}>{y.label}</span>
+              <span style={{ fontFamily: 'Inter', fontSize: '0.7rem', fontWeight: 600, color: 'var(--uo-grey)' }}>{y.secured} / {y.max} Marks</span>
+              <span style={{ fontFamily: 'Inter', fontSize: '0.72rem', fontWeight: 700, color: '#fff', background: '#3b82f6', padding: '2px 8px' }}>{y.percentage}</span>
+              <span style={{ color: 'var(--uo-grey)', flexShrink: 0 }}>
+                {expandedYear === idx ? <ChevronUp size={14} /> : <ChevronDown size={14} />}
+              </span>
+            </button>
+
+            <AnimatePresence>
+              {expandedYear === idx && (
+                <motion.div
+                  initial={{ opacity: 0, height: 0 }}
+                  animate={{ opacity: 1, height: 'auto' }}
+                  exit={{ opacity: 0, height: 0 }}
+                  transition={{ duration: 0.28 }}
+                  style={{ overflow: 'hidden' }}
+                >
+                  <div style={{ padding: '0 1.25rem 1.25rem', borderTop: '1px solid var(--uo-border)', background: '#fafafa' }}>
+                    <div style={{ overflowX: 'auto', border: '1px solid var(--uo-border)', background: '#fff', marginTop: '1rem' }}>
+                      <table style={{ width: '100%', borderCollapse: 'collapse', fontFamily: 'Inter, sans-serif', fontSize: '0.75rem', color: 'var(--uo-dark)' }}>
+                        <thead>
+                          <tr style={{ background: 'var(--uo-green)', color: '#fff', textAlign: 'left' }}>
+                            <th style={{ padding: '8px 12px', fontSize: '0.62rem', fontWeight: 700, letterSpacing: '1px', textTransform: 'uppercase', width: '80px' }}>Code</th>
+                            <th style={{ padding: '8px 12px', fontSize: '0.62rem', fontWeight: 700, letterSpacing: '1px', textTransform: 'uppercase' }}>Subject</th>
+                            <th style={{ padding: '8px 12px', fontSize: '0.62rem', fontWeight: 700, letterSpacing: '1px', textTransform: 'uppercase', textAlign: 'center', width: '100px' }}>Max Marks</th>
+                            <th style={{ padding: '8px 12px', fontSize: '0.62rem', fontWeight: 700, letterSpacing: '1px', textTransform: 'uppercase', textAlign: 'center', width: '120px' }}>Marks Secured</th>
+                            <th style={{ padding: '8px 12px', fontSize: '0.62rem', fontWeight: 700, letterSpacing: '1px', textTransform: 'uppercase', textAlign: 'center', width: '100px' }}>Percentage</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {y.subjects.map((sub, sIdx) => (
+                            <tr key={sIdx} style={{ borderBottom: '1px solid var(--uo-border)', background: sIdx % 2 === 0 ? 'rgba(0,0,0,0.01)' : 'transparent' }}>
+                              <td style={{ padding: '8px 12px', fontWeight: 700, color: 'var(--uo-green)' }}>{sub.code}</td>
+                              <td style={{ padding: '8px 12px', fontWeight: 500 }}>{sub.name}</td>
+                              <td style={{ padding: '8px 12px', textAlign: 'center', fontWeight: 600 }}>{sub.max}</td>
+                              <td style={{ padding: '8px 12px', textAlign: 'center', fontWeight: 700, color: sub.secured >= (sub.max*0.9) ? '#16a34a' : 'var(--uo-dark)' }}>{sub.secured}</td>
+                              <td style={{ padding: '8px 12px', textAlign: 'center', fontWeight: 700 }}>{((sub.secured / sub.max) * 100).toFixed(0)}%</td>
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
+        ))}
+
+        {/* Co-Curricular & Ethics Block */}
+        <div style={{ border: '1px solid var(--uo-border)', background: 'var(--uo-white)', padding: '0.85rem 1.25rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '0.75rem' }}>
+          <div style={{ display: 'flex', gap: '15px', flexWrap: 'wrap' }}>
+            <span style={{ fontFamily: 'Inter', fontSize: '0.72rem', fontWeight: 700, color: 'var(--uo-green)' }}>ENVIRONMENTAL EDUCATION</span>
+            <span style={{ fontFamily: 'Inter', fontSize: '0.72rem', fontWeight: 700, color: 'var(--uo-green)' }}>ETHICS &amp; HUMAN VALUES</span>
+          </div>
+          <span style={{ display: 'inline-flex', alignItems: 'center', gap: '3px', fontFamily: 'Inter', fontSize: '0.62rem', fontWeight: 700, letterSpacing: '1px', textTransform: 'uppercase', color: '#16a34a', background: '#dcfce7', padding: '2px 8px' }}>
+            <CheckCircle2 size={10} /> Qualified
+          </span>
+        </div>
+      </div>
+
+      {/* PDF links */}
+      <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
+        {[
+          { label: 'Class XII Marksheet', url: '/Class XII Marksheet BY DIGI LOCKER.pdf' },
+          { label: 'Transfer Certificate', url: '/TRANSFER CERTIFICATE FOR INTERMEDIATE COURSE.pdf' }
+        ].map(p => (
+          <a
+            key={p.label}
+            href={p.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ display: 'inline-flex', alignItems: 'center', gap: '5px', padding: '6px 14px', border: '1px solid var(--uo-green)', color: 'var(--uo-green)', fontFamily: 'Inter', fontSize: '0.72rem', fontWeight: 600, textDecoration: 'none', transition: 'background 0.2s, color 0.2s', background: '#fff' }}
+            onMouseEnter={e => { e.currentTarget.style.background = 'var(--uo-green)'; e.currentTarget.style.color = 'var(--uo-yellow)'; }}
+            onMouseLeave={e => { e.currentTarget.style.background = '#fff'; e.currentTarget.style.color = 'var(--uo-green)'; }}
+          >
+            <ExternalLink size={11} /> {p.label}
+          </a>
+        ))}
+      </div>
+
+    </div>
+  );
 };
 
 const UniversityDashboard = () => {
@@ -437,12 +708,12 @@ const Academics = () => {
                     </p>
                   )}
 
-                  <p style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.85rem', lineHeight: 1.65, color: 'var(--uo-grey)', marginBottom: edu.pdfs || edu.isUniversity ? '1rem' : 0 }}>
+                  <p style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.85rem', lineHeight: 1.65, color: 'var(--uo-grey)', marginBottom: edu.pdfs || edu.isUniversity || edu.isHighSchool || edu.isIntermediate ? '1rem' : 0 }}>
                     {edu.description}
                   </p>
 
-                  {/* Regular PDF links for non-university entries */}
-                  {edu.pdfs && (
+                  {/* Regular PDF links for non-university/non-high/non-inter entries */}
+                  {edu.pdfs && !edu.isHighSchool && !edu.isIntermediate && (
                     <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
                       {edu.pdfs.map(p => (
                         <a
@@ -459,6 +730,12 @@ const Academics = () => {
                       ))}
                     </div>
                   )}
+
+                  {/* High School Dashboard */}
+                  {edu.isHighSchool && <HighSchoolDashboard />}
+
+                  {/* Intermediate Dashboard */}
+                  {edu.isIntermediate && <IntermediateDashboard />}
 
                   {/* University Semester Dashboard */}
                   {edu.isUniversity && <UniversityDashboard />}
