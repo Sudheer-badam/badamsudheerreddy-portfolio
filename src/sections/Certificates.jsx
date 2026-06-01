@@ -29,10 +29,10 @@ const courseraCertificates = [
 ];
 
 const otherCertificates = [
+  { title: "Artificial Intelligence and Machine Learning", issuer: "Kodacy", tags: ["AI", "Machine Learning", "Course Completion"], link: "https://courses.kodacy.com/kodacy-certificate/?cert_hash=a966e300ec1b7cfc" },
   { title: "Docker Tutorial for Beginners", issuer: "Simplilearn", tags: ["Docker", "DevOps"], link: "https://www.simplilearn.com/learn-docker-basics-free-course-skillup" },
   { title: "Certified Essentials Automation Professional", issuer: "Automation Anywhere", tags: ["RPA", "Jan 2026"], link: "https://certificates.automationanywhere.com/dc112cfc-ae58-41fd-b671-202663d60156" },
   { title: "Linguva Skills", issuer: "Linguva", tags: ["Communication", "Soft Skills"], link: "/Badam Sudheer Reddy.pdf" },
-  { title: "Technical Internship Certificate", issuer: "Linguva Skills", tags: ["Internship", "Engineering"], link: "https://forage-uploads-prod.s3.amazonaws.com/completion" },
 ];
 
 const upcomingCertificates = [
