@@ -40,8 +40,47 @@ const PlaceMentorProject = {
   ]
 };
 
+const SearchPvtLtdProject = {
+  title: 'Search Pvt.Ltd',
+  tagline: 'Global Business Intelligence Platform & Corporate Directory API',
+  url: 'https://badamsudheerreddy-search-pvt-ltd.vercel.app/',
+  role: 'Creator & Full-Stack Architect',
+  status: 'Live / Production Ready',
+  category: 'FinTech / Data Intelligence',
+  summary: 'A corporate intelligence directory and developer API ecosystem providing real-time KYC, GST verification, and company information validation for 50M+ Private Limited companies.',
+  tags: ['React', 'Next.js', 'JSON API', 'Vercel', 'Corporate KYC', 'Node.js', 'JavaScript'],
+  metrics: [
+    { label: 'Database Coverage', value: '50M+ Indian Companies' },
+    { label: 'API Response Latency', value: '< 150ms Real-time' },
+    { label: 'Integration Protocols', value: 'REST JSON Endpoints' }
+  ],
+  features: [
+    {
+      icon: Cpu,
+      title: 'Real-time Verification',
+      desc: 'Instantly check CIN/UIN status, active directors, company category, and registration details from official corporate registries.'
+    },
+    {
+      icon: Terminal,
+      title: 'Developer JSON API',
+      desc: 'Robust RESTful API platform enabling developers to verify company details and automate corporate KYC checks programmatically.'
+    },
+    {
+      icon: ShieldAlert,
+      title: 'Corporate Directory KYC',
+      desc: 'Searchable database categorized by industry sector, such as IT, AI Startups, Finance, Logistics, and E-commerce.'
+    },
+    {
+      icon: Award,
+      title: 'Global Business Coverage',
+      desc: 'Enriched insights spanning over 50+ countries with advanced search patterns, revenue predictions, and company size mappings.'
+    }
+  ]
+};
+
 const Projects = () => {
-  const [showTechnicalSpecs, setShowTechnicalSpecs] = useState(false);
+  const [showPlaceMentorSpecs, setShowPlaceMentorSpecs] = useState(false);
+  const [showSearchSpecs, setShowSearchSpecs] = useState(false);
 
   return (
     <section id="projects" style={{ background: 'var(--uo-cream)', padding: '90px 20px', borderBottom: '1px solid var(--uo-border)' }}>
@@ -153,7 +192,7 @@ const Projects = () => {
                     Launch Live App <ExternalLink size={15} />
                   </a>
                   <button
-                    onClick={() => setShowTechnicalSpecs(!showTechnicalSpecs)}
+                    onClick={() => setShowPlaceMentorSpecs(!showPlaceMentorSpecs)}
                     style={{
                       display: 'inline-flex',
                       alignItems: 'center',
@@ -171,7 +210,7 @@ const Projects = () => {
                       transition: 'all 0.2s'
                     }}
                   >
-                    {showTechnicalSpecs ? 'Hide Details' : 'View Deep Tech Specs'}
+                    {showPlaceMentorSpecs ? 'Hide Details' : 'View Deep Tech Specs'}
                   </button>
                 </div>
               </div>
@@ -199,7 +238,7 @@ const Projects = () => {
 
             {/* Technical specs detailed view */}
             <AnimatePresence>
-              {showTechnicalSpecs && (
+              {showPlaceMentorSpecs && (
                 <motion.div
                   initial={{ opacity: 0, height: 0 }}
                   animate={{ opacity: 1, height: 'auto' }}
@@ -209,6 +248,186 @@ const Projects = () => {
                 >
                   <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem' }}>
                     {PlaceMentorProject.features.map(f => {
+                      const Icon = f.icon;
+                      return (
+                        <div key={f.title} style={{ display: 'flex', gap: '1rem', background: 'rgba(255, 255, 255, 0.02)', padding: '1.25rem', border: '1px solid rgba(255, 255, 255, 0.05)' }}>
+                          <div style={{ color: 'var(--uo-yellow)', marginTop: '3px' }}>
+                            <Icon size={20} />
+                          </div>
+                          <div>
+                            <h4 style={{ fontFamily: '"Playfair Display", serif', fontSize: '1rem', fontWeight: 700, color: '#FFFFFF', marginBottom: '0.4rem' }}>
+                              {f.title}
+                            </h4>
+                            <p style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.8rem', color: 'rgba(255,255,255,0.65)', lineHeight: 1.6 }}>
+                              {f.desc}
+                            </p>
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
+        </motion.div>
+
+        {/* ── Search Pvt.Ltd Card ── */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.1 }}
+          className="editorial-card"
+          style={{
+            marginTop: '2.5rem',
+            background: 'var(--uo-green-dark)',
+            color: '#FFFFFF',
+            border: '2px solid var(--uo-yellow)',
+            padding: '0',
+            overflow: 'hidden',
+            boxShadow: '0 20px 40px rgba(13,46,33,0.15)'
+          }}
+        >
+          {/* Top header bar */}
+          <div style={{
+            background: 'rgba(255, 255, 255, 0.03)',
+            padding: '1.25rem 2rem',
+            borderBottom: '1px solid rgba(255, 255, 255, 0.08)',
+            display: 'flex',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+            flexWrap: 'wrap',
+            gap: '1rem'
+          }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+              <span className="pulse-dot" style={{ display: 'inline-block', width: '8px', height: '8px', borderRadius: '50%', background: 'var(--uo-yellow)', boxShadow: '0 0 10px var(--uo-yellow)' }} />
+              <span style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.68rem', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', color: 'var(--uo-yellow)' }}>
+                {SearchPvtLtdProject.status}
+              </span>
+            </div>
+            <span style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.72rem', fontWeight: 600, letterSpacing: '1px', textTransform: 'uppercase', color: 'rgba(255, 255, 255, 0.4)' }}>
+              {SearchPvtLtdProject.category}
+            </span>
+          </div>
+
+          <div style={{ padding: '2.5rem 2rem' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: '3fr 2fr', gap: '3rem', alignItems: 'start' }}>
+              
+              {/* Left Column: Core Info */}
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
+                <div>
+                  <h3 style={{ fontFamily: '"Playfair Display", Georgia, serif', fontSize: 'clamp(2rem, 4vw, 2.75rem)', fontWeight: 900, color: 'var(--uo-yellow)', lineHeight: 1.1 }}>
+                    {SearchPvtLtdProject.title}
+                  </h3>
+                  <div style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.9rem', fontWeight: 600, letterSpacing: '0.5px', color: 'rgba(255,255,255,0.7)', marginTop: '0.5rem' }}>
+                    {SearchPvtLtdProject.tagline}
+                  </div>
+                </div>
+
+                <div style={{ width: '60px', height: '3px', background: 'var(--uo-yellow)' }} />
+
+                <p style={{ fontFamily: 'Inter, sans-serif', fontSize: '1rem', lineHeight: 1.8, color: 'rgba(255, 255, 255, 0.85)' }}>
+                  {SearchPvtLtdProject.summary}
+                </p>
+
+                {/* Tags */}
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', marginTop: '0.5rem' }}>
+                  {SearchPvtLtdProject.tags.map(tag => (
+                    <span key={tag} style={{
+                      fontFamily: 'Inter, sans-serif',
+                      fontSize: '0.68rem',
+                      fontWeight: 700,
+                      letterSpacing: '1px',
+                      textTransform: 'uppercase',
+                      padding: '4px 10px',
+                      background: 'rgba(255, 255, 255, 0.06)',
+                      border: '1px solid rgba(255, 255, 255, 0.12)',
+                      color: 'rgba(255, 255, 255, 0.8)'
+                    }}>
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+
+                {/* CTA Buttons */}
+                <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', marginTop: '1rem' }}>
+                  <a
+                    href={SearchPvtLtdProject.url}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="btn-primary"
+                    style={{
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      gap: '8px',
+                      padding: '0.85rem 1.75rem',
+                      background: 'var(--uo-yellow)',
+                      color: 'var(--uo-green-dark)',
+                      textDecoration: 'none',
+                      fontWeight: 700,
+                      border: '2px solid var(--uo-yellow)'
+                    }}
+                  >
+                    Launch Live App <ExternalLink size={15} />
+                  </a>
+                  <button
+                    onClick={() => setShowSearchSpecs(!showSearchSpecs)}
+                    style={{
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      gap: '8px',
+                      padding: '0.85rem 1.75rem',
+                      background: 'transparent',
+                      color: '#FFFFFF',
+                      border: '2px solid rgba(255, 255, 255, 0.25)',
+                      fontFamily: 'Inter, sans-serif',
+                      fontSize: '0.8rem',
+                      fontWeight: 700,
+                      letterSpacing: '1px',
+                      textTransform: 'uppercase',
+                      cursor: 'pointer',
+                      transition: 'all 0.2s'
+                    }}
+                  >
+                    {showSearchSpecs ? 'Hide Details' : 'View Deep Tech Specs'}
+                  </button>
+                </div>
+              </div>
+
+              {/* Right Column: Key metrics */}
+              <div style={{ background: 'rgba(0, 0, 0, 0.15)', padding: '1.75rem', borderLeft: '3px solid var(--uo-yellow)' }}>
+                <div style={{ fontFamily: '"Playfair Display", serif', fontSize: '1.1rem', fontWeight: 700, color: 'var(--uo-yellow)', marginBottom: '1.25rem' }}>
+                  Project Specs
+                </div>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
+                  {SearchPvtLtdProject.metrics.map(m => (
+                    <div key={m.label} style={{ display: 'flex', flexDirection: 'column', borderBottom: '1px solid rgba(255,255,255,0.06)', paddingBottom: '0.75rem' }}>
+                      <span style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.62rem', fontWeight: 600, letterSpacing: '1.5px', textTransform: 'uppercase', color: 'rgba(255,255,255,0.45)' }}>
+                        {m.label}
+                      </span>
+                      <span style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.9rem', fontWeight: 700, color: '#FFFFFF', marginTop: '2px' }}>
+                        {m.value}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+            </div>
+
+            {/* Technical specs detailed view */}
+            <AnimatePresence>
+              {showSearchSpecs && (
+                <motion.div
+                  initial={{ opacity: 0, height: 0 }}
+                  animate={{ opacity: 1, height: 'auto' }}
+                  exit={{ opacity: 0, height: 0 }}
+                  transition={{ duration: 0.4 }}
+                  style={{ overflow: 'hidden', marginTop: '2.5rem', paddingTop: '2.5rem', borderTop: '1px solid rgba(255,255,255,0.1)' }}
+                >
+                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem' }}>
+                    {SearchPvtLtdProject.features.map(f => {
                       const Icon = f.icon;
                       return (
                         <div key={f.title} style={{ display: 'flex', gap: '1rem', background: 'rgba(255, 255, 255, 0.02)', padding: '1.25rem', border: '1px solid rgba(255, 255, 255, 0.05)' }}>
