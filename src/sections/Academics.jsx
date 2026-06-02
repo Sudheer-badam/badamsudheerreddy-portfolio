@@ -142,6 +142,7 @@ const educationTimeline = [
     years: '2014–2015',
     description: 'Completed 4th Standard with excellence, developing a solid foundation in core subjects.',
     icon: School,
+    logo: '/Screenshot 2026-06-02 123855.png',
   },
   {
     level: '5th to 8th Standard',
@@ -150,6 +151,7 @@ const educationTimeline = [
     years: '2015–2018',
     description: 'Built strong fundamentals in academics and developed early interest in science and mathematics.',
     icon: School,
+    logo: '/Screenshot 2026-06-02 122842.png',
   },
   {
     level: 'High School',
@@ -160,6 +162,7 @@ const educationTimeline = [
     description: 'Achieved a perfect score in 10th Standard. Excelled in Mathematics & Science.',
     icon: BookOpen,
     isHighSchool: true,
+    logo: '/Screenshot 2026-06-02 122741.png',
     pdfs: [
       { label: 'Marks Memo', url: '/SCHOOL OF SECONDARY EDUCATION MARKS MEMO BY DIGILOCKER.pdf' },
       { label: 'Transfer Certificate', url: '/TRANSFER CERTIFICATE FOR 10TH STANDARD.pdf' },
@@ -174,6 +177,7 @@ const educationTimeline = [
     description: 'Studied Maths, Physics, Chemistry. Secured excellent marks and qualified for engineering entrance exams.',
     icon: GraduationCap,
     isIntermediate: true,
+    logo: '/Screenshot 2026-06-02 122810.png',
     pdfs: [
       { label: 'Marks Memo', url: '/Class XII Marksheet BY DIGI LOCKER.pdf' },
       { label: 'Transfer Certificate', url: '/TRANSFER CERTIFICATE FOR INTERMEDIATE COURSE.pdf' },
@@ -189,6 +193,7 @@ const educationTimeline = [
     icon: University,
     current: true,
     isUniversity: true,
+    logo: '/KL_University_logo.svg',
   },
 ];
 
@@ -683,10 +688,26 @@ const Academics = () => {
                 {/* Card */}
                 <div className="editorial-card" style={{ borderTopColor: edu.current ? 'var(--uo-yellow)' : 'var(--uo-green)' }}>
                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '0.5rem', marginBottom: '0.75rem' }}>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                      <div style={{ width: '36px', height: '36px', flexShrink: 0, background: edu.current ? 'var(--uo-yellow)' : 'var(--uo-green)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                        <Icon size={18} color={edu.current ? 'var(--uo-green-dark)' : '#fff'} />
-                      </div>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                      {edu.logo && (
+                        <div style={{
+                          width: '48px', height: '48px', flexShrink: 0,
+                          background: '#fff',
+                          border: '2px solid var(--uo-border)',
+                          borderRadius: '8px',
+                          display: 'flex', alignItems: 'center', justifyContent: 'center',
+                          overflow: 'hidden',
+                          padding: '4px',
+                          boxShadow: '0 2px 8px rgba(0,0,0,0.08)'
+                        }}>
+                          <img
+                            src={edu.logo}
+                            alt={edu.school + ' logo'}
+                            style={{ width: '100%', height: '100%', objectFit: 'contain' }}
+                            onError={e => { e.currentTarget.style.display = 'none'; }}
+                          />
+                        </div>
+                      )}
                       <div>
                         <div style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.65rem', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', color: 'var(--uo-grey)' }}>{edu.years}</div>
                         <h3 style={{ fontFamily: '"Playfair Display", serif', fontSize: '1.15rem', fontWeight: 700, color: 'var(--uo-dark)', marginTop: '2px' }}>{edu.level}</h3>
