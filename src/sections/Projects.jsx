@@ -6,12 +6,13 @@ const PlaceMentorProject = {
   title: 'PlaceMentor AI',
   tagline: 'Autonomous Student Placement Intelligence & Neural Notification Engine',
   url: 'https://placementor-ai-badamsudheerreddy.streamlit.app/',
-  role: 'Creator & Lead Architect',
+  role: 'Badam Sudheer Reddy',
   status: 'Live / Production Ready',
   category: 'AI / Full-Stack Analytics',
   summary: 'A futuristic academic co-pilot and placement preparation ecosystem built to empower KL University students. Features real-time official news scraping, AI resume scoring, and institutional data analytics.',
   tags: ['Python', 'Streamlit', 'NLP & Spacy', 'SQLite3', 'Pandas & NumPy', 'BeautifulSoup4', 'Plotly'],
   metrics: [
+    { label: 'Developer', value: 'Badam Sudheer Reddy' },
     { label: 'Core Architecture', value: 'Platform Intelligent' },
     { label: 'Sync Capability', value: 'Real-time Neural Feed' },
     { label: 'Admin Security', value: 'Master ID Bypass' },
@@ -41,15 +42,16 @@ const PlaceMentorProject = {
 };
 
 const SearchPvtLtdProject = {
-  title: 'Search Pvt.Ltd',
+  title: 'Sudheer Pvt.Ltd',
   tagline: 'Global Business Intelligence Platform & Corporate Directory API',
   url: 'https://badamsudheerreddy-search-pvt-ltd.vercel.app/',
-  role: 'Creator & Full-Stack Architect',
+  role: 'Badam Sudheer Reddy',
   status: 'Live / Production Ready',
   category: 'FinTech / Data Intelligence',
   summary: 'A corporate intelligence directory and developer API ecosystem providing real-time KYC, GST verification, and company information validation for 50M+ Private Limited companies.',
   tags: ['React', 'Next.js', 'JSON API', 'Vercel', 'Corporate KYC', 'Node.js', 'JavaScript'],
   metrics: [
+    { label: 'Developer', value: 'Badam Sudheer Reddy' },
     { label: 'Database Coverage', value: '50M+ Indian Companies' },
     { label: 'API Response Latency', value: '< 150ms Real-time' },
     { label: 'Integration Protocols', value: 'REST JSON Endpoints' }
@@ -137,9 +139,20 @@ const Projects = () => {
               {/* Left Column: Core Info */}
               <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
                 <div>
-                  <h3 style={{ fontFamily: '"Playfair Display", Georgia, serif', fontSize: 'clamp(2rem, 4vw, 2.75rem)', fontWeight: 900, color: 'var(--uo-yellow)', lineHeight: 1.1 }}>
-                    {PlaceMentorProject.title}
-                  </h3>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '0.25rem' }}>
+                    <div style={{
+                      width: '60px', height: '60px', borderRadius: '50%',
+                      border: '2.5px solid var(--uo-yellow)',
+                      boxShadow: '0 0 16px rgba(255,213,0,0.4)',
+                      overflow: 'hidden', flexShrink: 0, background: '#fff'
+                    }}>
+                      <img src="/PLACEMENTOR AI LOGO.png" alt="PlaceMentor AI Logo"
+                        style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                    </div>
+                    <h3 style={{ fontFamily: '"Playfair Display", Georgia, serif', fontSize: 'clamp(2rem, 4vw, 2.75rem)', fontWeight: 900, color: 'var(--uo-yellow)', lineHeight: 1.1, margin: 0 }}>
+                      {PlaceMentorProject.title}
+                    </h3>
+                  </div>
                   <div style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.9rem', fontWeight: 600, letterSpacing: '0.5px', color: 'rgba(255,255,255,0.7)', marginTop: '0.5rem' }}>
                     {PlaceMentorProject.tagline}
                   </div>
@@ -317,9 +330,20 @@ const Projects = () => {
               {/* Left Column: Core Info */}
               <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
                 <div>
-                  <h3 style={{ fontFamily: '"Playfair Display", Georgia, serif', fontSize: 'clamp(2rem, 4vw, 2.75rem)', fontWeight: 900, color: 'var(--uo-yellow)', lineHeight: 1.1 }}>
-                    {SearchPvtLtdProject.title}
-                  </h3>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '0.25rem' }}>
+                    <div style={{
+                      width: '60px', height: '60px', borderRadius: '50%',
+                      border: '2.5px solid var(--uo-yellow)',
+                      boxShadow: '0 0 16px rgba(255,213,0,0.4)',
+                      overflow: 'hidden', flexShrink: 0, background: '#fff'
+                    }}>
+                      <img src="/SUDHEER PVT.LTD.png" alt="Sudheer Pvt.Ltd Logo"
+                        style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                    </div>
+                    <h3 style={{ fontFamily: '"Playfair Display", Georgia, serif', fontSize: 'clamp(2rem, 4vw, 2.75rem)', fontWeight: 900, color: 'var(--uo-yellow)', lineHeight: 1.1, margin: 0 }}>
+                      {SearchPvtLtdProject.title}
+                    </h3>
+                  </div>
                   <div style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.9rem', fontWeight: 600, letterSpacing: '0.5px', color: 'rgba(255,255,255,0.7)', marginTop: '0.5rem' }}>
                     {SearchPvtLtdProject.tagline}
                   </div>
@@ -487,9 +511,20 @@ const Projects = () => {
               {/* Left */}
               <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
                 <div>
-                  <h3 style={{ fontFamily: '"Playfair Display", Georgia, serif', fontSize: 'clamp(2rem, 4vw, 2.75rem)', fontWeight: 900, color: 'var(--uo-yellow)', lineHeight: 1.1 }}>
-                    Badam Mart
-                  </h3>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '0.25rem' }}>
+                    <div style={{
+                      width: '60px', height: '60px', borderRadius: '50%',
+                      border: '2.5px solid var(--uo-yellow)',
+                      boxShadow: '0 0 16px rgba(255,213,0,0.4)',
+                      overflow: 'hidden', flexShrink: 0, background: '#fff'
+                    }}>
+                      <img src="/SUDHEER MART LOGO.png" alt="Sudheer Mart Logo"
+                        style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                    </div>
+                    <h3 style={{ fontFamily: '"Playfair Display", Georgia, serif', fontSize: 'clamp(2rem, 4vw, 2.75rem)', fontWeight: 900, color: 'var(--uo-yellow)', lineHeight: 1.1, margin: 0 }}>
+                      Badam Mart
+                    </h3>
+                  </div>
                   <div style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.9rem', fontWeight: 600, letterSpacing: '0.5px', color: 'rgba(255,255,255,0.7)', marginTop: '0.5rem' }}>
                     Modern E-Commerce Store &amp; Product Showcase Platform
                   </div>
@@ -529,7 +564,7 @@ const Projects = () => {
                   {[
                     { label: 'Type', value: 'E-Commerce Store' },
                     { label: 'Hosting', value: 'Vercel (Live)' },
-                    { label: 'Role', value: 'Creator & Developer' },
+                    { label: 'Developer', value: 'Badam Sudheer Reddy' },
                   ].map(m => (
                     <div key={m.label} style={{ display: 'flex', flexDirection: 'column', borderBottom: '1px solid rgba(255,255,255,0.06)', paddingBottom: '0.75rem' }}>
                       <span style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.62rem', fontWeight: 600, letterSpacing: '1.5px', textTransform: 'uppercase', color: 'rgba(255,255,255,0.45)' }}>{m.label}</span>

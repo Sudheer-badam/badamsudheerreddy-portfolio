@@ -8,6 +8,7 @@ import Skills from './sections/Skills';
 import Projects from './sections/Projects';
 import Certificates from './sections/Certificates';
 import Contact from './sections/Contact';
+import IntroScreen from './components/IntroScreen';
 import './App.css';
 
 function App() {
@@ -38,6 +39,7 @@ function App() {
 
   return (
     <div className="app-container">
+      <IntroScreen />
       <Navbar />
 
       <main style={{ paddingTop: '64px' }}>

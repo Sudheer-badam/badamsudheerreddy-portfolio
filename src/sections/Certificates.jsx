@@ -3,43 +3,43 @@ import { motion } from 'framer-motion';
 import { ExternalLink, CheckCircle, Clock } from 'lucide-react';
 
 const courseraCertificates = [
-  { title: "Dynamic Programming, Greedy Algorithms", issuer: "University of Colorado Boulder", tags: ["Algorithms", "Mar 2025"], link: "https://coursera.org/share/93ea572f881930e79b05d6df90a3c110" },
-  { title: "Introduction To Java Database Connectivity", issuer: "LearnQuest", tags: ["Java", "JDBC", "Nov 2024"], link: "https://coursera.org/share/4ef29f7982990c8ab3b6fac6fef1c3d7" },
-  { title: "Operating Systems and You: Becoming a Power User", issuer: "Google", tags: ["Google", "OS", "Apr 2025"], link: "https://coursera.org/share/573a68286a3a93498fe0de1d0ee41515" },
-  { title: "The Bits and Bytes of Computer Networking", issuer: "Google", tags: ["Google", "Networking", "Feb 2025"], link: "https://coursera.org/share/bcd1884664e1a00c3e9bb6a6e27d4693" },
-  { title: "The Unix Workbench", issuer: "Johns Hopkins University", tags: ["Unix", "Bash", "Apr 2025"], link: "https://coursera.org/share/429a8a1034c0f6ac1b3021d9bbfc48d4" },
-  { title: "Spring — Ecosystem and Core", issuer: "LearnQuest", tags: ["Spring", "Java", "Feb 2025"], link: "https://coursera.org/share/eb5d25ada645e0e132339f4fbf77f631" },
-  { title: "Intro to Operating Systems 1: Virtualization", issuer: "Codio", tags: ["OS", "Virtualization", "Apr 2025"], link: "https://coursera.org/share/db7d175c8e34d2171764c86e299c8b22" },
-  { title: "Lambda Expressions with Java", issuer: "Coursera", tags: ["Java", "Functional Programming", "Nov 2024"], link: "https://coursera.org/share/8f1d5ebc5dcfc2d0dd84f02585209a41" },
-  { title: "Developing Front-End Apps with React", issuer: "IBM", tags: ["React", "IBM", "Mar 2025"], link: "https://coursera.org/share/cd5fe0a0c13fc8dd9de76e4b181c5908" },
-  { title: "Introduction to Front-End Development", issuer: "Meta", tags: ["Meta", "HTML/CSS", "Mar 2025"], link: "https://coursera.org/share/82ff0132cd0fc59ca8b004bbb01333f3" },
-  { title: "Introduction to Artificial Intelligence (AI)", issuer: "IBM", tags: ["AI", "IBM", "Nov 2024"], link: "https://coursera.org/share/801bf737e7048133453dc4a96793f7e7" },
-  { title: "Hardware and Operating System Foundations II", issuer: "Illinois Tech", tags: ["Hardware", "OS", "Nov 2024"], link: "https://coursera.org/share/d483b81259d0e0f6465b69abbdd7f7f3" },
-  { title: "Supervised Machine Learning: Regression", issuer: "IBM", tags: ["ML", "IBM", "Nov 2024"], link: "https://coursera.org/share/9c6365a22ac240df74498e2d46400081" },
-  { title: "Exploratory Data Analysis for Machine Learning", issuer: "IBM", tags: ["Data Science", "IBM", "Nov 2024"], link: "https://coursera.org/share/a4087cec469771689522552e604d130d" },
-  { title: "Java Servlet Pages (JSPs)", issuer: "LearnQuest", tags: ["Java", "JSP", "Nov 2024"], link: "https://coursera.org/share/739c1d02c371fb0f68e9392bb19ee3b3" },
-  { title: "Introduction to Databases", issuer: "Meta", tags: ["Meta", "SQL", "Nov 2024"], link: "https://coursera.org/share/bfdd442776f485ca3e21d3f9ad71efea" },
-  { title: "Cloud Application Development Foundations", issuer: "IBM", tags: ["Cloud", "IBM", "Nov 2024"], link: "https://coursera.org/share/51e8e1b64b96536217a94c54af6c7167" },
-  { title: "Python for Data Science, AI & Development", issuer: "IBM", tags: ["Python", "IBM", "Nov 2024"], link: "https://coursera.org/share/f14648a482b0c54ec2c9e26f17c832e0" },
-  { title: "Java Database Connectivity (JDBC) Introduction", issuer: "LearnQuest", tags: ["Java", "JDBC", "Nov 2024"], link: "https://coursera.org/share/8745d9bbe887490f94dc0f043945e207" },
-  { title: "Hands-on Introduction to Linux Commands and Shell Scripting", issuer: "IBM", tags: ["Linux", "Bash", "Nov 2024"], link: "https://coursera.org/share/8d1a3bbf149e875c835d5f98fa8f5fc4" },
-  { title: "Introduction to Object-Oriented Programming with Java", issuer: "LearnQuest", tags: ["Java", "OOP", "Nov 2024"], link: "https://coursera.org/share/b1ca42087ee8432dcb7d286f1478b2cc" },
-  { title: "Introduction to Test and Behavior Driven Development", issuer: "IBM", tags: ["TDD", "BDD", "Nov 2024"], link: "https://coursera.org/share/b1360208b18da2b83b25e6f2f9cd7e72" },
-  { title: "Design Patterns", issuer: "University of Alberta", tags: ["Design Patterns", "UML", "Nov 2024"], link: "https://coursera.org/share/2c31b3b648e0c7ce12ddbebfbb100f91" },
+  { title: "Dynamic Programming, Greedy Algorithms", issuer: "University of Colorado Boulder", tags: ["Algorithms", "Mar 2025"], link: "https://coursera.org/share/93ea572f881930e79b05d6df90a3c110", logo: "/Courseera logo.jpeg" },
+  { title: "Introduction To Java Database Connectivity", issuer: "LearnQuest", tags: ["Java", "JDBC", "Nov 2024"], link: "https://coursera.org/share/4ef29f7982990c8ab3b6fac6fef1c3d7", logo: "/Courseera logo.jpeg" },
+  { title: "Operating Systems and You: Becoming a Power User", issuer: "Google", tags: ["Google", "OS", "Apr 2025"], link: "https://coursera.org/share/573a68286a3a93498fe0de1d0ee41515", logo: "/Courseera logo.jpeg" },
+  { title: "The Bits and Bytes of Computer Networking", issuer: "Google", tags: ["Google", "Networking", "Feb 2025"], link: "https://coursera.org/share/bcd1884664e1a00c3e9bb6a6e27d4693", logo: "/Courseera logo.jpeg" },
+  { title: "The Unix Workbench", issuer: "Johns Hopkins University", tags: ["Unix", "Bash", "Apr 2025"], link: "https://coursera.org/share/429a8a1034c0f6ac1b3021d9bbfc48d4", logo: "/Courseera logo.jpeg" },
+  { title: "Spring — Ecosystem and Core", issuer: "LearnQuest", tags: ["Spring", "Java", "Feb 2025"], link: "https://coursera.org/share/eb5d25ada645e0e132339f4fbf77f631", logo: "/Courseera logo.jpeg" },
+  { title: "Intro to Operating Systems 1: Virtualization", issuer: "Codio", tags: ["OS", "Virtualization", "Apr 2025"], link: "https://coursera.org/share/db7d175c8e34d2171764c86e299c8b22", logo: "/Courseera logo.jpeg" },
+  { title: "Lambda Expressions with Java", issuer: "Coursera", tags: ["Java", "Functional Programming", "Nov 2024"], link: "https://coursera.org/share/8f1d5ebc5dcfc2d0dd84f02585209a41", logo: "/Courseera logo.jpeg" },
+  { title: "Developing Front-End Apps with React", issuer: "IBM", tags: ["React", "IBM", "Mar 2025"], link: "https://coursera.org/share/cd5fe0a0c13fc8dd9de76e4b181c5908", logo: "/Courseera logo.jpeg" },
+  { title: "Introduction to Front-End Development", issuer: "Meta", tags: ["Meta", "HTML/CSS", "Mar 2025"], link: "https://coursera.org/share/82ff0132cd0fc59ca8b004bbb01333f3", logo: "/Courseera logo.jpeg" },
+  { title: "Introduction to Artificial Intelligence (AI)", issuer: "IBM", tags: ["AI", "IBM", "Nov 2024"], link: "https://coursera.org/share/801bf737e7048133453dc4a96793f7e7", logo: "/Courseera logo.jpeg" },
+  { title: "Hardware and Operating System Foundations II", issuer: "Illinois Tech", tags: ["Hardware", "OS", "Nov 2024"], link: "https://coursera.org/share/d483b81259d0e0f6465b69abbdd7f7f3", logo: "/Courseera logo.jpeg" },
+  { title: "Supervised Machine Learning: Regression", issuer: "IBM", tags: ["ML", "IBM", "Nov 2024"], link: "https://coursera.org/share/9c6365a22ac240df74498e2d46400081", logo: "/Courseera logo.jpeg" },
+  { title: "Exploratory Data Analysis for Machine Learning", issuer: "IBM", tags: ["Data Science", "IBM", "Nov 2024"], link: "https://coursera.org/share/a4087cec469771689522552e604d130d", logo: "/Courseera logo.jpeg" },
+  { title: "Java Servlet Pages (JSPs)", issuer: "LearnQuest", tags: ["Java", "JSP", "Nov 2024"], link: "https://coursera.org/share/739c1d02c371fb0f68e9392bb19ee3b3", logo: "/Courseera logo.jpeg" },
+  { title: "Introduction to Databases", issuer: "Meta", tags: ["Meta", "SQL", "Nov 2024"], link: "https://coursera.org/share/bfdd442776f485ca3e21d3f9ad71efea", logo: "/Courseera logo.jpeg" },
+  { title: "Cloud Application Development Foundations", issuer: "IBM", tags: ["Cloud", "IBM", "Nov 2024"], link: "https://coursera.org/share/51e8e1b64b96536217a94c54af6c7167", logo: "/Courseera logo.jpeg" },
+  { title: "Python for Data Science, AI & Development", issuer: "IBM", tags: ["Python", "IBM", "Nov 2024"], link: "https://coursera.org/share/f14648a482b0c54ec2c9e26f17c832e0", logo: "/Courseera logo.jpeg" },
+  { title: "Java Database Connectivity (JDBC) Introduction", issuer: "LearnQuest", tags: ["Java", "JDBC", "Nov 2024"], link: "https://coursera.org/share/8745d9bbe887490f94dc0f043945e207", logo: "/Courseera logo.jpeg" },
+  { title: "Hands-on Introduction to Linux Commands and Shell Scripting", issuer: "IBM", tags: ["Linux", "Bash", "Nov 2024"], link: "https://coursera.org/share/8d1a3bbf149e875c835d5f98fa8f5fc4", logo: "/Courseera logo.jpeg" },
+  { title: "Introduction to Object-Oriented Programming with Java", issuer: "LearnQuest", tags: ["Java", "OOP", "Nov 2024"], link: "https://coursera.org/share/b1ca42087ee8432dcb7d286f1478b2cc", logo: "/Courseera logo.jpeg" },
+  { title: "Introduction to Test and Behavior Driven Development", issuer: "IBM", tags: ["TDD", "BDD", "Nov 2024"], link: "https://coursera.org/share/b1360208b18da2b83b25e6f2f9cd7e72", logo: "/Courseera logo.jpeg" },
+  { title: "Design Patterns", issuer: "University of Alberta", tags: ["Design Patterns", "UML", "Nov 2024"], link: "https://coursera.org/share/2c31b3b648e0c7ce12ddbebfbb100f91", logo: "/Courseera logo.jpeg" },
 ];
 
 const otherCertificates = [
-  { title: "Artificial Intelligence and Machine Learning", issuer: "Kodacy", tags: ["AI", "Machine Learning", "Course Completion"], link: "https://courses.kodacy.com/kodacy-certificate/?cert_hash=a966e300ec1b7cfc" },
+  { title: "Artificial Intelligence and Machine Learning", issuer: "Kodacy", tags: ["AI", "Machine Learning", "Course Completion"], link: "https://courses.kodacy.com/kodacy-certificate/?cert_hash=a966e300ec1b7cfc", logo: "/kodacy logo.png" },
   { title: "Docker Tutorial for Beginners", issuer: "Simplilearn", tags: ["Docker", "DevOps"], link: "https://www.simplilearn.com/learn-docker-basics-free-course-skillup" },
-  { title: "Certified Essentials Automation Professional", issuer: "Automation Anywhere", tags: ["RPA", "Jan 2026"], link: "https://certificates.automationanywhere.com/dc112cfc-ae58-41fd-b671-202663d60156" },
-  { title: "Linguva Skills", issuer: "Linguva", tags: ["Communication", "Soft Skills"], link: "/Badam Sudheer Reddy.pdf" },
+  { title: "Certified Essentials Automation Professional", issuer: "Automation Anywhere", tags: ["RPA", "Jan 2026"], link: "https://certificates.automationanywhere.com/dc112cfc-ae58-41fd-b671-202663d60156", logo: "/automotive Anywhere logo.png" },
+  { title: "Linguva Skills", issuer: "Linguva", tags: ["Communication", "Soft Skills"], link: "/Badam Sudheer Reddy.pdf", logo: "/Linguva Skills logo.png" },
 ];
 
 const upcomingCertificates = [
-  { title: "AWS Certified Developer – Associate", issuer: "Amazon Web Services", tags: ["Cloud", "AWS", "Planned"] },
-  { title: "Meta Back-End Developer", issuer: "Meta", tags: ["Back-End", "Django", "In Progress"] },
-  { title: "Google Cloud Professional Data Engineer", issuer: "Google Cloud", tags: ["Data Engineering", "ML Ops", "Planned"] },
-  { title: "Java SE Professional Certification", issuer: "Oracle", tags: ["Java", "Architecture", "Planned"] },
+  { title: "AWS Certified Developer – Associate", issuer: "Amazon Web Services", tags: ["Cloud", "AWS", "Planned"], logo: "/aws Certified logo.jpeg" },
+  { title: "Meta Back-End Developer", issuer: "Meta", tags: ["Back-End", "Django", "In Progress"], logo: "/META BACK END LOGO.jpeg" },
+  { title: "Google Cloud Professional Data Engineer", issuer: "Google Cloud", tags: ["Data Engineering", "ML Ops", "Planned"], logo: "/GOOGLE CLOUD LOGO.png" },
+  { title: "Java SE Professional Certification", issuer: "Oracle", tags: ["Java", "Architecture", "Planned"], logo: "/ORACLE LOGO.png" },
 ];
 
 // Reusable editorial cert card
@@ -61,7 +61,8 @@ const CertCard = ({ cert, future = false }) => (
       {future
         ? <Clock size={14} color="var(--uo-border)" style={{ flexShrink: 0, marginTop: '2px' }} />
         : <CheckCircle size={14} color="var(--uo-green)" style={{ flexShrink: 0, marginTop: '2px' }} />}
-      <div>
+      <div style={{ flex: 1 }}>
+        {/* Title */}
         <div style={{ fontFamily: '"Playfair Display", serif', fontSize: '0.95rem', fontWeight: 700, color: 'var(--uo-dark)', lineHeight: 1.3, marginBottom: '2px' }}>{cert.title}</div>
         <div style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.72rem', fontWeight: 600, color: 'var(--uo-green)', letterSpacing: '0.5px' }}>{cert.issuer}</div>
       </div>

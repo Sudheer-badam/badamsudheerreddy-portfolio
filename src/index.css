@@ -270,38 +270,91 @@ section:nth-child(even) {
     top: 0;
     padding: 0 1rem;
     height: 56px;
-    overflow-x: auto !important;
+    overflow-x: auto !important; /* Enable horizontal scrolling on the entire bar */
     overflow-y: hidden;
     display: flex !important;
-    -webkit-overflow-scrolling: touch;
+    justify-content: flex-start !important; /* Start layout from the left */
+    align-items: center;
+    -webkit-overflow-scrolling: touch !important;
     scrollbar-width: none;
+    gap: 12px;
   }
 
   .navbar-container::-webkit-scrollbar { display: none; }
 
   .navbar-brand {
     flex-shrink: 0;
-    margin-right: 16px;
+    margin-right: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
   }
 
-  .navbar-brand-img { width: 34px; height: 34px; }
+  .navbar-brand-img { width: 34px; height: 34px; flex-shrink: 0; }
 
-  .navbar-brand-text { font-size: 0.85rem; }
+  .navbar-brand-text { font-size: 0.85rem; flex-shrink: 0; }
 
   .navbar-links {
-    flex-shrink: 0;
-    gap: 0;
+    flex-shrink: 0 !important;
+    display: flex !important;
+    overflow: visible !important; /* Disable nested scrollbar so outer container handles scrolling */
+    justify-content: flex-start !important;
+    align-items: stretch;
+    height: 100%;
     min-width: max-content;
   }
 
-  .navbar-link-item { font-size: 0.75rem; padding: 0 14px; }
+  .navbar-link-item { 
+    font-size: 0.75rem; 
+    padding: 0 14px; 
+    height: 100%;
+    display: inline-flex;
+    align-items: center;
+    flex-shrink: 0;
+  }
 }
 
 @media (max-width: 480px) {
-  .navbar-container { padding: 0 0.75rem; height: 52px; }
+  .navbar-container { padding: 0 0.75rem; height: 52px; gap: 8px; }
   .navbar-brand-img { width: 30px; height: 30px; }
   .navbar-brand-text { font-size: 0.8rem; letter-spacing: 0.5px; }
   .navbar-link-item { font-size: 0.7rem; padding: 0 12px; }
+}
+
+/* ─── Dashboard Stats Grid ─────────────────────────────────── */
+.dashboard-stats-grid {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr) !important;
+  gap: 0.75rem !important;
+  margin-bottom: 1.5rem !important;
+}
+
+.dashboard-stats-grid.intermediate-stats {
+  grid-template-columns: repeat(3, 1fr) !important;
+  margin-bottom: 1.25rem !important;
+}
+
+@media (max-width: 768px) {
+  .dashboard-stats-grid,
+  .dashboard-stats-grid.intermediate-stats {
+    display: flex !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    gap: 0.75rem !important;
+    scrollbar-width: none !important;
+    padding-bottom: 8px !important;
+    margin-bottom: 1.25rem !important;
+  }
+
+  .dashboard-stats-grid::-webkit-scrollbar,
+  .dashboard-stats-grid.intermediate-stats::-webkit-scrollbar {
+    display: none !important;
+  }
+
+  .dashboard-stats-grid > div,
+  .dashboard-stats-grid.intermediate-stats > div {
+    flex: 0 0 135px !important; /* Fixed width on mobile to enable swipe scrolling */
+  }
 }
 
 /* ─── Editorial card ─────────────────────────────────────────── */
