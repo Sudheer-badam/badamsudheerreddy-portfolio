@@ -10,6 +10,15 @@
     ],
     "headers": [
         {
+            "source": "/favicon(.*)",
+            "headers": [
+                {
+                    "key": "Cache-Control",
+                    "value": "no-cache, no-store, must-revalidate"
+                }
+            ]
+        },
+        {
             "source": "/(.*).(mp4|webm|ogg|mp3|wav|flac|png|jpg|jpeg|gif|svg|webp)",
             "headers": [
                 {
