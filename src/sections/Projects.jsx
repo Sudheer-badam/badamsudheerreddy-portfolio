@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ExternalLink, Cpu, Terminal, ShieldAlert, Award, FileText, BellRing, BarChart3, Radio } from 'lucide-react';
+import { ExternalLink, Cpu, Terminal, ShieldAlert, Award, FileText, BellRing, BarChart3, Radio, BookOpen, Globe, Landmark, Music } from 'lucide-react';
 
 const PlaceMentorProject = {
   title: 'PlaceMentor AI',
@@ -80,9 +80,49 @@ const SearchPvtLtdProject = {
   ]
 };
 
+const TempleProject = {
+  title: 'Narasingapadu Sivalayam',
+  tagline: 'Palnati Kasi — Ancient Sacred Shrine & Bilingual Digital Heritage Portal',
+  url: 'https://narasingapadu-temple.vercel.app/',
+  role: 'Badam Sudheer Reddy',
+  status: 'Live / Production Ready',
+  category: 'Cultural Heritage / Web',
+  summary: 'A full-stack bilingual (Telugu & English) temple heritage website for Narasingapadu Sivalayam — an ancient Shiva shrine in Palnadu district, AP. Features 100 classical Telugu verses by Jnanpith laureate Viswanatha Satyanarayana, temple history, festival calendar, gallery, rituals, and committee contacts. Deployed live on Vercel.',
+  tags: ['Next.js', 'React', 'CSS', 'Vercel', 'JavaScript', 'Telugu Bilingual', 'SEO'],
+  metrics: [
+    { label: 'Developer', value: 'Badam Sudheer Reddy' },
+    { label: 'Type', value: 'Cultural Heritage Portal' },
+    { label: 'Hosting', value: 'Vercel (Live)' },
+    { label: 'Language Support', value: 'Telugu & English' },
+  ],
+  features: [
+    {
+      icon: BookOpen,
+      title: '100 Classical Telugu Verses',
+      desc: 'Full archive of 100 Madhyakkara poems composed by Jnanpith laureate Kavi Samrat Viswanatha Satyanarayana in 1958, dedicated to Lord Kasi Visweswar at Narasingapadu.'
+    },
+    {
+      icon: Globe,
+      title: 'Bilingual Interface (Telugu & English)',
+      desc: 'Fully bilingual website with seamless language toggle, serving both local Telugu-speaking devotees and the global audience with complete content in both languages.'
+    },
+    {
+      icon: Landmark,
+      title: 'Temple History & Heritage',
+      desc: 'Comprehensive temple history spanning from 1178 CE Palnati war era to the 1958 Maha Samprokshanam, detailing sacred geography, miraculous events, and priestly lineages.'
+    },
+    {
+      icon: Music,
+      title: 'Festivals, Rituals & Gallery',
+      desc: 'Detailed festival calendar (Maha Shivaratri, Karthika Brahmotsavams, Teppotsavam), daily ritual schedule, photo gallery, and temple committee with contact information.'
+    }
+  ]
+};
+
 const Projects = () => {
   const [showPlaceMentorSpecs, setShowPlaceMentorSpecs] = useState(false);
   const [showSearchSpecs, setShowSearchSpecs] = useState(false);
+  const [showTempleSpecs, setShowTempleSpecs] = useState(false);
 
   return (
     <section id="projects" style={{ background: 'var(--uo-cream)', padding: '90px 20px', borderBottom: '1px solid var(--uo-border)' }}>
@@ -574,6 +614,197 @@ const Projects = () => {
                 </div>
               </div>
             </div>
+          </div>
+        </motion.div>
+
+        {/* ── Narasingapadu Temple Card ── */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="editorial-card"
+          style={{
+            marginTop: '2.5rem',
+            background: 'var(--uo-green-dark)',
+            color: '#FFFFFF',
+            border: '2px solid var(--uo-yellow)',
+            padding: '0',
+            overflow: 'hidden',
+            boxShadow: '0 20px 40px rgba(13,46,33,0.15)'
+          }}
+        >
+          {/* Top header bar */}
+          <div style={{
+            background: 'rgba(255, 255, 255, 0.03)',
+            padding: '1.25rem 2rem',
+            borderBottom: '1px solid rgba(255, 255, 255, 0.08)',
+            display: 'flex',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+            flexWrap: 'wrap',
+            gap: '1rem'
+          }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+              <span className="pulse-dot" style={{ display: 'inline-block', width: '8px', height: '8px', borderRadius: '50%', background: 'var(--uo-yellow)', boxShadow: '0 0 10px var(--uo-yellow)' }} />
+              <span style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.68rem', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', color: 'var(--uo-yellow)' }}>
+                {TempleProject.status}
+              </span>
+            </div>
+            <span style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.72rem', fontWeight: 600, letterSpacing: '1px', textTransform: 'uppercase', color: 'rgba(255, 255, 255, 0.4)' }}>
+              {TempleProject.category}
+            </span>
+          </div>
+
+          <div style={{ padding: '2.5rem 2rem' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: '3fr 2fr', gap: '3rem', alignItems: 'start' }}>
+
+              {/* Left Column: Core Info */}
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
+                <div>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '0.25rem' }}>
+                    <div style={{
+                      width: '60px', height: '60px', borderRadius: '50%',
+                      border: '2.5px solid var(--uo-yellow)',
+                      boxShadow: '0 0 16px rgba(255,213,0,0.4)',
+                      overflow: 'hidden', flexShrink: 0, background: '#fff'
+                    }}>
+                      <img src="/NARASINGAPADU TEMPLE LOGO.jpg" alt="Narasingapadu Sivalayam Logo"
+                        style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                    </div>
+                    <h3 style={{ fontFamily: '"Playfair Display", Georgia, serif', fontSize: 'clamp(1.6rem, 3.5vw, 2.4rem)', fontWeight: 900, color: 'var(--uo-yellow)', lineHeight: 1.1, margin: 0 }}>
+                      {TempleProject.title}
+                    </h3>
+                  </div>
+                  <div style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.9rem', fontWeight: 600, letterSpacing: '0.5px', color: 'rgba(255,255,255,0.7)', marginTop: '0.5rem' }}>
+                    {TempleProject.tagline}
+                  </div>
+                </div>
+
+                <div style={{ width: '60px', height: '3px', background: 'var(--uo-yellow)' }} />
+
+                <p style={{ fontFamily: 'Inter, sans-serif', fontSize: '1rem', lineHeight: 1.8, color: 'rgba(255, 255, 255, 0.85)' }}>
+                  {TempleProject.summary}
+                </p>
+
+                {/* Tags */}
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', marginTop: '0.5rem' }}>
+                  {TempleProject.tags.map(tag => (
+                    <span key={tag} style={{
+                      fontFamily: 'Inter, sans-serif',
+                      fontSize: '0.68rem',
+                      fontWeight: 700,
+                      letterSpacing: '1px',
+                      textTransform: 'uppercase',
+                      padding: '4px 10px',
+                      background: 'rgba(255, 255, 255, 0.06)',
+                      border: '1px solid rgba(255, 255, 255, 0.12)',
+                      color: 'rgba(255, 255, 255, 0.8)'
+                    }}>
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+
+                {/* CTA Buttons */}
+                <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', marginTop: '1rem' }}>
+                  <a
+                    href={TempleProject.url}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="btn-primary"
+                    style={{
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      gap: '8px',
+                      padding: '0.85rem 1.75rem',
+                      background: 'var(--uo-yellow)',
+                      color: 'var(--uo-green-dark)',
+                      textDecoration: 'none',
+                      fontWeight: 700,
+                      border: '2px solid var(--uo-yellow)'
+                    }}
+                  >
+                    Visit Temple Site <ExternalLink size={15} />
+                  </a>
+                  <button
+                    onClick={() => setShowTempleSpecs(!showTempleSpecs)}
+                    style={{
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      gap: '8px',
+                      padding: '0.85rem 1.75rem',
+                      background: 'transparent',
+                      color: '#FFFFFF',
+                      border: '2px solid rgba(255, 255, 255, 0.25)',
+                      fontFamily: 'Inter, sans-serif',
+                      fontSize: '0.8rem',
+                      fontWeight: 700,
+                      letterSpacing: '1px',
+                      textTransform: 'uppercase',
+                      cursor: 'pointer',
+                      transition: 'all 0.2s'
+                    }}
+                  >
+                    {showTempleSpecs ? 'Hide Details' : 'View Deep Tech Specs'}
+                  </button>
+                </div>
+              </div>
+
+              {/* Right Column: Key metrics */}
+              <div style={{ background: 'rgba(0, 0, 0, 0.15)', padding: '1.75rem', borderLeft: '3px solid var(--uo-yellow)' }}>
+                <div style={{ fontFamily: '"Playfair Display", serif', fontSize: '1.1rem', fontWeight: 700, color: 'var(--uo-yellow)', marginBottom: '1.25rem' }}>
+                  Project Specs
+                </div>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
+                  {TempleProject.metrics.map(m => (
+                    <div key={m.label} style={{ display: 'flex', flexDirection: 'column', borderBottom: '1px solid rgba(255,255,255,0.06)', paddingBottom: '0.75rem' }}>
+                      <span style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.62rem', fontWeight: 600, letterSpacing: '1.5px', textTransform: 'uppercase', color: 'rgba(255,255,255,0.45)' }}>
+                        {m.label}
+                      </span>
+                      <span style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.9rem', fontWeight: 700, color: '#FFFFFF', marginTop: '2px' }}>
+                        {m.value}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+            </div>
+
+            {/* Technical specs detailed view */}
+            <AnimatePresence>
+              {showTempleSpecs && (
+                <motion.div
+                  initial={{ opacity: 0, height: 0 }}
+                  animate={{ opacity: 1, height: 'auto' }}
+                  exit={{ opacity: 0, height: 0 }}
+                  transition={{ duration: 0.4 }}
+                  style={{ overflow: 'hidden', marginTop: '2.5rem', paddingTop: '2.5rem', borderTop: '1px solid rgba(255,255,255,0.1)' }}
+                >
+                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem' }}>
+                    {TempleProject.features.map(f => {
+                      const Icon = f.icon;
+                      return (
+                        <div key={f.title} style={{ display: 'flex', gap: '1rem', background: 'rgba(255, 255, 255, 0.02)', padding: '1.25rem', border: '1px solid rgba(255, 255, 255, 0.05)' }}>
+                          <div style={{ color: 'var(--uo-yellow)', marginTop: '3px' }}>
+                            <Icon size={20} />
+                          </div>
+                          <div>
+                            <h4 style={{ fontFamily: '"Playfair Display", serif', fontSize: '1rem', fontWeight: 700, color: '#FFFFFF', marginBottom: '0.4rem' }}>
+                              {f.title}
+                            </h4>
+                            <p style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.8rem', color: 'rgba(255,255,255,0.65)', lineHeight: 1.6 }}>
+                              {f.desc}
+                            </p>
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
           </div>
         </motion.div>
 
