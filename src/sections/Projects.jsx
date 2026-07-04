@@ -119,10 +119,130 @@ const TempleProject = {
   ]
 };
 
+const ShopSmartCatalogProject = {
+  title: 'ShopSmart Catalog',
+  tagline: 'Next-Gen E-Commerce Product Discovery & Shopping Experience',
+  url: 'https://shopsmart-catalog.vercel.app/',
+  role: 'Badam Sudheer Reddy',
+  status: 'Live / Production Ready',
+  category: 'E-Commerce / Frontend',
+  summary: 'A modern e-commerce product catalog offering a seamless shopping experience with dynamic filtering, cart management, and an elegant UI/UX built for high performance.',
+  tags: ['React', 'Next.js', 'TailwindCSS', 'Vercel', 'JavaScript'],
+  metrics: [
+    { label: 'Developer', value: 'Badam Sudheer Reddy' },
+    { label: 'Type', value: 'E-Commerce Storefront' },
+    { label: 'Hosting', value: 'Vercel (Live)' },
+    { label: 'Performance', value: 'Highly Optimized' }
+  ],
+  features: [
+    {
+      icon: Globe,
+      title: 'Seamless Discovery',
+      desc: 'Advanced product search and filtering mechanism for rapid discovery.'
+    },
+    {
+      icon: Cpu,
+      title: 'Dynamic Cart Management',
+      desc: 'Real-time state management for handling user cart and checkout flow seamlessly.'
+    },
+    {
+      icon: BarChart3,
+      title: 'High-Performance UI',
+      desc: 'Optimized asset delivery and fast page load times ensuring minimal bounce rate.'
+    },
+    {
+      icon: ShieldAlert,
+      title: 'Secure Browsing',
+      desc: 'Secure and optimized frontend architecture providing safe browsing experience.'
+    }
+  ]
+};
+
+const ShopSmartAdminProject = {
+  title: 'ShopSmart Admin Portal',
+  tagline: 'Comprehensive E-Commerce Management Dashboard',
+  url: 'https://shopsmart-admin-iota.vercel.app/',
+  role: 'Badam Sudheer Reddy',
+  status: 'Live / Production Ready',
+  category: 'E-Commerce / Backoffice',
+  summary: 'A secure administrative portal for managing products, categories, orders, and customer data with real-time analytics, inventory control, and secure access.',
+  tags: ['React', 'Dashboard', 'Vercel', 'Analytics', 'JavaScript'],
+  metrics: [
+    { label: 'Developer', value: 'Badam Sudheer Reddy' },
+    { label: 'Type', value: 'Admin Dashboard' },
+    { label: 'Security', value: 'Role-Based Access' },
+    { label: 'Hosting', value: 'Vercel (Live)' }
+  ],
+  features: [
+    {
+      icon: BarChart3,
+      title: 'Real-Time Analytics',
+      desc: 'Live dashboard tracking sales metrics, user activity, and inventory levels.'
+    },
+    {
+      icon: ShieldAlert,
+      title: 'Secure Access Control',
+      desc: 'Role-based authentication ensuring administrative actions are restricted to authorized personnel.'
+    },
+    {
+      icon: Terminal,
+      title: 'Inventory Management',
+      desc: 'Comprehensive tools to add, edit, and categorize e-commerce products dynamically.'
+    },
+    {
+      icon: BellRing,
+      title: 'Order Tracking',
+      desc: 'End-to-end lifecycle management of customer orders, from placement to delivery.'
+    }
+  ]
+};
+
+const PrintWebProject = {
+  title: 'Antigravity Print SaaS',
+  tagline: 'Premium Printing Management & Order Workflow Ecosystem',
+  url: 'https://badamsudheerreddy1-printweb.vercel.app/',
+  role: 'Badam Sudheer Reddy',
+  status: 'Live / Production Ready',
+  category: 'SaaS / Full-Stack',
+  summary: 'A sophisticated SaaS platform designed for print businesses, featuring an end-to-end workflow for managing printing orders, generating invoices, and managing customers with Firebase auth and Neon PostgreSQL.',
+  tags: ['React', 'Firebase', 'PostgreSQL', 'Vercel', 'SaaS'],
+  metrics: [
+    { label: 'Developer', value: 'Badam Sudheer Reddy' },
+    { label: 'Database', value: 'Neon PostgreSQL' },
+    { label: 'Authentication', value: 'Firebase Auth' },
+    { label: 'Hosting', value: 'Vercel (Live)' }
+  ],
+  features: [
+    {
+      icon: FileText,
+      title: 'Automated Invoicing',
+      desc: 'Generates real-time, professional PDF invoices for print orders using advanced DOM rendering.'
+    },
+    {
+      icon: ShieldAlert,
+      title: 'Secure Authentication',
+      desc: 'Robust user authentication and session management powered by Firebase.'
+    },
+    {
+      icon: Cpu,
+      title: 'End-to-End Workflow',
+      desc: 'Complete lifecycle management of print jobs including quoting, processing, and final delivery tracking.'
+    },
+    {
+      icon: Landmark,
+      title: 'Scalable Database',
+      desc: 'High-performance data storage utilizing Neon serverless PostgreSQL for seamless scaling.'
+    }
+  ]
+};
+
 const Projects = () => {
   const [showPlaceMentorSpecs, setShowPlaceMentorSpecs] = useState(false);
   const [showSearchSpecs, setShowSearchSpecs] = useState(false);
   const [showTempleSpecs, setShowTempleSpecs] = useState(false);
+  const [showShopSmartCatalogSpecs, setShowShopSmartCatalogSpecs] = useState(false);
+  const [showShopSmartAdminSpecs, setShowShopSmartAdminSpecs] = useState(false);
+  const [showPrintWebSpecs, setShowPrintWebSpecs] = useState(false);
 
   return (
     <section id="projects" style={{ background: 'var(--uo-cream)', padding: '90px 20px', borderBottom: '1px solid var(--uo-border)' }}>
