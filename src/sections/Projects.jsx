@@ -976,10 +976,10 @@ const Projects = () => {
                       width: '60px', height: '60px', borderRadius: '50%',
                       border: '2.5px solid var(--uo-yellow)',
                       boxShadow: '0 0 16px rgba(255,213,0,0.4)',
-                      overflow: 'hidden', flexShrink: 0, background: 'var(--uo-green-dark)',
-                      display: 'flex', justifyContent: 'center', alignItems: 'center'
+                      overflow: 'hidden', flexShrink: 0, background: '#fff'
                     }}>
-                      <Globe size={30} color="var(--uo-yellow)" />
+                      <img src="/shopsmart-logo.png" alt="ShopSmart Logo"
+                        style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                     </div>
                     <h3 style={{ fontFamily: '"Playfair Display", Georgia, serif', fontSize: 'clamp(1.6rem, 3.5vw, 2.4rem)', fontWeight: 900, color: 'var(--uo-yellow)', lineHeight: 1.1, margin: 0 }}>
                       {ShopSmartCatalogProject.title}
@@ -1159,10 +1159,10 @@ const Projects = () => {
                       width: '60px', height: '60px', borderRadius: '50%',
                       border: '2.5px solid var(--uo-yellow)',
                       boxShadow: '0 0 16px rgba(255,213,0,0.4)',
-                      overflow: 'hidden', flexShrink: 0, background: 'var(--uo-green-dark)',
-                      display: 'flex', justifyContent: 'center', alignItems: 'center'
+                      overflow: 'hidden', flexShrink: 0, background: '#fff'
                     }}>
-                      <Globe size={30} color="var(--uo-yellow)" />
+                      <img src="/shopsmart-logo.png" alt="ShopSmart Logo"
+                        style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                     </div>
                     <h3 style={{ fontFamily: '"Playfair Display", Georgia, serif', fontSize: 'clamp(1.6rem, 3.5vw, 2.4rem)', fontWeight: 900, color: 'var(--uo-yellow)', lineHeight: 1.1, margin: 0 }}>
                       {ShopSmartAdminProject.title}
@@ -1342,10 +1342,10 @@ const Projects = () => {
                       width: '60px', height: '60px', borderRadius: '50%',
                       border: '2.5px solid var(--uo-yellow)',
                       boxShadow: '0 0 16px rgba(255,213,0,0.4)',
-                      overflow: 'hidden', flexShrink: 0, background: 'var(--uo-green-dark)',
-                      display: 'flex', justifyContent: 'center', alignItems: 'center'
+                      overflow: 'hidden', flexShrink: 0, background: '#fff'
                     }}>
-                      <Globe size={30} color="var(--uo-yellow)" />
+                      <img src="/print-saas-logo.png" alt="Antigravity Print SaaS Logo"
+                        style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                     </div>
                     <h3 style={{ fontFamily: '"Playfair Display", Georgia, serif', fontSize: 'clamp(1.6rem, 3.5vw, 2.4rem)', fontWeight: 900, color: 'var(--uo-yellow)', lineHeight: 1.1, margin: 0 }}>
                       {PrintWebProject.title}
