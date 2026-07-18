@@ -76,6 +76,17 @@ const facultyInfo = {
   'VENKATA SAI SAILAJA BOKKISAM':            { designation: 'Assistant Professor', qualification: 'M.Tech' },
   'VUNNAM ASHA LATHA':                       { designation: 'Assistant Professor', qualification: 'M.Tech' },
   'yerakamma chapala':                       { designation: 'Assistant Professor', qualification: 'M.Tech' },
+
+  // Sem 4.1 & Missing Faculty
+  'Rajesh Kumar Kantam':                     { designation: 'Assistant Professor', qualification: 'Ph.D' },
+  'Kanthimathi Tumuluri':                    { designation: 'Assistant Professor', qualification: 'Ph.D' },
+  'Rallabandi Revathi':                      { designation: 'Assistant Professor', qualification: 'M.Tech' },
+  'PARDHU THOTTEMPUDI':                      { designation: 'Assistant Professor', qualification: 'M.Tech' },
+  'Shalini Ramaraju':                        { designation: 'Assistant Professor', qualification: 'Ph.D' },
+  'SAGAR SATHULURI':                         { designation: 'Assistant Professor', qualification: 'Ph.D' },
+  'SRILAKSHMI RAMYA SAKAMUDI':               { designation: 'Assistant Professor', qualification: 'M.Tech' },
+  'Noimur Rahman':                           { designation: 'Assistant Professor', qualification: 'Ph.D' },
+  'Madhavarapu Chandan':                     { designation: 'Assistant Professor', qualification: 'M.Tech' },
 };
 
 const semesterData = [
@@ -1036,6 +1047,145 @@ const semesterData = [
       }
     ],
     pdfUrl: '/3.2 SEM END EXAM RESULT.pdf',
+  },
+  {
+    sem: 'Sem 4.1',
+    period: 'Aug – Dec 2026',
+    sgpa: '-',
+    credits: 26,
+    courses: 8,
+    promoted: false,
+    courseList: [
+      {
+        code: '23UC0008',
+        name: 'INDIAN CONSTITUTION',
+        credits: 0,
+        grade: '-',
+        internal: '-',
+        external: '-',
+        total: '-',
+        attendancePercent: '-',
+        ltps: {
+          L: { conducted: 0, attended: 0, absent: 0, faculty: 'Rajesh Kumar Kantam' },
+          T: { conducted: 0, attended: 0, absent: 0, faculty: null },
+          P: { conducted: 0, attended: 0, absent: 0, faculty: null },
+          S: { conducted: 0, attended: 0, absent: 0, faculty: null }
+        }
+      },
+      {
+        code: '23UC0009',
+        name: 'ECOLOGY AND ENVIRONMENT',
+        credits: 0,
+        grade: '-',
+        internal: '-',
+        external: '-',
+        total: '-',
+        attendancePercent: '-',
+        ltps: {
+          L: { conducted: 0, attended: 0, absent: 0, faculty: 'Kanthimathi Tumuluri' },
+          T: { conducted: 0, attended: 0, absent: 0, faculty: null },
+          P: { conducted: 0, attended: 0, absent: 0, faculty: null },
+          S: { conducted: 0, attended: 0, absent: 0, faculty: null }
+        }
+      },
+      {
+        code: 'OEEC0004',
+        name: 'SATELLITE SUB-SYSTEMS',
+        credits: 3,
+        grade: '-',
+        internal: '-',
+        external: '-',
+        total: '-',
+        attendancePercent: '-',
+        ltps: {
+          L: { conducted: 0, attended: 0, absent: 0, faculty: 'Rallabandi Revathi' },
+          T: { conducted: 0, attended: 0, absent: 0, faculty: null },
+          P: { conducted: 0, attended: 0, absent: 0, faculty: null },
+          S: { conducted: 0, attended: 0, absent: 0, faculty: null }
+        }
+      },
+      {
+        code: 'OEEC0011',
+        name: 'IMAGE PROCESSING',
+        credits: 3,
+        grade: '-',
+        internal: '-',
+        external: '-',
+        total: '-',
+        attendancePercent: '-',
+        ltps: {
+          L: { conducted: 0, attended: 0, absent: 0, faculty: 'PARDHU THOTTEMPUDI' },
+          T: { conducted: 0, attended: 0, absent: 0, faculty: null },
+          P: { conducted: 0, attended: 0, absent: 0, faculty: null },
+          S: { conducted: 0, attended: 0, absent: 0, faculty: null }
+        }
+      },
+      {
+        code: '23SDM3405',
+        name: 'DIGITAL MEDIA ANALYTICS',
+        credits: 3,
+        grade: '-',
+        internal: '-',
+        external: '-',
+        total: '-',
+        attendancePercent: '-',
+        ltps: {
+          L: { conducted: 0, attended: 0, absent: 0, faculty: 'Shalini Ramaraju' },
+          T: { conducted: 0, attended: 0, absent: 0, faculty: null },
+          P: { conducted: 0, attended: 0, absent: 0, faculty: null },
+          S: { conducted: 0, attended: 0, absent: 0, faculty: null }
+        }
+      },
+      {
+        code: '23SDM3507',
+        name: 'INTELLIGENT SOCIAL MEDIA MONITORING SYSTEMS',
+        credits: 3,
+        grade: '-',
+        internal: '-',
+        external: '-',
+        total: '-',
+        attendancePercent: '-',
+        ltps: {
+          L: { conducted: 0, attended: 0, absent: 0, faculty: 'SAGAR SATHULURI' },
+          T: { conducted: 0, attended: 0, absent: 0, faculty: null },
+          P: { conducted: 0, attended: 0, absent: 0, faculty: null },
+          S: { conducted: 0, attended: 0, absent: 0, faculty: null }
+        }
+      },
+      {
+        code: '23IE4053A',
+        name: 'ENGINEERING CAPSTONE PROJECT - 1',
+        credits: 10,
+        grade: '-',
+        internal: '-',
+        external: '-',
+        total: '-',
+        attendancePercent: '-',
+        ltps: {
+          L: { conducted: 0, attended: 0, absent: 0, faculty: null },
+          T: { conducted: 0, attended: 0, absent: 0, faculty: null },
+          P: { conducted: 0, attended: 0, absent: 0, faculty: 'SRILAKSHMI RAMYA SAKAMUDI' },
+          S: { conducted: 0, attended: 0, absent: 0, faculty: 'JALLI STALIN BABU' }
+        }
+      },
+      {
+        code: '23CY1001',
+        name: 'ENGINEERING CHEMISTRY',
+        credits: 4,
+        grade: '-',
+        internal: '-',
+        external: '-',
+        total: '-',
+        attendancePercent: '-',
+        ltps: {
+          L: { conducted: 0, attended: 0, absent: 0, faculty: 'Noimur Rahman' },
+          T: { conducted: 0, attended: 0, absent: 0, faculty: null },
+          P: { conducted: 0, attended: 0, absent: 0, faculty: 'Noimur Rahman' },
+          S: { conducted: 0, attended: 0, absent: 0, faculty: null }
+        }
+      }
+    ],
+    pdfUrl: '#',
   }
 ];
 
@@ -1423,11 +1573,11 @@ const UniversityDashboard = () => {
         <div style={{ fontFamily: 'Inter', fontSize: '0.65rem', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', color: 'rgba(255,255,255,0.5)', marginBottom: '1rem' }}>SGPA Progression</div>
         <div style={{ display: 'flex', alignItems: 'flex-end', gap: '8px', height: '80px' }}>
           {semesterData.map(s => {
-            const heightPct = ((s.sgpa - 7) / 3) * 100;
+            const heightPct = s.sgpa === '-' ? 0 : ((s.sgpa - 7) / 3) * 100;
             return (
               <div key={s.sem} style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '4px', height: '100%', justifyContent: 'flex-end' }}>
                 <span style={{ fontFamily: 'Inter', fontSize: '0.55rem', fontWeight: 700, color: '#fff' }}>{s.sgpa}</span>
-                <div style={{ width: '100%', height: `${heightPct}%`, background: sgpaColor(s.sgpa), minHeight: '8px', transition: 'height 0.5s ease' }} />
+                <div style={{ width: '100%', height: `${Math.max(0, heightPct)}%`, background: s.sgpa === '-' ? 'rgba(255,255,255,0.2)' : sgpaColor(s.sgpa), minHeight: '8px', transition: 'height 0.5s ease' }} />
                 <span style={{ fontFamily: 'Inter', fontSize: '0.52rem', color: 'rgba(255,255,255,0.5)', textAlign: 'center', lineHeight: 1.2 }}>{s.sem}</span>
               </div>
             );
@@ -1460,8 +1610,8 @@ const UniversityDashboard = () => {
               <span style={{ fontFamily: 'Inter', fontSize: '0.7rem', fontWeight: 600, color: 'var(--uo-dark)', minWidth: '60px', textAlign: 'center' }}>{s.credits} credits</span>
 
               {/* Promoted badge */}
-              <span style={{ display: 'inline-flex', alignItems: 'center', gap: '3px', fontFamily: 'Inter', fontSize: '0.62rem', fontWeight: 700, letterSpacing: '1px', textTransform: 'uppercase', color: s.promoted ? '#16a34a' : '#dc2626', background: s.promoted ? '#dcfce7' : '#fee2e2', padding: '2px 8px' }}>
-                <CheckCircle2 size={10} /> {s.promoted ? 'Promoted' : 'Not Promoted'}
+              <span style={{ display: 'inline-flex', alignItems: 'center', gap: '3px', fontFamily: 'Inter', fontSize: '0.62rem', fontWeight: 700, letterSpacing: '1px', textTransform: 'uppercase', color: s.sgpa === '-' ? '#d97706' : (s.promoted ? '#16a34a' : '#dc2626'), background: s.sgpa === '-' ? '#fef3c7' : (s.promoted ? '#dcfce7' : '#fee2e2'), padding: '2px 8px' }}>
+                <CheckCircle2 size={10} /> {s.sgpa === '-' ? 'Ongoing' : (s.promoted ? 'Promoted' : 'Not Promoted')}
               </span>
 
               {/* Expand icon */}
@@ -1647,9 +1797,9 @@ const UniversityDashboard = () => {
                                                       background: '#fff', 
                                                       padding: '0.75rem', 
                                                       border: '1px solid var(--uo-border)', 
-                                                      borderTop: `3px solid ${isConducted ? 'var(--uo-green)' : '#e5e7eb'}`, 
+                                                      borderTop: `3px solid ${isConducted || compData.faculty ? 'var(--uo-green)' : '#e5e7eb'}`, 
                                                       borderRadius: '4px',
-                                                      opacity: isConducted ? 1 : 0.45
+                                                      opacity: isConducted || compData.faculty ? 1 : 0.45
                                                     }}
                                                   >
                                                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '4px' }}>
@@ -1675,7 +1825,7 @@ const UniversityDashboard = () => {
                                                       )}
                                                     </div>
 
-                                                    {isConducted && compData.faculty && (() => {
+                                                    {compData.faculty && (() => {
                                                       const info = facultyInfo[compData.faculty];
                                                       return (
                                                         <div style={{ marginBottom: '6px' }}>
@@ -1765,7 +1915,7 @@ const UniversityDashboard = () => {
       {/* Total credits summary bar */}
       <div style={{ marginTop: '1rem', background: 'var(--uo-green)', padding: '0.85rem 1.25rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '0.75rem' }}>
         <span style={{ fontFamily: 'Inter', fontSize: '0.7rem', fontWeight: 700, letterSpacing: '1.5px', textTransform: 'uppercase', color: 'rgba(255,255,255,0.7)' }}>Total Cumulative Credits Completed</span>
-        <span style={{ fontFamily: '"Playfair Display", serif', fontSize: '1.25rem', fontWeight: 900, color: 'var(--uo-yellow)' }}>{totalCredits} / ~160 required</span>
+        <span style={{ fontFamily: '"Playfair Display", serif', fontSize: '1.25rem', fontWeight: 900, color: 'var(--uo-yellow)' }}>{totalCredits} / 173 required</span>
       </div>
     </div>
   );
@@ -1793,11 +1943,12 @@ const Academics = () => {
             return (
               <motion.div
                 key={edu.level}
+                id={edu.isUniversity ? 'academics-university' : undefined}
                 initial={{ opacity: 0, x: -30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.55, delay: i * 0.1 }}
-                style={{ position: 'relative', marginBottom: '1.75rem' }}
+                style={{ position: 'relative', marginBottom: '1.75rem', scrollMarginTop: '80px' }}
               >
                 {/* Dot */}
                 <div style={{

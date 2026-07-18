@@ -288,15 +288,29 @@ const Hero = () => {
             {/* Stat row */}
             <div style={{ display: 'flex', gap: '2.5rem', marginTop: '0.5rem' }}>
               {[
-                { num: '8.88', label: 'CGPA' },
-                { num: '1 Live', label: 'AI Project' },
+                { num: '8.88', label: 'CGPA', link: '#academics-university' },
+                { num: '6 Live', label: 'Projects', link: '#projects' },
                 { num: '2027', label: 'Graduate' },
-              ].map(s => (
-                <div key={s.label}>
-                  <div style={{ fontFamily: '"Playfair Display", serif', fontSize: '1.8rem', fontWeight: 700, color: 'var(--uo-yellow)', lineHeight: 1 }}>{s.num}</div>
-                  <div style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.65rem', fontWeight: 600, letterSpacing: '2px', textTransform: 'uppercase', color: 'rgba(255,255,255,0.55)', marginTop: '4px' }}>{s.label}</div>
-                </div>
-              ))}
+              ].map(s => {
+                const Tag = s.link ? 'a' : 'div';
+                return (
+                  <Tag 
+                    key={s.label} 
+                    {...(s.link ? { href: s.link } : {})}
+                    style={{ 
+                      textDecoration: 'none', 
+                      display: 'block',
+                      transition: 'transform 0.2s',
+                      cursor: s.link ? 'pointer' : 'default'
+                    }}
+                    onMouseEnter={e => { if (s.link) e.currentTarget.style.transform = 'translateY(-2px)' }}
+                    onMouseLeave={e => { if (s.link) e.currentTarget.style.transform = 'translateY(0)' }}
+                  >
+                    <div style={{ fontFamily: '"Playfair Display", serif', fontSize: '1.8rem', fontWeight: 700, color: 'var(--uo-yellow)', lineHeight: 1 }}>{s.num}</div>
+                    <div style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.65rem', fontWeight: 600, letterSpacing: '2px', textTransform: 'uppercase', color: 'rgba(255,255,255,0.55)', marginTop: '4px' }}>{s.label}</div>
+                  </Tag>
+                );
+              })}
             </div>
           </div>
 
