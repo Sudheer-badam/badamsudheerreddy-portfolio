@@ -80,6 +80,88 @@ const SearchPvtLtdProject = {
   ]
 };
 
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { ExternalLink, Cpu, Terminal, ShieldAlert, Award, FileText, BellRing, BarChart3, Radio, BookOpen, Globe, Landmark, Music } from 'lucide-react';
+
+const PlaceMentorProject = {
+  title: 'PlaceMentor AI',
+  tagline: 'Autonomous Student Placement Intelligence & Neural Notification Engine',
+  url: 'https://placementor-ai-badamsudheerreddy.streamlit.app/',
+  role: 'Badam Sudheer Reddy',
+  status: 'Live / Production Ready',
+  category: 'AI / Full-Stack Analytics',
+  summary: 'A futuristic academic co-pilot and placement preparation ecosystem built to empower KL University students. Features real-time official news scraping, AI resume scoring, and institutional data analytics.',
+  tags: ['Python', 'Streamlit', 'NLP & Spacy', 'SQLite3', 'Pandas & NumPy', 'BeautifulSoup4', 'Plotly'],
+  metrics: [
+    { label: 'Developer', value: 'Badam Sudheer Reddy' },
+    { label: 'Core Architecture', value: 'Platform Intelligent' },
+    { label: 'Sync Capability', value: 'Real-time Neural Feed' },
+    { label: 'Admin Security', value: 'Master ID Bypass' },
+  ],
+  features: [
+    {
+      icon: Cpu,
+      title: 'AI Resume Parser & Optimizer',
+      desc: 'Integrates automated NLP engines to parse resumes, map core competencies, and generate placement preparedness scores.'
+    },
+    {
+      icon: Radio,
+      title: 'KLU Live Updates Scraper',
+      desc: 'An automated live scraper that aggregates announcements from KL University official channels and renders them inside the app.'
+    },
+    {
+      icon: BellRing,
+      title: 'Pulsing Neural Notice Board',
+      desc: 'Features custom notifications styled with high-contrast, pulsing badges to ensure high-priority academic alerts are never missed.'
+    },
+    {
+      icon: BarChart3,
+      title: 'Developer Control Dashboard',
+      desc: 'Provides secure user access controls and deep-dive analytics to track student progress, college affiliations, and scores.'
+    }
+  ]
+};
+
+const SearchPvtLtdProject = {
+  title: 'Sudheer Pvt.Ltd',
+  tagline: 'Global Business Intelligence Platform & Corporate Directory API',
+  url: 'https://badamsudheerreddy-search-pvt-ltd.vercel.app/',
+  role: 'Badam Sudheer Reddy',
+  status: 'Live / Production Ready',
+  category: 'FinTech / Data Intelligence',
+  summary: 'A corporate intelligence directory and developer API ecosystem providing real-time KYC, GST verification, and company information validation for 50M+ Private Limited companies.',
+  tags: ['React', 'Next.js', 'JSON API', 'Vercel', 'Corporate KYC', 'Node.js', 'JavaScript'],
+  metrics: [
+    { label: 'Developer', value: 'Badam Sudheer Reddy' },
+    { label: 'Database Coverage', value: '50M+ Indian Companies' },
+    { label: 'API Response Latency', value: '< 150ms Real-time' },
+    { label: 'Integration Protocols', value: 'REST JSON Endpoints' }
+  ],
+  features: [
+    {
+      icon: Cpu,
+      title: 'Real-time Verification',
+      desc: 'Instantly check CIN/UIN status, active directors, company category, and registration details from official corporate registries.'
+    },
+    {
+      icon: Terminal,
+      title: 'Developer JSON API',
+      desc: 'Robust RESTful API platform enabling developers to verify company details and automate corporate KYC checks programmatically.'
+    },
+    {
+      icon: ShieldAlert,
+      title: 'Corporate Directory KYC',
+      desc: 'Searchable database categorized by industry sector, such as IT, AI Startups, Finance, Logistics, and E-commerce.'
+    },
+    {
+      icon: Award,
+      title: 'Global Business Coverage',
+      desc: 'Enriched insights spanning over 50+ countries with advanced search patterns, revenue predictions, and company size mappings.'
+    }
+  ]
+};
+
 const TempleProject = {
   title: 'Narasingapadu Sivalayam',
   tagline: 'Palnati Kasi — Ancient Sacred Shrine & Bilingual Digital Heritage Portal',
@@ -87,8 +169,8 @@ const TempleProject = {
   role: 'Badam Sudheer Reddy',
   status: 'Live / Production Ready',
   category: 'Cultural Heritage / Web',
-  summary: 'A full-stack bilingual (Telugu & English) temple heritage website for Narasingapadu Sivalayam — an ancient Shiva shrine in Palnadu district, AP. Features 100 classical Telugu verses by Jnanpith laureate Viswanatha Satyanarayana, temple history, festival calendar, gallery, rituals, and committee contacts. Deployed live on Vercel.',
-  tags: ['Next.js', 'React', 'CSS', 'Vercel', 'JavaScript', 'Telugu Bilingual', 'SEO'],
+  summary: 'A full-stack bilingual (Telugu & English) temple heritage website for Narasingapadu Sivalayam — an ancient Shiva shrine in Palnadu district, AP. Features a secure social login portal, live visitor tracking, 100 classical Telugu verses by Jnanpith laureate Viswanatha Satyanarayana, temple history, festival calendar, gallery, rituals, and committee contacts. Deployed live on Vercel.',
+  tags: ['Firebase Auth', 'Live Visitor Tracking', 'Next.js', 'React', 'CSS', 'Vercel', 'JavaScript', 'Telugu Bilingual', 'SEO'],
   metrics: [
     { label: 'Developer', value: 'Badam Sudheer Reddy' },
     { label: 'Type', value: 'Cultural Heritage Portal' },
@@ -96,6 +178,16 @@ const TempleProject = {
     { label: 'Language Support', value: 'Telugu & English' },
   ],
   features: [
+    {
+      icon: ShieldAlert,
+      title: 'Secure Social Login Portal',
+      desc: 'Advanced authentication system utilizing Firebase Auth with support for Google, Facebook, Twitter, YouTube, and Microsoft sign-ins with reCAPTCHA Enterprise protection.'
+    },
+    {
+      icon: BarChart3,
+      title: 'Live Visitor Tracking',
+      desc: 'Real-time visitor counter with a glassmorphism widget, dynamically tracking and displaying the live user engagement metrics.'
+    },
     {
       icon: BookOpen,
       title: '100 Classical Telugu Verses',
@@ -115,6 +207,45 @@ const TempleProject = {
       icon: Music,
       title: 'Festivals, Rituals & Gallery',
       desc: 'Detailed festival calendar (Maha Shivaratri, Karthika Brahmotsavams, Teppotsavam), daily ritual schedule, photo gallery, and temple committee with contact information.'
+    }
+  ]
+};
+
+const CapstoneProject = {
+  title: 'AI Sentiment & Trend Analysis Platform',
+  tagline: 'KL University Capstone Project 220 — Real-Time Social Media Analytics',
+  url: 'https://capstone-project-220-batch.vercel.app/',
+  role: 'Badam Sudheer Reddy & Team',
+  status: 'Live / Completed',
+  category: 'AI / Full-Stack',
+  summary: 'A comprehensive design system and architecture report for a real-time social media analytics platform. Built with React, FastAPI, and BERT. Features an 87.2% accuracy model for sentiment and trend analysis, utilizing Firebase Auth and Firestore for real-time collaboration.',
+  tags: ['React', 'FastAPI', 'BERT', 'Firebase', 'Next.js', 'Socket.io', 'AI/ML'],
+  metrics: [
+    { label: 'Developer', value: 'Batch 220 (KL University)' },
+    { label: 'Model Accuracy', value: '87.2% (BERT Ensemble)' },
+    { label: 'Real-time Comm.', value: 'Socket.io WebSockets' },
+    { label: 'Hosting', value: 'Vercel (Live)' },
+  ],
+  features: [
+    {
+      icon: Cpu,
+      title: 'Implementation & Architecture',
+      desc: 'Scalable technical foundation covering Next.js frontend, FastAPI backend, and real-time Socket.io WebSockets.'
+    },
+    {
+      icon: ShieldAlert,
+      title: 'Secure Firebase Auth',
+      desc: 'Enterprise-grade guard logic leveraging Firebase Auth and Firestore, limiting access exclusively to authorized university emails.'
+    },
+    {
+      icon: BarChart3,
+      title: 'Results & Metrics',
+      desc: 'Model performance evaluation, demonstrating 87.2% accuracy using the BERT ensemble for sentiment and trend tracking.'
+    },
+    {
+      icon: FileText,
+      title: 'Comprehensive Documentation',
+      desc: 'Interactive markdown-based digital report viewer seamlessly rendering diagrams (UML, DFD, ERD) and results with PDF export capabilities.'
     }
   ]
 };
@@ -240,6 +371,7 @@ const Projects = () => {
   const [showPlaceMentorSpecs, setShowPlaceMentorSpecs] = useState(false);
   const [showSearchSpecs, setShowSearchSpecs] = useState(false);
   const [showTempleSpecs, setShowTempleSpecs] = useState(false);
+  const [showCapstoneSpecs, setShowCapstoneSpecs] = useState(false);
   const [showShopSmartCatalogSpecs, setShowShopSmartCatalogSpecs] = useState(false);
   const [showShopSmartAdminSpecs, setShowShopSmartAdminSpecs] = useState(false);
   const [showPrintWebSpecs, setShowPrintWebSpecs] = useState(false);
@@ -929,6 +1061,186 @@ const Projects = () => {
         </motion.div>
 
         
+        {/* ── Capstone Project Card ── */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.15 }}
+          style={{
+            marginTop: '2.5rem',
+            background: 'var(--uo-green-dark)',
+            color: '#FFFFFF',
+            border: '2px solid var(--uo-yellow)',
+            overflow: 'hidden',
+            boxShadow: '0 20px 40px rgba(13,46,33,0.15)',
+          }}
+        >
+          {/* Top bar */}
+          <div style={{
+            background: 'rgba(255,255,255,0.03)',
+            padding: '1.25rem 2rem',
+            borderBottom: '1px solid rgba(255,255,255,0.08)',
+            display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1rem'
+          }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+              <span className="pulse-dot" style={{ display: 'inline-block', width: '8px', height: '8px', borderRadius: '50%', background: 'var(--uo-yellow)', boxShadow: '0 0 10px var(--uo-yellow)' }} />
+              <span style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.68rem', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', color: 'var(--uo-yellow)' }}>{CapstoneProject.status}</span>
+            </div>
+            <span style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.72rem', fontWeight: 600, letterSpacing: '1px', textTransform: 'uppercase', color: 'rgba(255,255,255,0.4)' }}>{CapstoneProject.category}</span>
+          </div>
+
+          <div style={{ padding: '2.5rem 2rem' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: '3fr 2fr', gap: '3rem', alignItems: 'start' }}>
+
+              {/* Left */}
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
+                <div>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '0.25rem' }}>
+                    <div style={{
+                      width: '60px', height: '60px', borderRadius: '50%',
+                      border: '2.5px solid var(--uo-yellow)',
+                      boxShadow: '0 0 16px rgba(255,213,0,0.4)',
+                      overflow: 'hidden', flexShrink: 0, background: '#fff',
+                      display: 'flex', alignItems: 'center', justifyContent: 'center'
+                    }}>
+                      <div style={{ fontSize: '24px', fontWeight: 'bold', color: 'var(--uo-green)' }}>CP</div>
+                    </div>
+                    <h3 style={{ fontFamily: '"Playfair Display", Georgia, serif', fontSize: 'clamp(1.6rem, 3.5vw, 2.4rem)', fontWeight: 900, color: 'var(--uo-yellow)', lineHeight: 1.1, margin: 0 }}>
+                      {CapstoneProject.title}
+                    </h3>
+                  </div>
+                  <div style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.9rem', fontWeight: 600, letterSpacing: '0.5px', color: 'rgba(255,255,255,0.7)', marginTop: '0.5rem' }}>
+                    {CapstoneProject.tagline}
+                  </div>
+                </div>
+
+                <div style={{ width: '60px', height: '3px', background: 'var(--uo-yellow)' }} />
+
+                <p style={{ fontFamily: 'Inter, sans-serif', fontSize: '1rem', lineHeight: 1.8, color: 'rgba(255, 255, 255, 0.85)' }}>
+                  {CapstoneProject.summary}
+                </p>
+
+                {/* Tags */}
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', marginTop: '0.5rem' }}>
+                  {CapstoneProject.tags.map(tag => (
+                    <span key={tag} style={{
+                      fontFamily: 'Inter, sans-serif',
+                      fontSize: '0.68rem',
+                      fontWeight: 700,
+                      letterSpacing: '1px',
+                      textTransform: 'uppercase',
+                      padding: '4px 10px',
+                      background: 'rgba(255, 255, 255, 0.06)',
+                      border: '1px solid rgba(255, 255, 255, 0.12)',
+                      color: 'rgba(255, 255, 255, 0.8)'
+                    }}>
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+
+                {/* CTA Buttons */}
+                <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', marginTop: '1rem' }}>
+                  <a
+                    href={CapstoneProject.url}
+                    target="_blank"
+                    rel="noreferrer"
+                    style={{
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      gap: '8px',
+                      padding: '0.85rem 1.75rem',
+                      background: 'var(--uo-yellow)',
+                      color: 'var(--uo-green-dark)',
+                      textDecoration: 'none',
+                      fontWeight: 700,
+                      border: '2px solid var(--uo-yellow)'
+                    }}
+                  >
+                    View Project <ExternalLink size={15} />
+                  </a>
+                  <button
+                    onClick={() => setShowCapstoneSpecs(!showCapstoneSpecs)}
+                    style={{
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      gap: '8px',
+                      padding: '0.85rem 1.75rem',
+                      background: 'transparent',
+                      color: '#FFFFFF',
+                      border: '2px solid rgba(255, 255, 255, 0.25)',
+                      fontFamily: 'Inter, sans-serif',
+                      fontSize: '0.8rem',
+                      fontWeight: 700,
+                      letterSpacing: '1px',
+                      textTransform: 'uppercase',
+                      cursor: 'pointer',
+                      transition: 'all 0.2s'
+                    }}
+                  >
+                    {showCapstoneSpecs ? 'Hide Details' : 'View Deep Tech Specs'}
+                  </button>
+                </div>
+              </div>
+
+              {/* Right Column: Key metrics */}
+              <div style={{ background: 'rgba(0, 0, 0, 0.15)', padding: '1.75rem', borderLeft: '3px solid var(--uo-yellow)' }}>
+                <div style={{ fontFamily: '"Playfair Display", serif', fontSize: '1.1rem', fontWeight: 700, color: 'var(--uo-yellow)', marginBottom: '1.25rem' }}>
+                  Project Specs
+                </div>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
+                  {CapstoneProject.metrics.map(m => (
+                    <div key={m.label} style={{ display: 'flex', flexDirection: 'column', borderBottom: '1px solid rgba(255,255,255,0.06)', paddingBottom: '0.75rem' }}>
+                      <span style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.62rem', fontWeight: 600, letterSpacing: '1.5px', textTransform: 'uppercase', color: 'rgba(255,255,255,0.45)' }}>
+                        {m.label}
+                      </span>
+                      <span style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.9rem', fontWeight: 700, color: '#FFFFFF', marginTop: '2px' }}>
+                        {m.value}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+            </div>
+
+            {/* Technical specs detailed view */}
+            <AnimatePresence>
+              {showCapstoneSpecs && (
+                <motion.div
+                  initial={{ opacity: 0, height: 0 }}
+                  animate={{ opacity: 1, height: 'auto' }}
+                  exit={{ opacity: 0, height: 0 }}
+                  transition={{ duration: 0.4 }}
+                  style={{ overflow: 'hidden', marginTop: '2.5rem', paddingTop: '2.5rem', borderTop: '1px solid rgba(255,255,255,0.1)' }}
+                >
+                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem' }}>
+                    {CapstoneProject.features.map(f => {
+                      const Icon = f.icon;
+                      return (
+                        <div key={f.title} style={{ display: 'flex', gap: '1rem', background: 'rgba(255, 255, 255, 0.02)', padding: '1.25rem', border: '1px solid rgba(255, 255, 255, 0.05)' }}>
+                          <div style={{ color: 'var(--uo-yellow)', marginTop: '3px' }}>
+                            <Icon size={20} />
+                          </div>
+                          <div>
+                            <h4 style={{ fontFamily: '"Playfair Display", serif', fontSize: '1rem', fontWeight: 700, color: '#FFFFFF', marginBottom: '0.4rem' }}>
+                              {f.title}
+                            </h4>
+                            <p style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.8rem', color: 'rgba(255,255,255,0.65)', lineHeight: 1.6 }}>
+                              {f.desc}
+                            </p>
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
+        </motion.div>
+
         {/* ── ShopSmartCatalogProject Card ── */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
