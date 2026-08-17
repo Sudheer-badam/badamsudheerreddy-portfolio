@@ -130,7 +130,7 @@ const TempleProject = {
 };
 
 const CapstoneProject = {
-  title: 'AI Sentiment & Trend Analysis',
+  title: 'Capstone Project 220 Batch',
   tagline: 'KL University Capstone Project 220 — Real-Time Social Media Analytics Platform',
   url: 'https://capstone-project-220-batch.vercel.app/',
   role: 'Badam Sudheer Reddy & Team',
@@ -1006,8 +1006,8 @@ const Projects = () => {
               <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
                 <div>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '0.25rem' }}>
-                    <div style={{ width: '60px', height: '60px', borderRadius: '50%', border: '2.5px solid var(--uo-yellow)', boxShadow: '0 0 16px rgba(255,213,0,0.4)', overflow: 'hidden', flexShrink: 0, background: '#4F46E5', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                      <span style={{ fontSize: '22px', fontWeight: 900, color: '#fff', letterSpacing: '-1px' }}>220</span>
+                    <div style={{ width: '60px', height: '60px', borderRadius: '50%', border: '2.5px solid var(--uo-yellow)', boxShadow: '0 0 16px rgba(255,213,0,0.4)', overflow: 'hidden', flexShrink: 0, background: '#fff' }}>
+                      <img src="/capstone-220-logo.jpg" alt="Capstone Project 220 Batch Logo" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                     </div>
                     <h3 style={{ fontFamily: '"Playfair Display", Georgia, serif', fontSize: 'clamp(1.5rem, 3.5vw, 2.2rem)', fontWeight: 900, color: 'var(--uo-yellow)', lineHeight: 1.1, margin: 0 }}>{CapstoneProject.title}</h3>
                   </div>
