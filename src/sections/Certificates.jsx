@@ -1,6 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ExternalLink, CheckCircle, Clock } from 'lucide-react';
+import { Document, Page, pdfjs } from 'react-pdf';
+import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
+import 'react-pdf/dist/esm/Page/TextLayer.css';
+
+pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
 
 const courseraCertificates = [
   { title: "Dynamic Programming, Greedy Algorithms", issuer: "University of Colorado Boulder", tags: ["Algorithms", "Mar 2025"], link: "/coursera_certs/Dynamic Programming Greedy Algorithm.pdf", verifyLink: "https://coursera.org/verify/RCWP4R7IE7O6" },
@@ -77,12 +82,19 @@ const CertCard = ({ cert, future = false }) => {
         
         {/* Certificate Preview */}
         {isPdf ? (
-          <div style={{ width: '100%', height: '100%', overflow: 'hidden' }}>
-            <iframe 
-              src={`${cert.link}#toolbar=0&navpanes=0&scrollbar=0&view=FitH`} 
-              style={{ width: '100%', height: 'calc(100% + 55px)', marginTop: '-55px', border: 'none', pointerEvents: 'none' }}
-              title={cert.title}
-            />
+          <div style={{ width: '100%', height: '100%', overflow: 'hidden', display: 'flex', justifyContent: 'center', alignItems: 'flex-start' }}>
+            <Document 
+              file={cert.link} 
+              loading={<div style={{ height: '220px', display: 'flex', alignItems: 'center', color: '#ccc' }}>Loading...</div>}
+              error={<div style={{ height: '220px', display: 'flex', alignItems: 'center', color: '#ccc' }}>Failed to load PDF</div>}
+            >
+              <Page 
+                pageNumber={1} 
+                height={260} 
+                renderTextLayer={false} 
+                renderAnnotationLayer={false} 
+              />
+            </Document>
           </div>
         ) : isImage ? (
           <img 
