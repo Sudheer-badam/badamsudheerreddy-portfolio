@@ -3,39 +3,41 @@ import { motion } from 'framer-motion';
 import { ExternalLink, CheckCircle, Clock } from 'lucide-react';
 
 const courseraCertificates = [
-  { title: "Dynamic Programming, Greedy Algorithms", issuer: "University of Colorado Boulder", tags: ["Algorithms", "Mar 2025"], link: "/coursera_certs/Dynamic Programming Greedy Algorithm.pdf" },
-  { title: "Introduction To Java Database Connectivity", issuer: "LearnQuest", tags: ["Java", "JDBC", "Nov 2024"], link: "/coursera_certs/document (4).pdf" },
-  { title: "Operating Systems and You: Becoming a Power User", issuer: "Google", tags: ["Google", "OS", "Apr 2025"], link: "/coursera_certs/document (5).pdf" },
-  { title: "The Bits and Bytes of Computer Networking", issuer: "Google", tags: ["Google", "Networking", "Feb 2025"], link: "/coursera_certs/document (6).pdf" },
-  { title: "The Unix Workbench", issuer: "Johns Hopkins University", tags: ["Unix", "Bash", "Apr 2025"], link: "/coursera_certs/document (7).pdf" },
-  { title: "Spring — Ecosystem and Core", issuer: "LearnQuest", tags: ["Spring", "Java", "Feb 2025"], link: "/coursera_certs/document (25).pdf" },
-  { title: "Intro to Operating Systems 1: Virtualization", issuer: "Codio", tags: ["OS", "Virtualization", "Apr 2025"], link: "/coursera_certs/document (26).pdf" },
-  { title: "Lambda Expressions with Java", issuer: "Coursera", tags: ["Java", "Functional Programming", "Nov 2024"], link: "/coursera_certs/document (27).pdf" },
-  { title: "Developing Front-End Apps with React", issuer: "IBM", tags: ["React", "IBM", "Mar 2025"], link: "/coursera_certs/document (28).pdf" },
-  { title: "Introduction to Front-End Development", issuer: "Meta", tags: ["Meta", "HTML/CSS", "Mar 2025"], link: "/coursera_certs/document (8).pdf" },
-  { title: "Introduction to Artificial Intelligence (AI)", issuer: "IBM", tags: ["AI", "IBM", "Nov 2024"], link: "/coursera_certs/document (9).pdf" },
-  { title: "Hardware and Operating System Foundations II", issuer: "Illinois Tech", tags: ["Hardware", "OS", "Nov 2024"], link: "/coursera_certs/document (13).pdf" },
-  { title: "Supervised Machine Learning: Regression", issuer: "IBM", tags: ["ML", "IBM", "Nov 2024"], link: "/coursera_certs/document (14).pdf" },
-  { title: "Exploratory Data Analysis for Machine Learning", issuer: "IBM", tags: ["Data Science", "IBM", "Nov 2024"], link: "/coursera_certs/document (15).pdf" },
-  { title: "Java Servlet Pages (JSPs)", issuer: "LearnQuest", tags: ["Java", "JSP", "Nov 2024"], link: "/coursera_certs/document (16).pdf" },
-  { title: "Introduction to Databases", issuer: "Meta", tags: ["Meta", "SQL", "Nov 2024"], link: "/coursera_certs/document (17).pdf" },
-  { title: "Cloud Application Development Foundations", issuer: "IBM", tags: ["Cloud", "IBM", "Nov 2024"], link: "/coursera_certs/certificate-1788584603154.pdf" },
-  { title: "Python for Data Science, AI & Development", issuer: "IBM", tags: ["Python", "IBM", "Nov 2024"], link: "/coursera_certs/document (19).pdf" },
-  { title: "Java Database Connectivity (JDBC) Introduction", issuer: "LearnQuest", tags: ["Java", "JDBC", "Nov 2024"], link: "/coursera_certs/document (20).pdf" },
-  { title: "Fundamentals of Red Hat Enterprise Linux", issuer: "Red Hat", tags: ["Linux", "Red Hat", "Nov 2024"], link: "/coursera_certs/document (29).pdf" },
-  { title: "Hands-on Introduction to Linux Commands and Shell Scripting", issuer: "IBM", tags: ["Linux", "Bash", "Nov 2024"], link: "/coursera_certs/document (21).pdf" },
-  { title: "Introduction to Object-Oriented Programming with Java", issuer: "LearnQuest", tags: ["Java", "OOP", "Nov 2024"], link: "/coursera_certs/document (22).pdf" },
-  { title: "Introduction to Test and Behavior Driven Development", issuer: "IBM", tags: ["TDD", "BDD", "Nov 2024"], link: "/coursera_certs/document (23).pdf" },
-  { title: "Design Patterns", issuer: "University of Alberta", tags: ["Design Patterns", "UML", "Nov 2024"], link: "/coursera_certs/document (24).pdf" },
+  { title: "Dynamic Programming, Greedy Algorithms", issuer: "University of Colorado Boulder", tags: ["Algorithms", "Mar 2025"], link: "/coursera_certs/Dynamic Programming Greedy Algorithm.pdf", verifyLink: "https://coursera.org/verify/RCWP4R7IE7O6" },
+  { title: "Introduction To Java Database Connectivity", issuer: "LearnQuest", tags: ["Java", "JDBC", "Nov 2024"], link: "/coursera_certs/document (4).pdf", verifyLink: "https://coursera.org/verify/HCYXTHBHS60N" },
+  { title: "Operating Systems and You: Becoming a Power User", issuer: "Google", tags: ["Google", "OS", "Apr 2025"], link: "/coursera_certs/document (5).pdf", verifyLink: "https://coursera.org/verify/VV1NBZFZGF3R" },
+  { title: "The Bits and Bytes of Computer Networking", issuer: "Google", tags: ["Google", "Networking", "Feb 2025"], link: "/coursera_certs/document (6).pdf", verifyLink: "https://coursera.org/verify/A30IOM8GYCNF" },
+  { title: "The Unix Workbench", issuer: "Johns Hopkins University", tags: ["Unix", "Bash", "Apr 2025"], link: "/coursera_certs/document (7).pdf", verifyLink: "https://coursera.org/verify/YDG3E68DEJ45" },
+  { title: "Spring — Ecosystem and Core", issuer: "LearnQuest", tags: ["Spring", "Java", "Feb 2025"], link: "/coursera_certs/document (25).pdf", verifyLink: "https://coursera.org/verify/XMDK949PDP5A" },
+  { title: "Intro to Operating Systems 1: Virtualization", issuer: "Codio", tags: ["OS", "Virtualization", "Apr 2025"], link: "/coursera_certs/document (26).pdf", verifyLink: "https://coursera.org/verify/K6K5GKFWUDYD" },
+  { title: "Lambda Expressions with Java", issuer: "Coursera", tags: ["Java", "Functional Programming", "Nov 2024"], link: "/coursera_certs/document (27).pdf", verifyLink: "https://coursera.org/verify/F281MJG34ZC7" },
+  { title: "Developing Front-End Apps with React", issuer: "IBM", tags: ["React", "IBM", "Mar 2025"], link: "/coursera_certs/document (28).pdf", verifyLink: "https://coursera.org/verify/KDGUB9VIR90I" },
+  { title: "Introduction to Front-End Development", issuer: "Meta", tags: ["Meta", "HTML/CSS", "Mar 2025"], link: "/coursera_certs/document (8).pdf", verifyLink: "https://coursera.org/verify/ZPVEKYXS7J96" },
+  { title: "Introduction to Artificial Intelligence (AI)", issuer: "IBM", tags: ["AI", "IBM", "Nov 2024"], link: "/coursera_certs/document (9).pdf", verifyLink: "https://coursera.org/verify/HZGZSJT8UWWW" },
+  { title: "Hardware and Operating System Foundations II", issuer: "Illinois Tech", tags: ["Hardware", "OS", "Nov 2024"], link: "/coursera_certs/document (13).pdf", verifyLink: "https://coursera.org/verify/YTNAXMMNTVLV" },
+  { title: "Supervised Machine Learning: Regression", issuer: "IBM", tags: ["ML", "IBM", "Nov 2024"], link: "/coursera_certs/document (14).pdf", verifyLink: "https://coursera.org/verify/74C9IPC23H1U" },
+  { title: "Exploratory Data Analysis for Machine Learning", issuer: "IBM", tags: ["Data Science", "IBM", "Nov 2024"], link: "/coursera_certs/document (15).pdf", verifyLink: "https://coursera.org/verify/IUP6VRD33RVC" },
+  { title: "Java Servlet Pages (JSPs)", issuer: "LearnQuest", tags: ["Java", "JSP", "Nov 2024"], link: "/coursera_certs/document (16).pdf", verifyLink: "https://coursera.org/verify/7PC5Q1ZS144I" },
+  { title: "Introduction to Databases", issuer: "Meta", tags: ["Meta", "SQL", "Nov 2024"], link: "/coursera_certs/document (17).pdf", verifyLink: "https://coursera.org/verify/3RBKIVGA6OYJ" },
+  { title: "Cloud Application Development Foundations", issuer: "IBM", tags: ["Cloud", "IBM", "Nov 2024"], link: "/coursera_certs/certificate-1788584603154.pdf", verifyLink: "https://coursera.org/verify/IUP6VRD33RVC" },
+  { title: "Python for Data Science, AI & Development", issuer: "IBM", tags: ["Python", "IBM", "Nov 2024"], link: "/coursera_certs/document (19).pdf", verifyLink: "https://coursera.org/verify/BYVU2FBW0YFO" },
+  { title: "Java Database Connectivity (JDBC) Introduction", issuer: "LearnQuest", tags: ["Java", "JDBC", "Nov 2024"], link: "/coursera_certs/document (20).pdf", verifyLink: "https://coursera.org/verify/PN5OLRU1JMSA" },
+  { title: "Fundamentals of Red Hat Enterprise Linux", issuer: "Red Hat", tags: ["Linux", "Red Hat", "Nov 2024"], link: "/coursera_certs/document (29).pdf", verifyLink: "https://coursera.org/verify/1ECNYPLWO0GX" },
+  { title: "Hands-on Introduction to Linux Commands and Shell Scripting", issuer: "IBM", tags: ["Linux", "Bash", "Nov 2024"], link: "/coursera_certs/document (21).pdf", verifyLink: "https://coursera.org/verify/IRED9L6T1RQI" },
+  { title: "Introduction to Object-Oriented Programming with Java", issuer: "LearnQuest", tags: ["Java", "OOP", "Nov 2024"], link: "/coursera_certs/document (22).pdf", verifyLink: "https://coursera.org/verify/LXS0PS4DQWLR" },
+  { title: "Introduction to Test and Behavior Driven Development", issuer: "IBM", tags: ["TDD", "BDD", "Nov 2024"], link: "/coursera_certs/document (23).pdf", verifyLink: "https://coursera.org/verify/41MDU4RTE9HG" },
+  { title: "Design Patterns", issuer: "University of Alberta", tags: ["Design Patterns", "UML", "Nov 2024"], link: "/coursera_certs/document (24).pdf", verifyLink: "https://coursera.org/verify/19G5APURUYK3" },
 ];
 
 const otherCertificates = [
-  { title: "AWS Certified Data Engineer - Associate", issuer: "Amazon Web Services", tags: ["AWS", "Data Engineering"], link: "/AWS Certified Data Engineer - Associate certificate BADAM SUDHEER REDDY.pdf", logo: "/aws Certified logo.jpeg" },
-  { title: "Microsoft Certified: Azure Fundamentals (AZ-900)", issuer: "Microsoft", tags: ["Azure", "Cloud"], link: "/BADAM SUDHEER REDDY AZURE 900 CERTIFICATE.pdf" },
-  { title: "ServiceNow Certified Implementation Specialist", issuer: "ServiceNow", tags: ["ServiceNow", "Implementation"], link: "/SERVICENOW CERTIFIED IMPLEMENTATION SPECIALIST -BADAM SUDHEER REDDY.pdf" },
+  { title: "AWS Certified Data Engineer - Associate", issuer: "Amazon Web Services", tags: ["AWS", "Data Engineering"], link: "/AWS Certified Data Engineer - Associate certificate BADAM SUDHEER REDDY.pdf", verifyLink: "https://cp.certmetrics.com/amazon/en/public/verify/credential/9b3af204cae14f8c97309f98f8e332b2", logo: "/aws Certified logo.jpeg" },
+  { title: "Microsoft Certified: Azure Fundamentals (AZ-900)", issuer: "Microsoft", tags: ["Azure", "Cloud"], link: "/BADAM SUDHEER REDDY AZURE 900 CERTIFICATE.pdf", verifyLink: "https://learn.microsoft.com/api/credentials/share/en-us/BADAMSUDHEERREDDY-1543/A6188231D38BFD8?sharingId=AD7EC3C8F9082076" },
+  { title: "ServiceNow Certified Implementation Specialist", issuer: "ServiceNow", tags: ["ServiceNow", "Implementation"], link: "/SERVICENOW CERTIFIED IMPLEMENTATION SPECIALIST -BADAM SUDHEER REDDY.pdf", credly: "https://www.credly.com/badges/2ecf1c9d-16e6-4a4e-81a5-58d5cf68ea0a" },
   { title: "Artificial Intelligence and Machine Learning", issuer: "Kodacy", tags: ["AI", "Machine Learning", "Course Completion"], link: "/coursera_certs/certificate-1788586467391.pdf", logo: "/kodacy logo.png" },
-  { title: "Docker Tutorial for Beginners", issuer: "Simplilearn", tags: ["Docker", "DevOps"], link: "/coursera_certs/9026705_94032931758524556245.pdf", code: "9026705" },
-  { title: "Certified Essentials Automation Professional", issuer: "Automation Anywhere", tags: ["RPA", "Jan 2026"], link: "/coursera_certs/4uxtk59k_1775034069321.pdf", logo: "/automotive Anywhere logo.png" },
+  { title: "Docker Tutorial for Beginners", issuer: "Simplilearn", tags: ["Docker", "DevOps"], link: "/coursera_certs/9026705_94032931758524556245.pdf", code: "9026705", verifyLink: "https://simpli-web.app.link/e/vKTav4Yob6b" },
+  { title: "Certified Essentials Automation Professional", issuer: "Automation Anywhere", tags: ["RPA", "Jan 2026"], link: "/coursera_certs/4uxtk59k_1775034069321.pdf", verifyLink: "https://certificates.automationanywhere.com/dc112cfc-ae58-41fd-b671-202663d60156#acc.fYEkw6Kt", logo: "/automotive Anywhere logo.png" },
+  { title: "Advanced Automation Certification", issuer: "Automation Anywhere", tags: ["RPA", "Advanced"], link: "/Advanced Automation Certification..pdf", verifyLink: "https://certificates.automationanywhere.com/8bc08cf3-f033-455c-9cac-00de17402811#acc.CaDRNxrb", logo: "/automotive Anywhere logo.png" },
+  { title: "Certified Essentials RPA Professional (Automation 360) - 2023", issuer: "Automation Anywhere", tags: ["RPA", "Essentials"], link: "/Automation Anywhere Certified Essentials RPA Professional (Automation 360) - 2023.pdf", verifyLink: "https://certificates.automationanywhere.com/94e357bd-1787-46f5-951a-6537ea7a8274#acc.Rh8u4eNO", logo: "/automotive Anywhere logo.png" },
   { title: "Linguva Skills", issuer: "Linguva", tags: ["Communication", "Soft Skills"], link: "/Badam Sudheer Reddy.pdf", logo: "/Linguva Skills logo.png" },
 ];
 
@@ -143,9 +145,16 @@ const CertCard = ({ cert, future = false }) => {
           {cert.issuer} {cert.tags && cert.tags.length > 0 && `· ${cert.tags.join(' · ')}`}
         </p>
 
-        {/* Credly/Code badges (Only show if present in data) */}
-        {(cert.credly || cert.code) && (
+        {/* Credly/Code badges and Verification Links (Only show if present in data) */}
+        {(cert.credly || cert.code || cert.verifyLink) && (
           <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', marginTop: 'auto' }}>
+            {cert.verifyLink && (
+              <div style={{ display: 'flex' }}>
+                <a href={cert.verifyLink} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '6px', border: '1px solid #dcfce7', color: '#16a34a', padding: '6px 12px', borderRadius: '24px', fontSize: '0.8rem', fontWeight: '700', backgroundColor: '#f0fdf4' }}>
+                  <CheckCircle size={14} /> Verify Certificate
+                </a>
+              </div>
+            )}
             {cert.credly && (
               <div style={{ display: 'flex' }}>
                 <a href={cert.credly} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '6px', border: '1px solid #e9d5ff', color: '#9333ea', padding: '6px 12px', borderRadius: '24px', fontSize: '0.8rem', fontWeight: '700', backgroundColor: '#faf5ff' }}>
