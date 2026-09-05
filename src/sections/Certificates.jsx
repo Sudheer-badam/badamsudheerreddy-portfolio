@@ -3,35 +3,39 @@ import { motion } from 'framer-motion';
 import { ExternalLink, CheckCircle, Clock } from 'lucide-react';
 
 const courseraCertificates = [
-  { title: "Dynamic Programming, Greedy Algorithms", issuer: "University of Colorado Boulder", tags: ["Algorithms", "Mar 2025"], link: "https://coursera.org/share/93ea572f881930e79b05d6df90a3c110", logo: "/Courseera logo.jpeg" },
-  { title: "Introduction To Java Database Connectivity", issuer: "LearnQuest", tags: ["Java", "JDBC", "Nov 2024"], link: "https://coursera.org/share/4ef29f7982990c8ab3b6fac6fef1c3d7", logo: "/Courseera logo.jpeg" },
-  { title: "Operating Systems and You: Becoming a Power User", issuer: "Google", tags: ["Google", "OS", "Apr 2025"], link: "https://coursera.org/share/573a68286a3a93498fe0de1d0ee41515", logo: "/Courseera logo.jpeg" },
-  { title: "The Bits and Bytes of Computer Networking", issuer: "Google", tags: ["Google", "Networking", "Feb 2025"], link: "https://coursera.org/share/bcd1884664e1a00c3e9bb6a6e27d4693", logo: "/Courseera logo.jpeg" },
-  { title: "The Unix Workbench", issuer: "Johns Hopkins University", tags: ["Unix", "Bash", "Apr 2025"], link: "https://coursera.org/share/429a8a1034c0f6ac1b3021d9bbfc48d4", logo: "/Courseera logo.jpeg" },
-  { title: "Spring — Ecosystem and Core", issuer: "LearnQuest", tags: ["Spring", "Java", "Feb 2025"], link: "https://coursera.org/share/eb5d25ada645e0e132339f4fbf77f631", logo: "/Courseera logo.jpeg" },
-  { title: "Intro to Operating Systems 1: Virtualization", issuer: "Codio", tags: ["OS", "Virtualization", "Apr 2025"], link: "https://coursera.org/share/db7d175c8e34d2171764c86e299c8b22", logo: "/Courseera logo.jpeg" },
-  { title: "Lambda Expressions with Java", issuer: "Coursera", tags: ["Java", "Functional Programming", "Nov 2024"], link: "https://coursera.org/share/8f1d5ebc5dcfc2d0dd84f02585209a41", logo: "/Courseera logo.jpeg" },
-  { title: "Developing Front-End Apps with React", issuer: "IBM", tags: ["React", "IBM", "Mar 2025"], link: "https://coursera.org/share/cd5fe0a0c13fc8dd9de76e4b181c5908", logo: "/Courseera logo.jpeg" },
-  { title: "Introduction to Front-End Development", issuer: "Meta", tags: ["Meta", "HTML/CSS", "Mar 2025"], link: "https://coursera.org/share/82ff0132cd0fc59ca8b004bbb01333f3", logo: "/Courseera logo.jpeg" },
-  { title: "Introduction to Artificial Intelligence (AI)", issuer: "IBM", tags: ["AI", "IBM", "Nov 2024"], link: "https://coursera.org/share/801bf737e7048133453dc4a96793f7e7", logo: "/Courseera logo.jpeg" },
-  { title: "Hardware and Operating System Foundations II", issuer: "Illinois Tech", tags: ["Hardware", "OS", "Nov 2024"], link: "https://coursera.org/share/d483b81259d0e0f6465b69abbdd7f7f3", logo: "/Courseera logo.jpeg" },
-  { title: "Supervised Machine Learning: Regression", issuer: "IBM", tags: ["ML", "IBM", "Nov 2024"], link: "https://coursera.org/share/9c6365a22ac240df74498e2d46400081", logo: "/Courseera logo.jpeg" },
-  { title: "Exploratory Data Analysis for Machine Learning", issuer: "IBM", tags: ["Data Science", "IBM", "Nov 2024"], link: "https://coursera.org/share/a4087cec469771689522552e604d130d", logo: "/Courseera logo.jpeg" },
-  { title: "Java Servlet Pages (JSPs)", issuer: "LearnQuest", tags: ["Java", "JSP", "Nov 2024"], link: "https://coursera.org/share/739c1d02c371fb0f68e9392bb19ee3b3", logo: "/Courseera logo.jpeg" },
-  { title: "Introduction to Databases", issuer: "Meta", tags: ["Meta", "SQL", "Nov 2024"], link: "https://coursera.org/share/bfdd442776f485ca3e21d3f9ad71efea", logo: "/Courseera logo.jpeg" },
-  { title: "Cloud Application Development Foundations", issuer: "IBM", tags: ["Cloud", "IBM", "Nov 2024"], link: "https://coursera.org/share/51e8e1b64b96536217a94c54af6c7167", logo: "/Courseera logo.jpeg" },
-  { title: "Python for Data Science, AI & Development", issuer: "IBM", tags: ["Python", "IBM", "Nov 2024"], link: "https://coursera.org/share/f14648a482b0c54ec2c9e26f17c832e0", logo: "/Courseera logo.jpeg" },
-  { title: "Java Database Connectivity (JDBC) Introduction", issuer: "LearnQuest", tags: ["Java", "JDBC", "Nov 2024"], link: "https://coursera.org/share/8745d9bbe887490f94dc0f043945e207", logo: "/Courseera logo.jpeg" },
-  { title: "Hands-on Introduction to Linux Commands and Shell Scripting", issuer: "IBM", tags: ["Linux", "Bash", "Nov 2024"], link: "https://coursera.org/share/8d1a3bbf149e875c835d5f98fa8f5fc4", logo: "/Courseera logo.jpeg" },
-  { title: "Introduction to Object-Oriented Programming with Java", issuer: "LearnQuest", tags: ["Java", "OOP", "Nov 2024"], link: "https://coursera.org/share/b1ca42087ee8432dcb7d286f1478b2cc", logo: "/Courseera logo.jpeg" },
-  { title: "Introduction to Test and Behavior Driven Development", issuer: "IBM", tags: ["TDD", "BDD", "Nov 2024"], link: "https://coursera.org/share/b1360208b18da2b83b25e6f2f9cd7e72", logo: "/Courseera logo.jpeg" },
-  { title: "Design Patterns", issuer: "University of Alberta", tags: ["Design Patterns", "UML", "Nov 2024"], link: "https://coursera.org/share/2c31b3b648e0c7ce12ddbebfbb100f91", logo: "/Courseera logo.jpeg" },
+  { title: "Dynamic Programming, Greedy Algorithms", issuer: "University of Colorado Boulder", tags: ["Algorithms", "Mar 2025"], link: "/coursera_certs/Dynamic Programming Greedy Algorithm.pdf" },
+  { title: "Introduction To Java Database Connectivity", issuer: "LearnQuest", tags: ["Java", "JDBC", "Nov 2024"], link: "/coursera_certs/document (4).pdf" },
+  { title: "Operating Systems and You: Becoming a Power User", issuer: "Google", tags: ["Google", "OS", "Apr 2025"], link: "/coursera_certs/document (5).pdf" },
+  { title: "The Bits and Bytes of Computer Networking", issuer: "Google", tags: ["Google", "Networking", "Feb 2025"], link: "/coursera_certs/document (6).pdf" },
+  { title: "The Unix Workbench", issuer: "Johns Hopkins University", tags: ["Unix", "Bash", "Apr 2025"], link: "/coursera_certs/document (7).pdf" },
+  { title: "Spring — Ecosystem and Core", issuer: "LearnQuest", tags: ["Spring", "Java", "Feb 2025"], link: "/coursera_certs/document (25).pdf" },
+  { title: "Intro to Operating Systems 1: Virtualization", issuer: "Codio", tags: ["OS", "Virtualization", "Apr 2025"], link: "/coursera_certs/document (26).pdf" },
+  { title: "Lambda Expressions with Java", issuer: "Coursera", tags: ["Java", "Functional Programming", "Nov 2024"], link: "/coursera_certs/document (27).pdf" },
+  { title: "Developing Front-End Apps with React", issuer: "IBM", tags: ["React", "IBM", "Mar 2025"], link: "/coursera_certs/document (28).pdf" },
+  { title: "Introduction to Front-End Development", issuer: "Meta", tags: ["Meta", "HTML/CSS", "Mar 2025"], link: "/coursera_certs/document (8).pdf" },
+  { title: "Introduction to Artificial Intelligence (AI)", issuer: "IBM", tags: ["AI", "IBM", "Nov 2024"], link: "/coursera_certs/document (9).pdf" },
+  { title: "Hardware and Operating System Foundations II", issuer: "Illinois Tech", tags: ["Hardware", "OS", "Nov 2024"], link: "/coursera_certs/document (13).pdf" },
+  { title: "Supervised Machine Learning: Regression", issuer: "IBM", tags: ["ML", "IBM", "Nov 2024"], link: "/coursera_certs/document (14).pdf" },
+  { title: "Exploratory Data Analysis for Machine Learning", issuer: "IBM", tags: ["Data Science", "IBM", "Nov 2024"], link: "/coursera_certs/document (15).pdf" },
+  { title: "Java Servlet Pages (JSPs)", issuer: "LearnQuest", tags: ["Java", "JSP", "Nov 2024"], link: "/coursera_certs/document (16).pdf" },
+  { title: "Introduction to Databases", issuer: "Meta", tags: ["Meta", "SQL", "Nov 2024"], link: "/coursera_certs/document (17).pdf" },
+  { title: "Cloud Application Development Foundations", issuer: "IBM", tags: ["Cloud", "IBM", "Nov 2024"], link: "/coursera_certs/certificate-1788584603154.pdf" },
+  { title: "Python for Data Science, AI & Development", issuer: "IBM", tags: ["Python", "IBM", "Nov 2024"], link: "/coursera_certs/document (19).pdf" },
+  { title: "Java Database Connectivity (JDBC) Introduction", issuer: "LearnQuest", tags: ["Java", "JDBC", "Nov 2024"], link: "/coursera_certs/document (20).pdf" },
+  { title: "Fundamentals of Red Hat Enterprise Linux", issuer: "Red Hat", tags: ["Linux", "Red Hat", "Nov 2024"], link: "/coursera_certs/document (29).pdf" },
+  { title: "Hands-on Introduction to Linux Commands and Shell Scripting", issuer: "IBM", tags: ["Linux", "Bash", "Nov 2024"], link: "/coursera_certs/document (21).pdf" },
+  { title: "Introduction to Object-Oriented Programming with Java", issuer: "LearnQuest", tags: ["Java", "OOP", "Nov 2024"], link: "/coursera_certs/document (22).pdf" },
+  { title: "Introduction to Test and Behavior Driven Development", issuer: "IBM", tags: ["TDD", "BDD", "Nov 2024"], link: "/coursera_certs/document (23).pdf" },
+  { title: "Design Patterns", issuer: "University of Alberta", tags: ["Design Patterns", "UML", "Nov 2024"], link: "/coursera_certs/document (24).pdf" },
 ];
 
 const otherCertificates = [
-  { title: "Artificial Intelligence and Machine Learning", issuer: "Kodacy", tags: ["AI", "Machine Learning", "Course Completion"], link: "https://courses.kodacy.com/kodacy-certificate/?cert_hash=a966e300ec1b7cfc", logo: "/kodacy logo.png" },
-  { title: "Docker Tutorial for Beginners", issuer: "Simplilearn", tags: ["Docker", "DevOps"], link: "https://www.simplilearn.com/learn-docker-basics-free-course-skillup" },
-  { title: "Certified Essentials Automation Professional", issuer: "Automation Anywhere", tags: ["RPA", "Jan 2026"], link: "https://certificates.automationanywhere.com/dc112cfc-ae58-41fd-b671-202663d60156", logo: "/automotive Anywhere logo.png" },
+  { title: "AWS Certified Data Engineer - Associate", issuer: "Amazon Web Services", tags: ["AWS", "Data Engineering"], link: "/AWS Certified Data Engineer - Associate certificate BADAM SUDHEER REDDY.pdf", logo: "/aws Certified logo.jpeg" },
+  { title: "Microsoft Certified: Azure Fundamentals (AZ-900)", issuer: "Microsoft", tags: ["Azure", "Cloud"], link: "/BADAM SUDHEER REDDY AZURE 900 CERTIFICATE.pdf" },
+  { title: "ServiceNow Certified Implementation Specialist", issuer: "ServiceNow", tags: ["ServiceNow", "Implementation"], link: "/SERVICENOW CERTIFIED IMPLEMENTATION SPECIALIST -BADAM SUDHEER REDDY.pdf" },
+  { title: "Artificial Intelligence and Machine Learning", issuer: "Kodacy", tags: ["AI", "Machine Learning", "Course Completion"], link: "/coursera_certs/certificate-1788586467391.pdf", logo: "/kodacy logo.png" },
+  { title: "Docker Tutorial for Beginners", issuer: "Simplilearn", tags: ["Docker", "DevOps"], link: "/coursera_certs/9026705_94032931758524556245.pdf", code: "9026705" },
+  { title: "Certified Essentials Automation Professional", issuer: "Automation Anywhere", tags: ["RPA", "Jan 2026"], link: "/coursera_certs/4uxtk59k_1775034069321.pdf", logo: "/automotive Anywhere logo.png" },
   { title: "Linguva Skills", issuer: "Linguva", tags: ["Communication", "Soft Skills"], link: "/Badam Sudheer Reddy.pdf", logo: "/Linguva Skills logo.png" },
 ];
 
@@ -43,46 +47,124 @@ const upcomingCertificates = [
 ];
 
 // Reusable editorial cert card
-const CertCard = ({ cert, future = false }) => (
-  <motion.div
-    initial={{ opacity: 0, y: 12 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: true }}
-    transition={{ duration: 0.4 }}
-    className="editorial-card"
-    style={{ opacity: future ? 0.7 : 1, position: 'relative' }}
-  >
-    {future && (
-      <span style={{ position: 'absolute', top: '0.75rem', right: '0.75rem', fontFamily: 'Inter, sans-serif', fontSize: '0.6rem', fontWeight: 700, letterSpacing: '1.5px', textTransform: 'uppercase', padding: '2px 8px', border: '1px solid var(--uo-border)', color: 'var(--uo-grey)' }}>
-        PLANNED
-      </span>
-    )}
-    <div style={{ display: 'flex', alignItems: 'flex-start', gap: '10px', marginBottom: '0.6rem' }}>
-      {future
-        ? <Clock size={14} color="var(--uo-border)" style={{ flexShrink: 0, marginTop: '2px' }} />
-        : <CheckCircle size={14} color="var(--uo-green)" style={{ flexShrink: 0, marginTop: '2px' }} />}
-      <div style={{ flex: 1 }}>
-        {/* Title */}
-        <div style={{ fontFamily: '"Playfair Display", serif', fontSize: '0.95rem', fontWeight: 700, color: 'var(--uo-dark)', lineHeight: 1.3, marginBottom: '2px' }}>{cert.title}</div>
-        <div style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.72rem', fontWeight: 600, color: 'var(--uo-green)', letterSpacing: '0.5px' }}>{cert.issuer}</div>
+const CertCard = ({ cert, future = false }) => {
+  const isPdf = cert.link && cert.link.toLowerCase().endsWith('.pdf');
+  const isImage = cert.link && (cert.link.toLowerCase().endsWith('.png') || cert.link.toLowerCase().endsWith('.jpg') || cert.link.toLowerCase().endsWith('.jpeg'));
+  
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 12 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.4 }}
+      style={{
+        display: 'flex',
+        flexDirection: 'column',
+        borderRadius: '16px',
+        border: '1px solid #eaeaea',
+        backgroundColor: '#ffffff',
+        overflow: 'hidden',
+        boxShadow: '0 4px 12px rgba(0,0,0,0.05)',
+        height: '100%',
+        opacity: future ? 0.7 : 1,
+        fontFamily: 'Inter, sans-serif'
+      }}
+    >
+      {/* Top Media Section */}
+      <div style={{ position: 'relative', height: '220px', backgroundColor: '#f9f9f9', borderBottom: '1px solid #eaeaea', overflow: 'hidden' }}>
+        
+        {/* Certificate Preview */}
+        {isPdf ? (
+          <div style={{ width: '100%', height: '100%', overflow: 'hidden' }}>
+            <iframe 
+              src={`${cert.link}#toolbar=0&navpanes=0&scrollbar=0&view=FitH`} 
+              style={{ width: '100%', height: 'calc(100% + 55px)', marginTop: '-55px', border: 'none', pointerEvents: 'none' }}
+              title={cert.title}
+            />
+          </div>
+        ) : isImage ? (
+          <img 
+            src={cert.link} 
+            alt={cert.title} 
+            style={{ width: '100%', height: '100%', objectFit: 'contain' }} 
+          />
+        ) : cert.link ? (
+          <iframe 
+            src={cert.link} 
+            style={{ width: '100%', height: '100%', border: 'none', pointerEvents: 'none' }}
+            title={cert.title}
+          />
+        ) : (
+          <div style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#ccc', fontWeight: 600 }}>
+             Preview Not Available
+          </div>
+        )}
+
+        {/* View Certificate Button */}
+        {cert.link && (
+          <a 
+            href={cert.link} 
+            target="_blank" 
+            rel="noopener noreferrer"
+            style={{
+              position: 'absolute',
+              bottom: '16px',
+              left: '50%',
+              transform: 'translateX(-50%)',
+              backgroundColor: '#ffffff',
+              color: '#333333',
+              padding: '8px 24px',
+              borderRadius: '24px',
+              fontSize: '0.9rem',
+              fontWeight: '700',
+              textDecoration: 'none',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '8px',
+              boxShadow: '0 4px 12px rgba(0,0,0,0.15)',
+              whiteSpace: 'nowrap',
+              transition: 'transform 0.2s ease, box-shadow 0.2s ease',
+              zIndex: 10
+            }}
+            onMouseEnter={e => { e.currentTarget.style.transform = 'translateX(-50%) scale(1.05)'; e.currentTarget.style.boxShadow = '0 6px 16px rgba(0,0,0,0.2)' }}
+            onMouseLeave={e => { e.currentTarget.style.transform = 'translateX(-50%) scale(1)'; e.currentTarget.style.boxShadow = '0 4px 12px rgba(0,0,0,0.15)' }}
+          >
+            <ExternalLink size={16} /> View Certificate
+          </a>
+        )}
       </div>
-    </div>
-    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px', marginBottom: cert.link ? '0.75rem' : 0 }}>
-      {cert.tags.map(tag => (
-        <span key={tag} style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.63rem', fontWeight: 700, letterSpacing: '0.5px', textTransform: 'uppercase', padding: '2px 8px', border: '1px solid var(--uo-border)', color: 'var(--uo-grey)' }}>{tag}</span>
-      ))}
-    </div>
-    {cert.link && (
-      <a href={cert.link} target="_blank" rel="noopener noreferrer"
-        style={{ display: 'inline-flex', alignItems: 'center', gap: '5px', fontFamily: 'Inter, sans-serif', fontSize: '0.72rem', fontWeight: 700, letterSpacing: '0.5px', textTransform: 'uppercase', color: 'var(--uo-green)', textDecoration: 'none', borderBottom: '1px solid var(--uo-green)', paddingBottom: '1px', transition: 'color 0.2s' }}
-        onMouseEnter={e => e.currentTarget.style.color = 'var(--uo-yellow)'}
-        onMouseLeave={e => e.currentTarget.style.color = 'var(--uo-green)'}
-      >
-        <ExternalLink size={11} /> View Certificate
-      </a>
-    )}
-  </motion.div>
-);
+
+      {/* Bottom Info Section */}
+      <div style={{ padding: '20px', display: 'flex', flexDirection: 'column', flex: 1 }}>
+        <h4 style={{ margin: '0 0 10px 0', fontSize: '1.15rem', fontWeight: '800', color: '#1a1a1a', lineHeight: 1.4 }}>
+          {cert.title}
+        </h4>
+        <p style={{ margin: '0 0 20px 0', fontSize: '0.8rem', color: '#6b7280', textTransform: 'uppercase', letterSpacing: '0.5px', fontWeight: '600' }}>
+          {cert.issuer} {cert.tags && cert.tags.length > 0 && `· ${cert.tags.join(' · ')}`}
+        </p>
+
+        {/* Credly/Code badges (Only show if present in data) */}
+        {(cert.credly || cert.code) && (
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', marginTop: 'auto' }}>
+            {cert.credly && (
+              <div style={{ display: 'flex' }}>
+                <a href={cert.credly} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '6px', border: '1px solid #e9d5ff', color: '#9333ea', padding: '6px 12px', borderRadius: '24px', fontSize: '0.8rem', fontWeight: '700', backgroundColor: '#faf5ff' }}>
+                  <CheckCircle size={14} /> Credly Badge
+                </a>
+              </div>
+            )}
+            {cert.code && (
+              <div style={{ backgroundColor: '#f3f4f6', padding: '10px 14px', borderRadius: '8px', fontSize: '0.8rem', color: '#4b5563', fontFamily: 'monospace', fontWeight: '500', border: '1px solid #e5e7eb' }}>
+                Code: {cert.code}
+              </div>
+            )}
+          </div>
+        )}
+
+      </div>
+    </motion.div>
+  );
+};
 
 const SubHeading = ({ label, count }) => (
   <div style={{ borderTop: '3px solid var(--uo-green)', paddingTop: '1.25rem', marginBottom: '1.5rem', display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end' }}>
