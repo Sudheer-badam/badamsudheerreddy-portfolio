@@ -10,3 +10,17 @@
 .yt-bg-overlay {
   display: none;
 }
+
+@keyframes rainbowBorder {
+  0% { border-color: #FF595E; }
+  20% { border-color: #FFCA3A; }
+  40% { border-color: #8AC926; }
+  60% { border-color: #1982C4; }
+  80% { border-color: #6A4C93; }
+  100% { border-color: #FF595E; }
+}
+
+.animated-avatar-border {
+  border: 4px solid #FF595E;
+  animation: rainbowBorder 5s linear infinite;
+}

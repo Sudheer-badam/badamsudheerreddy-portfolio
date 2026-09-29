@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import { MapPin } from 'lucide-react';
 import Hero from './sections/Hero';
@@ -9,9 +9,22 @@ import Projects from './sections/Projects';
 import Certificates from './sections/Certificates';
 import Contact from './sections/Contact';
 import IntroScreen from './components/IntroScreen';
+import AdminLogin from './components/AdminLogin';
+import { auth } from './firebase';
+import { onAuthStateChanged } from 'firebase/auth';
 import './App.css';
 
 function App() {
+  const [user, setUser] = useState(null);
+  const [isAuthChecking, setIsAuthChecking] = useState(true);
+
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      setUser(currentUser);
+      setIsAuthChecking(false);
+    });
+    return () => unsubscribe();
+  }, []);
   React.useEffect(() => {
     const img = new Image();
     img.src = '/BADAM SUDHEER REDDY .jpeg.png';
@@ -36,6 +49,22 @@ function App() {
       link.href = canvas.toDataURL('image/png');
     };
   }, []);
+
+  if (isAuthChecking) {
+    return (
+      <div style={{ height: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center', background: 'var(--uo-cream)' }}>
+        <div className="pulse-dot" style={{ width: '20px', height: '20px', background: 'var(--uo-green)', borderRadius: '50%' }}></div>
+      </div>
+    );
+  }
+
+  if (!user) {
+    return (
+      <div style={{ minHeight: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center', background: 'var(--uo-cream)', padding: '20px' }}>
+        <AdminLogin user={user} />
+      </div>
+    );
+  }
 
   return (
     <div className="app-container">

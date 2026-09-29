@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import { auth } from '../firebase';
+import { signOut } from 'firebase/auth';
 
 const links = [
   { name: 'Home',         href: '#home' },
@@ -11,6 +13,13 @@ const links = [
 ];
 
 const Navbar = () => {
+  const handleLogout = async () => {
+    try {
+      await signOut(auth);
+    } catch (err) {
+      console.error(err);
+    }
+  };
   const [active, setActive] = useState('home');
 
   useEffect(() => {
@@ -53,6 +62,27 @@ const Navbar = () => {
             {link.name}
           </a>
         ))}
+
+        <button
+          onClick={handleLogout}
+          style={{
+            marginLeft: '1rem',
+            padding: '6px 16px',
+            background: '#d32f2f',
+            color: 'white',
+            border: 'none',
+            borderRadius: '4px',
+            fontFamily: 'Inter, sans-serif',
+            fontSize: '0.85rem',
+            fontWeight: 600,
+            cursor: 'pointer',
+            transition: 'background 0.2s',
+          }}
+          onMouseEnter={(e) => e.target.style.background = '#b71c1c'}
+          onMouseLeave={(e) => e.target.style.background = '#d32f2f'}
+        >
+          Logout
+        </button>
       </div>
     </nav>
   );
