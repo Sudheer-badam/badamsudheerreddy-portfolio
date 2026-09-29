@@ -10,6 +10,7 @@ const AdminLogin = ({ user }) => {
   const [error, setError] = useState('');
   const [captchaVerified, setCaptchaVerified] = useState(false);
   const [termsAccepted, setTermsAccepted] = useState(false);
+  const [showTerms, setShowTerms] = useState(false);
   const recaptchaRef = useRef();
 
   const handleGoogleLogin = async () => {
@@ -75,17 +76,19 @@ const AdminLogin = ({ user }) => {
           style={{ cursor: 'pointer', width: '40px', height: '40px', accentColor: 'var(--uo-green-dark)' }} 
         />
         <label htmlFor="terms" style={{ fontSize: '2rem', color: '#555', cursor: 'pointer', fontFamily: 'Inter, sans-serif' }}>
-          I accept the <strong>Terms and Conditions</strong>
+          I accept the <strong onClick={(e) => { e.preventDefault(); setShowTerms(!showTerms); }} style={{ color: 'var(--uo-green-dark)', textDecoration: 'underline' }}>Terms and Conditions</strong>
         </label>
       </div>
 
-      <div style={{ height: '200px', overflowY: 'scroll', border: '1px solid #ddd', borderRadius: '12px', padding: '20px', marginBottom: '50px', fontSize: '1.4rem', color: '#666', lineHeight: '1.6', background: '#fafafa', textAlign: 'left' }}>
-        <h4 style={{ marginTop: 0, marginBottom: '10px', color: '#333' }}>Website Terms and Conditions</h4>
-        <p style={{ marginBottom: '10px' }}>Welcome to Badam Sudheer Reddy's portfolio website.</p>
-        <p style={{ marginBottom: '10px' }}>By accessing or using this website, you agree to be bound by these Terms and Conditions. The content of the pages of this website is for your general information and use only. It is subject to change without notice.</p>
-        <p style={{ marginBottom: '10px' }}>This website contains material which is owned by or licensed to us. This material includes, but is not limited to, the design, layout, look, appearance, and graphics. Reproduction is prohibited other than in accordance with the copyright notice, which forms part of these terms and conditions.</p>
-        <p style={{ margin: 0 }}>Unauthorized use of this website may give rise to a claim for damages and/or be a criminal offense. Your use of this website and any dispute arising out of such use of the website is subject to the laws of India.</p>
-      </div>
+      {showTerms && (
+        <div style={{ height: '200px', overflowY: 'scroll', border: '1px solid #ddd', borderRadius: '12px', padding: '20px', marginBottom: '50px', fontSize: '1.4rem', color: '#666', lineHeight: '1.6', background: '#fafafa', textAlign: 'left' }}>
+          <h4 style={{ marginTop: 0, marginBottom: '10px', color: '#333' }}>Website Terms and Conditions</h4>
+          <p style={{ marginBottom: '10px' }}>Welcome to Badam Sudheer Reddy's portfolio website.</p>
+          <p style={{ marginBottom: '10px' }}>By accessing or using this website, you agree to be bound by these Terms and Conditions. The content of the pages of this website is for your general information and use only. It is subject to change without notice.</p>
+          <p style={{ marginBottom: '10px' }}>This website contains material which is owned by or licensed to us. This material includes, but is not limited to, the design, layout, look, appearance, and graphics. Reproduction is prohibited other than in accordance with the copyright notice, which forms part of these terms and conditions.</p>
+          <p style={{ margin: 0 }}>Unauthorized use of this website may give rise to a claim for damages and/or be a criminal offense. Your use of this website and any dispute arising out of such use of the website is subject to the laws of India.</p>
+        </div>
+      )}
 
       <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '60px', transform: 'scale(1.8)', transformOrigin: 'center' }}>
         <ReCAPTCHA
