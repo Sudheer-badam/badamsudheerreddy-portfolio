@@ -81,12 +81,43 @@ const AdminLogin = ({ user }) => {
       </div>
 
       {showTerms && (
-        <div style={{ height: '200px', overflowY: 'scroll', border: '1px solid #ddd', borderRadius: '12px', padding: '20px', marginBottom: '50px', fontSize: '1.4rem', color: '#666', lineHeight: '1.6', background: '#fafafa', textAlign: 'left' }}>
-          <h4 style={{ marginTop: 0, marginBottom: '10px', color: '#333' }}>Website Terms and Conditions</h4>
-          <p style={{ marginBottom: '10px' }}>Welcome to Badam Sudheer Reddy's portfolio website.</p>
-          <p style={{ marginBottom: '10px' }}>By accessing or using this website, you agree to be bound by these Terms and Conditions. The content of the pages of this website is for your general information and use only. It is subject to change without notice.</p>
-          <p style={{ marginBottom: '10px' }}>This website contains material which is owned by or licensed to us. This material includes, but is not limited to, the design, layout, look, appearance, and graphics. Reproduction is prohibited other than in accordance with the copyright notice, which forms part of these terms and conditions.</p>
-          <p style={{ margin: 0 }}>Unauthorized use of this website may give rise to a claim for damages and/or be a criminal offense. Your use of this website and any dispute arising out of such use of the website is subject to the laws of India.</p>
+        <div style={{ position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', backgroundColor: 'rgba(0, 0, 0, 0.6)', zIndex: 9999, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+          <div style={{ background: '#FFFFFF', width: '90%', maxWidth: '800px', borderRadius: '16px', display: 'flex', flexDirection: 'column', maxHeight: '90vh', boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.5)' }}>
+            <div style={{ padding: '25px 30px', borderBottom: '1px solid #eee', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+              <h4 style={{ margin: 0, fontSize: '2.2rem', color: '#333', fontFamily: 'Inter, sans-serif' }}>Terms and Conditions</h4>
+              <button type="button" onClick={() => setShowTerms(false)} style={{ background: 'none', border: 'none', fontSize: '2.5rem', cursor: 'pointer', color: '#777', padding: '0 10px' }}>&times;</button>
+            </div>
+            
+            <div style={{ padding: '30px', overflowY: 'auto', fontSize: '1.5rem', color: '#555', lineHeight: '1.8', textAlign: 'left', flex: 1 }}>
+              <h5 style={{ marginTop: 0, color: '#333', fontSize: '1.7rem' }}>1. Introduction</h5>
+              <p style={{ marginBottom: '20px' }}>Welcome to the <strong>AI-Based Social Media Sentiment and Trend Analysis Platform.</strong> This application is developed as part of Capstone Project 220 at KL University. By accessing or using our service, you agree to be bound by these terms.</p>
+              
+              <h5 style={{ marginTop: 0, color: '#333', fontSize: '1.7rem' }}>2. Academic Purpose</h5>
+              <p style={{ marginBottom: '20px' }}>This platform is intended strictly for academic demonstration, research, and evaluation purposes. It showcases capabilities in natural language processing, sentiment analysis, and trend tracking.</p>
+              
+              <h5 style={{ marginTop: 0, color: '#333', fontSize: '1.7rem' }}>3. Compliance with Updated Programs & Instructions</h5>
+              <p style={{ marginBottom: '20px' }}>Users must comply with all newly updated application features, programs, and usage instructions introduced in recent updates. The platform features may change rapidly, and users are expected to adhere to the latest guidelines provided within the platform's interface and documentation.</p>
+              
+              <h5 style={{ marginTop: 0, color: '#333', fontSize: '1.7rem' }}>4. Data Privacy & Usage</h5>
+              <p style={{ marginBottom: '20px' }}>Any data you upload (including research papers, presentations, or sample datasets) is used locally for analysis. We do not permanently store, sell, or distribute your personal data or uploaded documents to third parties.</p>
+              
+              <h5 style={{ marginTop: 0, color: '#333', fontSize: '1.7rem' }}>5. Intellectual Property</h5>
+              <p style={{ margin: 0 }}>All platform code, design, and analysis algorithms remain the intellectual property of the developers and KL University.</p>
+            </div>
+
+            <div style={{ padding: '25px 30px', borderTop: '1px solid #eee', display: 'flex', justifyContent: 'flex-end', background: '#f9f9f9', borderBottomLeftRadius: '16px', borderBottomRightRadius: '16px' }}>
+              <button 
+                type="button"
+                onClick={() => {
+                  setTermsAccepted(true);
+                  setShowTerms(false);
+                }} 
+                style={{ padding: '16px 32px', background: '#5046e6', color: 'white', border: 'none', borderRadius: '8px', cursor: 'pointer', fontWeight: 600, fontSize: '1.6rem', transition: 'background 0.2s' }}
+              >
+                Accept & Close
+              </button>
+            </div>
+          </div>
         </div>
       )}
 
