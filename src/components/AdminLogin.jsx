@@ -62,57 +62,57 @@ const AdminLogin = ({ user }) => {
 
 
   return (
-    <div style={{ padding: '8rem 6rem', background: '#FFFFFF', border: '1px solid var(--uo-border)', borderRadius: '30px', margin: '5vh auto', maxWidth: '1200px', boxShadow: '0 25px 80px rgba(0,0,0,0.15)' }}>
-      <img src="/BADAM SUDHEER REDDY .jpeg.png" alt="Avatar" className="animated-avatar-border" style={{ width: '250px', height: '250px', borderRadius: '50%', objectFit: 'cover', objectPosition: 'center top', display: 'block', margin: '0 auto 4rem' }} />
-      <h3 style={{ fontFamily: '"Playfair Display", serif', color: 'var(--uo-green-dark)', marginBottom: '4rem', textAlign: 'center', fontSize: '4.5rem' }}>Authentication</h3>
-      {error && <p style={{ color: '#d32f2f', fontSize: '2rem', marginBottom: '3rem', textAlign: 'center', background: '#ffebee', padding: '24px', borderRadius: '12px' }}>{error}</p>}
+    <div style={{ padding: '3rem', background: '#FFFFFF', border: '1px solid var(--uo-border)', borderRadius: '24px', margin: '5vh auto', maxWidth: '480px', boxShadow: '0 25px 50px rgba(0,0,0,0.1)' }}>
+      <img src="/BADAM SUDHEER REDDY .jpeg.png" alt="Avatar" className="animated-avatar-border" style={{ width: '120px', height: '120px', borderRadius: '50%', objectFit: 'cover', objectPosition: 'center top', display: 'block', margin: '0 auto 2rem' }} />
+      <h3 style={{ fontFamily: '"Playfair Display", serif', color: 'var(--uo-green-dark)', marginBottom: '2rem', textAlign: 'center', fontSize: '2.5rem' }}>Authentication</h3>
+      {error && <p style={{ color: '#d32f2f', fontSize: '1rem', marginBottom: '1.5rem', textAlign: 'center', background: '#ffebee', padding: '12px', borderRadius: '8px' }}>{error}</p>}
       
-      <div style={{ display: 'flex', alignItems: 'center', gap: '25px', marginBottom: '20px', justifyContent: 'center' }}>
+      <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '24px', justifyContent: 'center' }}>
         <input 
           type="checkbox" 
           id="terms" 
           checked={termsAccepted} 
           onChange={(e) => setTermsAccepted(e.target.checked)} 
-          style={{ cursor: 'pointer', width: '40px', height: '40px', accentColor: 'var(--uo-green-dark)' }} 
+          style={{ cursor: 'pointer', width: '20px', height: '20px', accentColor: 'var(--uo-green-dark)' }} 
         />
-        <label htmlFor="terms" style={{ fontSize: '2rem', color: '#555', cursor: 'pointer', fontFamily: 'Inter, sans-serif' }}>
+        <label htmlFor="terms" style={{ fontSize: '1rem', color: '#555', cursor: 'pointer', fontFamily: 'Inter, sans-serif' }}>
           I accept the <strong onClick={(e) => { e.preventDefault(); setShowTerms(!showTerms); }} style={{ color: 'var(--uo-green-dark)', textDecoration: 'underline' }}>Terms and Conditions</strong>
         </label>
       </div>
 
       {showTerms && (
         <div style={{ position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', backgroundColor: 'rgba(0, 0, 0, 0.6)', zIndex: 9999, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-          <div style={{ background: '#FFFFFF', width: '90%', maxWidth: '800px', borderRadius: '16px', display: 'flex', flexDirection: 'column', maxHeight: '90vh', boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.5)' }}>
-            <div style={{ padding: '25px 30px', borderBottom: '1px solid #eee', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-              <h4 style={{ margin: 0, fontSize: '2.2rem', color: '#333', fontFamily: 'Inter, sans-serif' }}>Terms and Conditions</h4>
-              <button type="button" onClick={() => setShowTerms(false)} style={{ background: 'none', border: 'none', fontSize: '2.5rem', cursor: 'pointer', color: '#777', padding: '0 10px' }}>&times;</button>
+          <div style={{ background: '#FFFFFF', width: '90%', maxWidth: '600px', borderRadius: '16px', display: 'flex', flexDirection: 'column', maxHeight: '90vh', boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.5)' }}>
+            <div style={{ padding: '20px 24px', borderBottom: '1px solid #eee', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+              <h4 style={{ margin: 0, fontSize: '1.5rem', color: '#333', fontFamily: 'Inter, sans-serif' }}>Terms and Conditions</h4>
+              <button type="button" onClick={() => setShowTerms(false)} style={{ background: 'none', border: 'none', fontSize: '2rem', cursor: 'pointer', color: '#777', padding: '0 8px' }}>&times;</button>
             </div>
             
-            <div style={{ padding: '30px', overflowY: 'auto', fontSize: '1.5rem', color: '#555', lineHeight: '1.8', textAlign: 'left', flex: 1 }}>
-              <h5 style={{ marginTop: 0, color: '#333', fontSize: '1.7rem' }}>1. Introduction</h5>
-              <p style={{ marginBottom: '20px' }}>Welcome to the <strong>AI-Based Social Media Sentiment and Trend Analysis Platform.</strong> This application is developed as part of Capstone Project 220 at KL University. By accessing or using our service, you agree to be bound by these terms.</p>
+            <div style={{ padding: '24px', overflowY: 'auto', fontSize: '1rem', color: '#555', lineHeight: '1.6', textAlign: 'left', flex: 1 }}>
+              <h5 style={{ marginTop: 0, color: '#333', fontSize: '1.2rem' }}>1. Introduction</h5>
+              <p style={{ marginBottom: '16px' }}>Welcome to the <strong>Admin Dashboard for Sudheer Badam's Portfolio</strong>. This section is restricted to authorized personnel. By accessing or logging into this dashboard, you agree to be bound by these terms.</p>
               
-              <h5 style={{ marginTop: 0, color: '#333', fontSize: '1.7rem' }}>2. Academic Purpose</h5>
-              <p style={{ marginBottom: '20px' }}>This platform is intended strictly for academic demonstration, research, and evaluation purposes. It showcases capabilities in natural language processing, sentiment analysis, and trend tracking.</p>
+              <h5 style={{ marginTop: 0, color: '#333', fontSize: '1.2rem' }}>2. Access & Security</h5>
+              <p style={{ marginBottom: '16px' }}>Access to this administration panel is strictly confidential. You are responsible for maintaining the security of your authentication credentials and any actions taken under your account.</p>
               
-              <h5 style={{ marginTop: 0, color: '#333', fontSize: '1.7rem' }}>3. Compliance with Updated Programs & Instructions</h5>
-              <p style={{ marginBottom: '20px' }}>Users must comply with all newly updated application features, programs, and usage instructions introduced in recent updates. The platform features may change rapidly, and users are expected to adhere to the latest guidelines provided within the platform's interface and documentation.</p>
+              <h5 style={{ marginTop: 0, color: '#333', fontSize: '1.2rem' }}>3. Content Management</h5>
+              <p style={{ marginBottom: '16px' }}>Any changes, modifications, or deletions made to the portfolio content (such as projects, certificates, and personal information) will be reflected on the live website. Ensure that all updates are accurate and appropriate.</p>
               
-              <h5 style={{ marginTop: 0, color: '#333', fontSize: '1.7rem' }}>4. Data Privacy & Usage</h5>
-              <p style={{ marginBottom: '20px' }}>Any data you upload (including research papers, presentations, or sample datasets) is used locally for analysis. We do not permanently store, sell, or distribute your personal data or uploaded documents to third parties.</p>
+              <h5 style={{ marginTop: 0, color: '#333', fontSize: '1.2rem' }}>4. Usage Restrictions</h5>
+              <p style={{ marginBottom: '16px' }}>You agree not to attempt to breach the security of this application, manipulate the underlying database maliciously, or use this access for any unauthorized purposes.</p>
               
-              <h5 style={{ marginTop: 0, color: '#333', fontSize: '1.7rem' }}>5. Intellectual Property</h5>
-              <p style={{ margin: 0 }}>All platform code, design, and analysis algorithms remain the intellectual property of the developers and KL University.</p>
+              <h5 style={{ marginTop: 0, color: '#333', fontSize: '1.2rem' }}>5. Intellectual Property</h5>
+              <p style={{ margin: 0 }}>All portfolio content, source code, designs, and associated assets remain the intellectual property of Sudheer Badam.</p>
             </div>
 
-            <div style={{ padding: '25px 30px', borderTop: '1px solid #eee', display: 'flex', justifyContent: 'flex-end', background: '#f9f9f9', borderBottomLeftRadius: '16px', borderBottomRightRadius: '16px' }}>
+            <div style={{ padding: '20px 24px', borderTop: '1px solid #eee', display: 'flex', justifyContent: 'flex-end', background: '#f9f9f9', borderBottomLeftRadius: '16px', borderBottomRightRadius: '16px' }}>
               <button 
                 type="button"
                 onClick={() => {
                   setTermsAccepted(true);
                   setShowTerms(false);
                 }} 
-                style={{ padding: '16px 32px', background: '#5046e6', color: 'white', border: 'none', borderRadius: '8px', cursor: 'pointer', fontWeight: 600, fontSize: '1.6rem', transition: 'background 0.2s' }}
+                style={{ padding: '12px 24px', background: '#5046e6', color: 'white', border: 'none', borderRadius: '8px', cursor: 'pointer', fontWeight: 600, fontSize: '1rem', transition: 'background 0.2s' }}
               >
                 Accept & Close
               </button>
@@ -121,7 +121,7 @@ const AdminLogin = ({ user }) => {
         </div>
       )}
 
-      <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '60px', transform: 'scale(1.8)', transformOrigin: 'center' }}>
+      <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '24px' }}>
         <ReCAPTCHA
           ref={recaptchaRef}
           sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY} 
@@ -129,9 +129,9 @@ const AdminLogin = ({ user }) => {
         />
       </div>
 
-      <div style={{ display: 'flex', flexDirection: 'column', gap: '32px' }}>
-        <button type="button" onClick={handleGoogleLogin} style={{ padding: '32px', background: '#4285F4', color: 'white', border: 'none', borderRadius: '16px', cursor: 'pointer', fontWeight: 600, fontSize: '2.2rem', transition: 'background 0.2s' }}>Sign in with Google</button>
-        <button type="button" onClick={handleMicrosoftLogin} style={{ padding: '32px', background: '#0F9D58', color: 'white', border: 'none', borderRadius: '16px', cursor: 'pointer', fontWeight: 600, fontSize: '2.2rem', transition: 'background 0.2s' }}>Sign in with Microsoft</button>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+        <button type="button" onClick={handleGoogleLogin} style={{ padding: '16px', background: '#4285F4', color: 'white', border: 'none', borderRadius: '12px', cursor: 'pointer', fontWeight: 600, fontSize: '1.1rem', transition: 'background 0.2s' }}>Sign in with Google</button>
+        <button type="button" onClick={handleMicrosoftLogin} style={{ padding: '16px', background: '#0F9D58', color: 'white', border: 'none', borderRadius: '12px', cursor: 'pointer', fontWeight: 600, fontSize: '1.1rem', transition: 'background 0.2s' }}>Sign in with Microsoft</button>
       </div>
     </div>
   );
