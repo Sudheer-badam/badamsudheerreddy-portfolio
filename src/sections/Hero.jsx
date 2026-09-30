@@ -153,7 +153,7 @@ const Hero = () => {
 
             {/* Resume Download Button */}
             <a
-              href="/BADAM SUDHEER REDDY RESUME 2305 (1).pdf"
+              href="/Badam_Sudheer_Reddy_Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               download
