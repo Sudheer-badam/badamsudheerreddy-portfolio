@@ -132,10 +132,48 @@ const AdminLogin = ({ user }) => {
       </div>
 
       <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-        <button type="button" onClick={handleGoogleLogin} style={{ padding: 'clamp(12px, 3vw, 16px)', background: '#4285F4', color: 'white', border: 'none', borderRadius: '12px', cursor: 'pointer', fontWeight: 600, fontSize: 'clamp(1rem, 3.5vw, 1.1rem)', transition: 'background 0.2s', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px' }}>
+        <button 
+          type="button" 
+          onClick={handleGoogleLogin} 
+          disabled={!termsAccepted}
+          style={{ 
+            padding: 'clamp(12px, 3vw, 16px)', 
+            background: termsAccepted ? '#4285F4' : '#e0e0e0', 
+            color: termsAccepted ? 'white' : '#888', 
+            border: 'none', 
+            borderRadius: '12px', 
+            cursor: termsAccepted ? 'pointer' : 'not-allowed', 
+            fontWeight: 600, 
+            fontSize: 'clamp(1rem, 3.5vw, 1.1rem)', 
+            transition: 'background 0.2s, color 0.2s', 
+            display: 'flex', 
+            alignItems: 'center', 
+            justifyContent: 'center', 
+            gap: '10px' 
+          }}
+        >
           Sign in with Google
         </button>
-        <button type="button" onClick={handleMicrosoftLogin} style={{ padding: 'clamp(12px, 3vw, 16px)', background: '#0F9D58', color: 'white', border: 'none', borderRadius: '12px', cursor: 'pointer', fontWeight: 600, fontSize: 'clamp(1rem, 3.5vw, 1.1rem)', transition: 'background 0.2s', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px' }}>
+        <button 
+          type="button" 
+          onClick={handleMicrosoftLogin} 
+          disabled={!termsAccepted}
+          style={{ 
+            padding: 'clamp(12px, 3vw, 16px)', 
+            background: termsAccepted ? '#0F9D58' : '#e0e0e0', 
+            color: termsAccepted ? 'white' : '#888', 
+            border: 'none', 
+            borderRadius: '12px', 
+            cursor: termsAccepted ? 'pointer' : 'not-allowed', 
+            fontWeight: 600, 
+            fontSize: 'clamp(1rem, 3.5vw, 1.1rem)', 
+            transition: 'background 0.2s, color 0.2s', 
+            display: 'flex', 
+            alignItems: 'center', 
+            justifyContent: 'center', 
+            gap: '10px' 
+          }}
+        >
           Sign in with Microsoft
         </button>
       </div>
