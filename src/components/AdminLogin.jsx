@@ -121,14 +121,12 @@ const AdminLogin = ({ user }) => {
         </div>
       )}
 
-      <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '24px', overflowX: 'auto', maxWidth: '100%' }}>
-        <div style={{ minWidth: 'min-content' }}>
-          <ReCAPTCHA
-            ref={recaptchaRef}
-            sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY} 
-            onChange={onCaptchaChange}
-          />
-        </div>
+      <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '24px', width: '100%' }}>
+        <ReCAPTCHA
+          ref={recaptchaRef}
+          sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY} 
+          onChange={onCaptchaChange}
+        />
       </div>
 
       <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
