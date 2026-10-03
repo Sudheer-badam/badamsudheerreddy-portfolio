@@ -1449,7 +1449,7 @@ const Projects = () => {
                       boxShadow: '0 0 16px rgba(255,213,0,0.4)',
                       overflow: 'hidden', flexShrink: 0, background: '#fff'
                     }}>
-                      <img src="/print-saas-logo.png" alt="Print Docker Logo"
+                      <img src="/print-docker-logo.jpg" alt="Print Docker Logo"
                         style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                     </div>
                     <h3 style={{ fontFamily: '"Playfair Display", Georgia, serif', fontSize: 'clamp(1.6rem, 3.5vw, 2.4rem)', fontWeight: 900, color: 'var(--uo-yellow)', lineHeight: 1.1, margin: 0 }}>
