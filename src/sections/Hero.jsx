@@ -5,11 +5,11 @@ const Hero = () => {
   return (
     <section id="home" style={{ padding: 0, minHeight: '100vh', display: 'flex', flexDirection: 'column', paddingTop: '64px' }}>
       {/* ── Top green bar ── */}
-      <div style={{ background: 'var(--uo-green)', padding: '10px 2rem', display: 'flex', alignItems: 'center', gap: '12px' }}>
+      <div style={{ borderRadius: '16px', background: 'var(--uo-green)', padding: '10px 2rem', display: 'flex', alignItems: 'center', gap: '12px' }}>
         <span style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.7rem', fontWeight: 700, letterSpacing: '3px', textTransform: 'uppercase', color: 'rgba(255,255,255,0.6)' }}>
           Portfolio · Computer Science & Engineering
         </span>
-        <span style={{ flex: 1, height: '1px', background: 'rgba(255,255,255,0.15)' }} />
+        <span style={{ borderRadius: '16px', flex: 1, height: '1px', background: 'rgba(255,255,255,0.15)' }} />
         <span style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.7rem', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', color: 'var(--uo-yellow)' }}>
           KL University · 2027
         </span>
@@ -20,16 +20,14 @@ const Hero = () => {
         <div className="hero-grid" style={{ maxWidth: '100%', flex: 1, margin: 0 }}>
 
           {/* Photo Column */}
-          <div className="hero-photo-col" style={{
-            display: 'flex',
+          <div className="hero-photo-col" style={{ borderRadius: '16px', display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
             justifyContent: 'center',
             padding: '3rem 2rem',
             background: 'var(--uo-green-dark)',
             position: 'relative',
-            gap: '1.5rem'
-          }}>
+            gap: '1.5rem' }}>
             {/* Elegant Outer Ring / Frame */}
             <div style={{
               position: 'relative',
@@ -122,8 +120,7 @@ const Hero = () => {
               href="/APPAR ID BY DIGILOCKER.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              style={{
-                display: 'inline-flex',
+              style={{ borderRadius: '16px', display: 'inline-flex',
                 alignItems: 'center',
                 gap: '10px',
                 padding: '10px 18px',
@@ -133,8 +130,7 @@ const Hero = () => {
                 textDecoration: 'none',
                 transition: 'background 0.2s, border-color 0.2s',
                 maxWidth: '290px',
-                width: '100%',
-              }}
+                width: '100%', }}
               onMouseEnter={e => { e.currentTarget.style.background = 'rgba(254,225,35,0.08)'; e.currentTarget.style.borderColor = 'var(--uo-yellow)'; }}
               onMouseLeave={e => { e.currentTarget.style.background = 'rgba(255,255,255,0.05)'; e.currentTarget.style.borderColor = 'rgba(255,255,255,0.15)'; e.currentTarget.style.borderLeftColor = 'var(--uo-yellow)'; }}
             >
@@ -157,8 +153,7 @@ const Hero = () => {
               target="_blank"
               rel="noopener noreferrer"
               download
-              style={{
-                display: 'inline-flex',
+              style={{ borderRadius: '16px', display: 'inline-flex',
                 alignItems: 'center',
                 justifyContent: 'center',
                 gap: '8px',
@@ -174,8 +169,7 @@ const Hero = () => {
                 boxShadow: '0 4px 20px rgba(245,197,24,0.35)',
                 transition: 'transform 0.2s, box-shadow 0.2s',
                 maxWidth: '290px',
-                width: '100%',
-              }}
+                width: '100%', }}
               onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-2px)'; e.currentTarget.style.boxShadow = '0 8px 30px rgba(245,197,24,0.55)'; }}
               onMouseLeave={e => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = '0 4px 20px rgba(245,197,24,0.35)'; }}
             >
@@ -210,7 +204,7 @@ const Hero = () => {
               Reddy
             </motion.h1>
 
-            <div style={{ width: '50px', height: '3px', background: 'var(--uo-yellow)', margin: '0.25rem 0' }} />
+            <div style={{ borderRadius: '16px', width: '50px', height: '3px', background: 'var(--uo-yellow)', margin: '0.25rem 0' }} />
 
             <motion.p
               initial={{ opacity: 0 }}
@@ -246,7 +240,7 @@ const Hero = () => {
                   fontFamily: 'Inter, sans-serif', fontSize: '0.88rem',
                   fontWeight: 800, letterSpacing: '2px', textTransform: 'uppercase',
                   textDecoration: 'none',
-                  borderRadius: '2px',
+                  borderRadius: '16px',
                   boxShadow: '0 4px 20px rgba(245,197,24,0.4)',
                   transition: 'transform 0.2s, box-shadow 0.2s',
                   position: 'relative', overflow: 'hidden',
@@ -269,14 +263,12 @@ const Hero = () => {
               <a href="#projects" className="btn-primary" id="hero-explore-btn">
                 Explore Projects
               </a>
-              <a href="#contact" style={{
-                display: 'inline-block', padding: '0.85rem 2.2rem',
+              <a href="#contact" style={{ borderRadius: '16px', display: 'inline-block', padding: '0.85rem 2.2rem',
                 background: 'transparent', color: 'rgba(255,255,255,0.85)',
                 fontFamily: 'Inter, sans-serif', fontSize: '0.85rem',
                 fontWeight: 700, letterSpacing: '1.5px', textTransform: 'uppercase',
                 textDecoration: 'none', border: '2px solid rgba(255,255,255,0.35)',
-                transition: 'border-color 0.25s, color 0.25s',
-              }}
+                transition: 'border-color 0.25s, color 0.25s', }}
               onMouseEnter={e => { e.target.style.borderColor = 'var(--uo-yellow)'; e.target.style.color = 'var(--uo-yellow)'; }}
               onMouseLeave={e => { e.target.style.borderColor = 'rgba(255,255,255,0.35)'; e.target.style.color = 'rgba(255,255,255,0.85)'; }}
               id="hero-contact-btn"

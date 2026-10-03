@@ -17,7 +17,7 @@ const skills = [
 
 const Skills = () => {
   return (
-    <section id="skills" style={{ background: 'var(--uo-surface)', padding: '80px 20px' }}>
+    <section id="skills" style={{ borderRadius: '16px', background: 'var(--uo-surface)', padding: '80px 20px' }}>
       <div className="section-inner">
 
         {/* Section heading */}
@@ -60,7 +60,7 @@ const Skills = () => {
             </div>
 
             {/* Category legend */}
-            <div style={{ marginTop: '2rem', padding: '1.5rem', background: 'var(--uo-green)', borderLeft: '5px solid var(--uo-yellow)' }}>
+            <div style={{ borderRadius: '16px', marginTop: '2rem', padding: '1.5rem', background: 'var(--uo-green)', borderLeft: '5px solid var(--uo-yellow)' }}>
               <div style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.7rem', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', color: 'var(--uo-yellow)', marginBottom: '0.75rem' }}>Focus Areas</div>
               {['Frontend', 'Intelligence', 'Architecture', 'Design', 'DevOps'].map(cat => (
                 <div key={cat} style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.82rem', color: 'rgba(255,255,255,0.75)', padding: '4px 0', borderBottom: '1px solid rgba(255,255,255,0.08)' }}>
@@ -89,13 +89,13 @@ const Skills = () => {
                     </div>
                     <span style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.72rem', fontWeight: 700, color: 'var(--uo-green)' }}>{skill.level}%</span>
                   </div>
-                  <div style={{ height: '6px', background: 'var(--uo-border)', position: 'relative', overflow: 'hidden' }}>
+                  <div style={{ borderRadius: '16px', height: '6px', background: 'var(--uo-border)', position: 'relative', overflow: 'hidden' }}>
                     <motion.div
                       initial={{ width: 0 }}
                       whileInView={{ width: `${skill.level}%` }}
                       viewport={{ once: true }}
                       transition={{ duration: 1, delay: i * 0.06, ease: 'easeOut' }}
-                      style={{ position: 'absolute', top: 0, left: 0, height: '100%', background: skill.level >= 85 ? 'var(--uo-green)' : skill.level >= 75 ? 'var(--uo-green-light)' : 'var(--uo-yellow)' }}
+                      style={{ borderRadius: '16px', position: 'absolute', top: 0, left: 0, height: '100%', background: skill.level >= 85 ? 'var(--uo-green)' : skill.level >= 75 ? 'var(--uo-green-light)' : 'var(--uo-yellow)' }}
                     />
                   </div>
                 </div>

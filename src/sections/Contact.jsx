@@ -29,7 +29,7 @@ const inputStyle = {
   padding: '0.85rem 1rem',
   background: 'rgba(255,255,255,0.07)',
   border: '1px solid rgba(255,255,255,0.15)',
-  borderRadius: '8px',
+  borderRadius: '16px',
   color: '#fff',
   fontFamily: 'Inter, sans-serif',
   fontSize: '0.9rem',
@@ -55,7 +55,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" style={{ background: 'var(--uo-green)', padding: '80px 20px' }}>
+    <section id="contact" style={{ borderRadius: '16px', background: 'var(--uo-green)', padding: '80px 20px' }}>
       <div className="section-inner">
 
         {/* ── Centered heading ── */}
@@ -72,7 +72,7 @@ const Contact = () => {
           <h2 style={{ fontFamily: '"Playfair Display", Georgia, serif', fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: 700, color: '#FFFFFF', lineHeight: 1.15, margin: '0.5rem 0 0.75rem' }}>
             Get In <span style={{ color: 'var(--uo-yellow)' }}>Touch</span>
           </h2>
-          <div style={{ width: '50px', height: '3px', background: 'var(--uo-yellow)', margin: '0 auto 1rem' }} />
+          <div style={{ borderRadius: '16px', width: '50px', height: '3px', background: 'var(--uo-yellow)', margin: '0 auto 1rem' }} />
           <p style={{ fontFamily: 'Inter, sans-serif', fontSize: '1rem', color: 'rgba(255,255,255,0.65)', maxWidth: '480px', margin: '0 auto', lineHeight: 1.7 }}>
             Interested in working together or have a project idea? Reach out — I typically respond within 24 hours.
           </p>
@@ -110,7 +110,7 @@ const Contact = () => {
                       background: 'rgba(255,255,255,0.06)',
                       border: '1px solid rgba(255,255,255,0.1)',
                       borderLeft: '4px solid transparent',
-                      borderRadius: '4px',
+                      borderRadius: '16px',
                       textDecoration: 'none',
                       transition: 'background 0.25s, border-color 0.25s',
                     }}
@@ -118,7 +118,7 @@ const Contact = () => {
                     onMouseLeave={e => { e.currentTarget.style.background = 'rgba(255,255,255,0.06)'; e.currentTarget.style.borderLeftColor = 'transparent'; }}
                     id={`contact-${c.label.toLowerCase()}`}
                   >
-                    <div style={{ width: '34px', height: '34px', background: 'var(--uo-yellow)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, borderRadius: '6px' }}>
+                    <div style={{ width: '34px', height: '34px', background: 'var(--uo-yellow)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, borderRadius: '16px' }}>
                       <Icon color="var(--uo-green-dark)" />
                     </div>
                     <div>
@@ -160,7 +160,7 @@ const Contact = () => {
                 display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '10px',
                 padding: '1rem', background: 'linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%)',
                 color: '#fff', fontFamily: 'Inter, sans-serif', fontSize: '0.9rem', fontWeight: 700,
-                border: 'none', borderRadius: '8px', cursor: 'pointer',
+                border: 'none', borderRadius: '16px', cursor: 'pointer',
                 transition: 'opacity 0.2s, transform 0.2s',
               }}
                 onMouseEnter={e => { e.currentTarget.style.opacity = '0.88'; e.currentTarget.style.transform = 'translateY(-1px)'; }}
@@ -177,10 +177,10 @@ const Contact = () => {
                 background: 'rgba(255,255,255,0.06)',
                 border: '1px solid rgba(255,255,255,0.1)',
                 borderLeft: '4px solid var(--uo-yellow)',
-                borderRadius: '4px',
+                borderRadius: '16px',
                 marginTop: '0.25rem',
               }}>
-                <div style={{ width: '34px', height: '34px', background: 'var(--uo-yellow)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, borderRadius: '6px' }}>
+                <div style={{ width: '34px', height: '34px', background: 'var(--uo-yellow)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, borderRadius: '16px' }}>
                   <MapPin size={16} color="var(--uo-green-dark)" />
                 </div>
                 <div>

@@ -52,7 +52,7 @@ function App() {
 
   if (isAuthChecking) {
     return (
-      <div style={{ height: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center', background: 'var(--uo-cream)' }}>
+      <div style={{ borderRadius: '16px', height: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center', background: 'var(--uo-cream)' }}>
         <div className="pulse-dot" style={{ width: '20px', height: '20px', background: 'var(--uo-green)', borderRadius: '50%' }}></div>
       </div>
     );
@@ -60,7 +60,7 @@ function App() {
 
   if (!user) {
     return (
-      <div style={{ minHeight: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center', background: 'var(--uo-cream)', padding: '20px' }}>
+      <div style={{ borderRadius: '16px', minHeight: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center', background: 'var(--uo-cream)', padding: '20px' }}>
         <AdminLogin user={user} />
       </div>
     );
@@ -82,11 +82,9 @@ function App() {
       </main>
 
       {/* ── Footer ── */}
-      <footer style={{
-        background: 'var(--uo-green-dark)',
+      <footer style={{ borderRadius: '16px', background: 'var(--uo-green-dark)',
         borderTop: '4px solid var(--uo-yellow)',
-        padding: '0',
-      }}>
+        padding: '0', }}>
         {/* Top row */}
         <div style={{ padding: '2.5rem 2rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1.5rem', maxWidth: '1100px', margin: '0 auto' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>

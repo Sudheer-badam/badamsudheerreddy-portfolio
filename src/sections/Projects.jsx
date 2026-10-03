@@ -334,12 +334,12 @@ const Projects = () => {
   const [showCapstoneRealtimeSpecs, setShowCapstoneRealtimeSpecs] = useState(false);
 
   return (
-    <section id="projects" style={{ background: 'var(--uo-cream)', padding: '90px 20px', borderBottom: '1px solid var(--uo-border)' }}>
+    <section id="projects" style={{ borderRadius: '16px', background: 'var(--uo-cream)', padding: '90px 20px', borderBottom: '1px solid var(--uo-border)' }}>
       <div className="section-inner" style={{ maxWidth: '1100px', margin: '0 auto' }}>
         
         {/* Section Heading */}
         <div className="section-heading-bar" style={{ marginBottom: '3.5rem' }}>
-          <span className="section-label" style={{ border: '1px solid var(--uo-green)', color: 'var(--uo-green)' }}>Featured Case Studies</span>
+          <span className="section-label" style={{ borderRadius: '16px', border: '1px solid var(--uo-green)', color: 'var(--uo-green)' }}>Featured Case Studies</span>
           <h2 style={{ fontSize: 'clamp(2.2rem, 5vw, 3.2rem)', color: 'var(--uo-green)', marginTop: '0.5rem' }}>Core Projects</h2>
           <div className="editorial-divider" />
         </div>
@@ -351,26 +351,22 @@ const Projects = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
           className="editorial-card"
-          style={{
-            background: 'var(--uo-green-dark)',
+          style={{ borderRadius: '16px', background: 'var(--uo-green-dark)',
             color: '#FFFFFF',
             border: '2px solid var(--uo-yellow)',
             padding: '0',
             overflow: 'hidden',
-            boxShadow: '0 20px 40px rgba(13,46,33,0.15)'
-          }}
+            boxShadow: '0 20px 40px rgba(13,46,33,0.15)' }}
         >
           {/* Top header bar */}
-          <div style={{
-            background: 'rgba(255, 255, 255, 0.03)',
+          <div style={{ borderRadius: '16px', background: 'rgba(255, 255, 255, 0.03)',
             padding: '1.25rem 2rem',
             borderBottom: '1px solid rgba(255, 255, 255, 0.08)',
             display: 'flex',
             justifyContent: 'space-between',
             alignItems: 'center',
             flexWrap: 'wrap',
-            gap: '1rem'
-          }}>
+            gap: '1rem' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
               <span className="pulse-dot" style={{ display: 'inline-block', width: '8px', height: '8px', borderRadius: '50%', background: 'var(--uo-yellow)', boxShadow: '0 0 10px var(--uo-yellow)' }} />
               <span style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.68rem', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', color: 'var(--uo-yellow)' }}>
@@ -407,7 +403,7 @@ const Projects = () => {
                   </div>
                 </div>
 
-                <div style={{ width: '60px', height: '3px', background: 'var(--uo-yellow)' }} />
+                <div style={{ borderRadius: '16px', width: '60px', height: '3px', background: 'var(--uo-yellow)' }} />
 
                 <p style={{ fontFamily: 'Inter, sans-serif', fontSize: '1rem', lineHeight: 1.8, color: 'rgba(255, 255, 255, 0.85)' }}>
                   {PlaceMentorProject.summary}
@@ -416,8 +412,7 @@ const Projects = () => {
                 {/* Tags */}
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', marginTop: '0.5rem' }}>
                   {PlaceMentorProject.tags.map(tag => (
-                    <span key={tag} style={{
-                      fontFamily: 'Inter, sans-serif',
+                    <span key={tag} style={{ borderRadius: '16px', fontFamily: 'Inter, sans-serif',
                       fontSize: '0.68rem',
                       fontWeight: 700,
                       letterSpacing: '1px',
@@ -425,8 +420,7 @@ const Projects = () => {
                       padding: '4px 10px',
                       background: 'rgba(255, 255, 255, 0.06)',
                       border: '1px solid rgba(255, 255, 255, 0.12)',
-                      color: 'rgba(255, 255, 255, 0.8)'
-                    }}>
+                      color: 'rgba(255, 255, 255, 0.8)' }}>
                       {tag}
                     </span>
                   ))}
@@ -439,8 +433,7 @@ const Projects = () => {
                     target="_blank"
                     rel="noreferrer"
                     className="btn-primary"
-                    style={{
-                      display: 'inline-flex',
+                    style={{ borderRadius: '16px', display: 'inline-flex',
                       alignItems: 'center',
                       gap: '8px',
                       padding: '0.85rem 1.75rem',
@@ -448,15 +441,13 @@ const Projects = () => {
                       color: 'var(--uo-green-dark)',
                       textDecoration: 'none',
                       fontWeight: 700,
-                      border: '2px solid var(--uo-yellow)'
-                    }}
+                      border: '2px solid var(--uo-yellow)' }}
                   >
                     Launch Live App <ExternalLink size={15} />
                   </a>
                   <button
                     onClick={() => setShowPlaceMentorSpecs(!showPlaceMentorSpecs)}
-                    style={{
-                      display: 'inline-flex',
+                    style={{ borderRadius: '16px', display: 'inline-flex',
                       alignItems: 'center',
                       gap: '8px',
                       padding: '0.85rem 1.75rem',
@@ -469,8 +460,7 @@ const Projects = () => {
                       letterSpacing: '1px',
                       textTransform: 'uppercase',
                       cursor: 'pointer',
-                      transition: 'all 0.2s'
-                    }}
+                      transition: 'all 0.2s' }}
                   >
                     {showPlaceMentorSpecs ? 'Hide Details' : 'View Deep Tech Specs'}
                   </button>
@@ -478,7 +468,7 @@ const Projects = () => {
               </div>
 
               {/* Right Column: Key metrics */}
-              <div style={{ background: 'rgba(0, 0, 0, 0.15)', padding: '1.75rem', borderLeft: '3px solid var(--uo-yellow)' }}>
+              <div style={{ borderRadius: '16px', background: 'rgba(0, 0, 0, 0.15)', padding: '1.75rem', borderLeft: '3px solid var(--uo-yellow)' }}>
                 <div style={{ fontFamily: '"Playfair Display", serif', fontSize: '1.1rem', fontWeight: 700, color: 'var(--uo-yellow)', marginBottom: '1.25rem' }}>
                   System Architecture Specs
                 </div>
@@ -512,7 +502,7 @@ const Projects = () => {
                     {PlaceMentorProject.features.map(f => {
                       const Icon = f.icon;
                       return (
-                        <div key={f.title} style={{ display: 'flex', gap: '1rem', background: 'rgba(255, 255, 255, 0.02)', padding: '1.25rem', border: '1px solid rgba(255, 255, 255, 0.05)' }}>
+                        <div key={f.title} style={{ borderRadius: '16px', display: 'flex', gap: '1rem', background: 'rgba(255, 255, 255, 0.02)', padding: '1.25rem', border: '1px solid rgba(255, 255, 255, 0.05)' }}>
                           <div style={{ color: 'var(--uo-yellow)', marginTop: '3px' }}>
                             <Icon size={20} />
                           </div>
@@ -541,27 +531,23 @@ const Projects = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.1 }}
           className="editorial-card"
-          style={{
-            marginTop: '2.5rem',
+          style={{ borderRadius: '16px', marginTop: '2.5rem',
             background: 'var(--uo-green-dark)',
             color: '#FFFFFF',
             border: '2px solid var(--uo-yellow)',
             padding: '0',
             overflow: 'hidden',
-            boxShadow: '0 20px 40px rgba(13,46,33,0.15)'
-          }}
+            boxShadow: '0 20px 40px rgba(13,46,33,0.15)' }}
         >
           {/* Top header bar */}
-          <div style={{
-            background: 'rgba(255, 255, 255, 0.03)',
+          <div style={{ borderRadius: '16px', background: 'rgba(255, 255, 255, 0.03)',
             padding: '1.25rem 2rem',
             borderBottom: '1px solid rgba(255, 255, 255, 0.08)',
             display: 'flex',
             justifyContent: 'space-between',
             alignItems: 'center',
             flexWrap: 'wrap',
-            gap: '1rem'
-          }}>
+            gap: '1rem' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
               <span className="pulse-dot" style={{ display: 'inline-block', width: '8px', height: '8px', borderRadius: '50%', background: 'var(--uo-yellow)', boxShadow: '0 0 10px var(--uo-yellow)' }} />
               <span style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.68rem', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', color: 'var(--uo-yellow)' }}>
@@ -598,7 +584,7 @@ const Projects = () => {
                   </div>
                 </div>
 
-                <div style={{ width: '60px', height: '3px', background: 'var(--uo-yellow)' }} />
+                <div style={{ borderRadius: '16px', width: '60px', height: '3px', background: 'var(--uo-yellow)' }} />
 
                 <p style={{ fontFamily: 'Inter, sans-serif', fontSize: '1rem', lineHeight: 1.8, color: 'rgba(255, 255, 255, 0.85)' }}>
                   {SearchPvtLtdProject.summary}
@@ -607,8 +593,7 @@ const Projects = () => {
                 {/* Tags */}
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', marginTop: '0.5rem' }}>
                   {SearchPvtLtdProject.tags.map(tag => (
-                    <span key={tag} style={{
-                      fontFamily: 'Inter, sans-serif',
+                    <span key={tag} style={{ borderRadius: '16px', fontFamily: 'Inter, sans-serif',
                       fontSize: '0.68rem',
                       fontWeight: 700,
                       letterSpacing: '1px',
@@ -616,8 +601,7 @@ const Projects = () => {
                       padding: '4px 10px',
                       background: 'rgba(255, 255, 255, 0.06)',
                       border: '1px solid rgba(255, 255, 255, 0.12)',
-                      color: 'rgba(255, 255, 255, 0.8)'
-                    }}>
+                      color: 'rgba(255, 255, 255, 0.8)' }}>
                       {tag}
                     </span>
                   ))}
@@ -630,8 +614,7 @@ const Projects = () => {
                     target="_blank"
                     rel="noreferrer"
                     className="btn-primary"
-                    style={{
-                      display: 'inline-flex',
+                    style={{ borderRadius: '16px', display: 'inline-flex',
                       alignItems: 'center',
                       gap: '8px',
                       padding: '0.85rem 1.75rem',
@@ -639,15 +622,13 @@ const Projects = () => {
                       color: 'var(--uo-green-dark)',
                       textDecoration: 'none',
                       fontWeight: 700,
-                      border: '2px solid var(--uo-yellow)'
-                    }}
+                      border: '2px solid var(--uo-yellow)' }}
                   >
                     Launch Live App <ExternalLink size={15} />
                   </a>
                   <button
                     onClick={() => setShowSearchSpecs(!showSearchSpecs)}
-                    style={{
-                      display: 'inline-flex',
+                    style={{ borderRadius: '16px', display: 'inline-flex',
                       alignItems: 'center',
                       gap: '8px',
                       padding: '0.85rem 1.75rem',
@@ -660,8 +641,7 @@ const Projects = () => {
                       letterSpacing: '1px',
                       textTransform: 'uppercase',
                       cursor: 'pointer',
-                      transition: 'all 0.2s'
-                    }}
+                      transition: 'all 0.2s' }}
                   >
                     {showSearchSpecs ? 'Hide Details' : 'View Deep Tech Specs'}
                   </button>
@@ -669,7 +649,7 @@ const Projects = () => {
               </div>
 
               {/* Right Column: Key metrics */}
-              <div style={{ background: 'rgba(0, 0, 0, 0.15)', padding: '1.75rem', borderLeft: '3px solid var(--uo-yellow)' }}>
+              <div style={{ borderRadius: '16px', background: 'rgba(0, 0, 0, 0.15)', padding: '1.75rem', borderLeft: '3px solid var(--uo-yellow)' }}>
                 <div style={{ fontFamily: '"Playfair Display", serif', fontSize: '1.1rem', fontWeight: 700, color: 'var(--uo-yellow)', marginBottom: '1.25rem' }}>
                   Project Specs
                 </div>
@@ -703,7 +683,7 @@ const Projects = () => {
                     {SearchPvtLtdProject.features.map(f => {
                       const Icon = f.icon;
                       return (
-                        <div key={f.title} style={{ display: 'flex', gap: '1rem', background: 'rgba(255, 255, 255, 0.02)', padding: '1.25rem', border: '1px solid rgba(255, 255, 255, 0.05)' }}>
+                        <div key={f.title} style={{ borderRadius: '16px', display: 'flex', gap: '1rem', background: 'rgba(255, 255, 255, 0.02)', padding: '1.25rem', border: '1px solid rgba(255, 255, 255, 0.05)' }}>
                           <div style={{ color: 'var(--uo-yellow)', marginTop: '3px' }}>
                             <Icon size={20} />
                           </div>
@@ -731,22 +711,18 @@ const Projects = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.15 }}
-          style={{
-            marginTop: '2.5rem',
+          style={{ borderRadius: '16px', marginTop: '2.5rem',
             background: 'var(--uo-green-dark)',
             color: '#FFFFFF',
             border: '2px solid var(--uo-yellow)',
             overflow: 'hidden',
-            boxShadow: '0 20px 40px rgba(13,46,33,0.15)',
-          }}
+            boxShadow: '0 20px 40px rgba(13,46,33,0.15)', }}
         >
           {/* Top bar */}
-          <div style={{
-            background: 'rgba(255,255,255,0.03)',
+          <div style={{ borderRadius: '16px', background: 'rgba(255,255,255,0.03)',
             padding: '1.25rem 2rem',
             borderBottom: '1px solid rgba(255,255,255,0.08)',
-            display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1rem'
-          }}>
+            display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1rem' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
               <span className="pulse-dot" style={{ display: 'inline-block', width: '8px', height: '8px', borderRadius: '50%', background: 'var(--uo-yellow)', boxShadow: '0 0 10px var(--uo-yellow)' }} />
               <span style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.68rem', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', color: 'var(--uo-yellow)' }}>Live / Production Ready</span>
@@ -778,13 +754,13 @@ const Projects = () => {
                     Modern E-Commerce Store &amp; Product Showcase Platform
                   </div>
                 </div>
-                <div style={{ width: '60px', height: '3px', background: 'var(--uo-yellow)' }} />
+                <div style={{ borderRadius: '16px', width: '60px', height: '3px', background: 'var(--uo-yellow)' }} />
                 <p style={{ fontFamily: 'Inter, sans-serif', fontSize: '1rem', lineHeight: 1.8, color: 'rgba(255,255,255,0.85)' }}>
                   A fully deployed e-commerce web application featuring a clean product catalogue, responsive UI, and seamless shopping experience. Built and hosted live on Vercel.
                 </p>
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', marginTop: '0.5rem' }}>
                   {['React', 'Vite', 'CSS', 'Vercel', 'JavaScript'].map(tag => (
-                    <span key={tag} style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.68rem', fontWeight: 700, letterSpacing: '1px', textTransform: 'uppercase', padding: '4px 10px', background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.12)', color: 'rgba(255,255,255,0.8)' }}>{tag}</span>
+                    <span key={tag} style={{ borderRadius: '16px', fontFamily: 'Inter, sans-serif', fontSize: '0.68rem', fontWeight: 700, letterSpacing: '1px', textTransform: 'uppercase', padding: '4px 10px', background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.12)', color: 'rgba(255,255,255,0.8)' }}>{tag}</span>
                   ))}
                 </div>
                 <div style={{ marginTop: '1rem' }}>
@@ -793,13 +769,11 @@ const Projects = () => {
                     target="_blank"
                     rel="noreferrer"
                     id="mart-live-btn"
-                    style={{
-                      display: 'inline-flex', alignItems: 'center', gap: '8px',
+                    style={{ borderRadius: '16px', display: 'inline-flex', alignItems: 'center', gap: '8px',
                       padding: '0.85rem 1.75rem',
                       background: 'var(--uo-yellow)', color: 'var(--uo-green-dark)',
                       textDecoration: 'none', fontFamily: 'Inter, sans-serif',
-                      fontSize: '0.8rem', fontWeight: 700, letterSpacing: '1px', textTransform: 'uppercase',
-                    }}
+                      fontSize: '0.8rem', fontWeight: 700, letterSpacing: '1px', textTransform: 'uppercase', }}
                   >
                     Visit Live Site <ExternalLink size={15} />
                   </a>
@@ -807,7 +781,7 @@ const Projects = () => {
               </div>
 
               {/* Right — specs */}
-              <div style={{ background: 'rgba(0,0,0,0.15)', padding: '1.75rem', borderLeft: '3px solid var(--uo-yellow)' }}>
+              <div style={{ borderRadius: '16px', background: 'rgba(0,0,0,0.15)', padding: '1.75rem', borderLeft: '3px solid var(--uo-yellow)' }}>
                 <div style={{ fontFamily: '"Playfair Display", serif', fontSize: '1.1rem', fontWeight: 700, color: 'var(--uo-yellow)', marginBottom: '1.25rem' }}>Project Specs</div>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
                   {[
@@ -833,27 +807,23 @@ const Projects = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2 }}
           className="editorial-card"
-          style={{
-            marginTop: '2.5rem',
+          style={{ borderRadius: '16px', marginTop: '2.5rem',
             background: 'var(--uo-green-dark)',
             color: '#FFFFFF',
             border: '2px solid var(--uo-yellow)',
             padding: '0',
             overflow: 'hidden',
-            boxShadow: '0 20px 40px rgba(13,46,33,0.15)'
-          }}
+            boxShadow: '0 20px 40px rgba(13,46,33,0.15)' }}
         >
           {/* Top header bar */}
-          <div style={{
-            background: 'rgba(255, 255, 255, 0.03)',
+          <div style={{ borderRadius: '16px', background: 'rgba(255, 255, 255, 0.03)',
             padding: '1.25rem 2rem',
             borderBottom: '1px solid rgba(255, 255, 255, 0.08)',
             display: 'flex',
             justifyContent: 'space-between',
             alignItems: 'center',
             flexWrap: 'wrap',
-            gap: '1rem'
-          }}>
+            gap: '1rem' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
               <span className="pulse-dot" style={{ display: 'inline-block', width: '8px', height: '8px', borderRadius: '50%', background: 'var(--uo-yellow)', boxShadow: '0 0 10px var(--uo-yellow)' }} />
               <span style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.68rem', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', color: 'var(--uo-yellow)' }}>
@@ -890,7 +860,7 @@ const Projects = () => {
                   </div>
                 </div>
 
-                <div style={{ width: '60px', height: '3px', background: 'var(--uo-yellow)' }} />
+                <div style={{ borderRadius: '16px', width: '60px', height: '3px', background: 'var(--uo-yellow)' }} />
 
                 <p style={{ fontFamily: 'Inter, sans-serif', fontSize: '1rem', lineHeight: 1.8, color: 'rgba(255, 255, 255, 0.85)' }}>
                   {TempleProject.summary}
@@ -899,8 +869,7 @@ const Projects = () => {
                 {/* Tags */}
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', marginTop: '0.5rem' }}>
                   {TempleProject.tags.map(tag => (
-                    <span key={tag} style={{
-                      fontFamily: 'Inter, sans-serif',
+                    <span key={tag} style={{ borderRadius: '16px', fontFamily: 'Inter, sans-serif',
                       fontSize: '0.68rem',
                       fontWeight: 700,
                       letterSpacing: '1px',
@@ -908,8 +877,7 @@ const Projects = () => {
                       padding: '4px 10px',
                       background: 'rgba(255, 255, 255, 0.06)',
                       border: '1px solid rgba(255, 255, 255, 0.12)',
-                      color: 'rgba(255, 255, 255, 0.8)'
-                    }}>
+                      color: 'rgba(255, 255, 255, 0.8)' }}>
                       {tag}
                     </span>
                   ))}
@@ -922,8 +890,7 @@ const Projects = () => {
                     target="_blank"
                     rel="noreferrer"
                     className="btn-primary"
-                    style={{
-                      display: 'inline-flex',
+                    style={{ borderRadius: '16px', display: 'inline-flex',
                       alignItems: 'center',
                       gap: '8px',
                       padding: '0.85rem 1.75rem',
@@ -931,15 +898,13 @@ const Projects = () => {
                       color: 'var(--uo-green-dark)',
                       textDecoration: 'none',
                       fontWeight: 700,
-                      border: '2px solid var(--uo-yellow)'
-                    }}
+                      border: '2px solid var(--uo-yellow)' }}
                   >
                     Visit Temple Site <ExternalLink size={15} />
                   </a>
                   <button
                     onClick={() => setShowTempleSpecs(!showTempleSpecs)}
-                    style={{
-                      display: 'inline-flex',
+                    style={{ borderRadius: '16px', display: 'inline-flex',
                       alignItems: 'center',
                       gap: '8px',
                       padding: '0.85rem 1.75rem',
@@ -952,8 +917,7 @@ const Projects = () => {
                       letterSpacing: '1px',
                       textTransform: 'uppercase',
                       cursor: 'pointer',
-                      transition: 'all 0.2s'
-                    }}
+                      transition: 'all 0.2s' }}
                   >
                     {showTempleSpecs ? 'Hide Details' : 'View Deep Tech Specs'}
                   </button>
@@ -961,7 +925,7 @@ const Projects = () => {
               </div>
 
               {/* Right Column: Key metrics */}
-              <div style={{ background: 'rgba(0, 0, 0, 0.15)', padding: '1.75rem', borderLeft: '3px solid var(--uo-yellow)' }}>
+              <div style={{ borderRadius: '16px', background: 'rgba(0, 0, 0, 0.15)', padding: '1.75rem', borderLeft: '3px solid var(--uo-yellow)' }}>
                 <div style={{ fontFamily: '"Playfair Display", serif', fontSize: '1.1rem', fontWeight: 700, color: 'var(--uo-yellow)', marginBottom: '1.25rem' }}>
                   Project Specs
                 </div>
@@ -995,7 +959,7 @@ const Projects = () => {
                     {TempleProject.features.map(f => {
                       const Icon = f.icon;
                       return (
-                        <div key={f.title} style={{ display: 'flex', gap: '1rem', background: 'rgba(255, 255, 255, 0.02)', padding: '1.25rem', border: '1px solid rgba(255, 255, 255, 0.05)' }}>
+                        <div key={f.title} style={{ borderRadius: '16px', display: 'flex', gap: '1rem', background: 'rgba(255, 255, 255, 0.02)', padding: '1.25rem', border: '1px solid rgba(255, 255, 255, 0.05)' }}>
                           <div style={{ color: 'var(--uo-yellow)', marginTop: '3px' }}>
                             <Icon size={20} />
                           </div>
@@ -1024,16 +988,14 @@ const Projects = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.15 }}
-          style={{
-            marginTop: '2.5rem',
+          style={{ borderRadius: '16px', marginTop: '2.5rem',
             background: 'var(--uo-green-dark)',
             color: '#FFFFFF',
             border: '2px solid var(--uo-yellow)',
             overflow: 'hidden',
-            boxShadow: '0 20px 40px rgba(13,46,33,0.15)',
-          }}
+            boxShadow: '0 20px 40px rgba(13,46,33,0.15)', }}
         >
-          <div style={{ background: 'rgba(255,255,255,0.03)', padding: '1.25rem 2rem', borderBottom: '1px solid rgba(255,255,255,0.08)', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1rem' }}>
+          <div style={{ borderRadius: '16px', background: 'rgba(255,255,255,0.03)', padding: '1.25rem 2rem', borderBottom: '1px solid rgba(255,255,255,0.08)', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1rem' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
               <span className="pulse-dot" style={{ display: 'inline-block', width: '8px', height: '8px', borderRadius: '50%', background: 'var(--uo-yellow)', boxShadow: '0 0 10px var(--uo-yellow)' }} />
               <span style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.68rem', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', color: 'var(--uo-yellow)' }}>{CapstoneProject.status}</span>
@@ -1052,19 +1014,19 @@ const Projects = () => {
                   </div>
                   <div style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.9rem', fontWeight: 600, letterSpacing: '0.5px', color: 'rgba(255,255,255,0.7)', marginTop: '0.5rem' }}>{CapstoneProject.tagline}</div>
                 </div>
-                <div style={{ width: '60px', height: '3px', background: 'var(--uo-yellow)' }} />
+                <div style={{ borderRadius: '16px', width: '60px', height: '3px', background: 'var(--uo-yellow)' }} />
                 <p style={{ fontFamily: 'Inter, sans-serif', fontSize: '1rem', lineHeight: 1.8, color: 'rgba(255, 255, 255, 0.85)' }}>{CapstoneProject.summary}</p>
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', marginTop: '0.5rem' }}>
                   {CapstoneProject.tags.map(tag => (
-                    <span key={tag} style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.68rem', fontWeight: 700, letterSpacing: '1px', textTransform: 'uppercase', padding: '4px 10px', background: 'rgba(255, 255, 255, 0.06)', border: '1px solid rgba(255, 255, 255, 0.12)', color: 'rgba(255, 255, 255, 0.8)' }}>{tag}</span>
+                    <span key={tag} style={{ borderRadius: '16px', fontFamily: 'Inter, sans-serif', fontSize: '0.68rem', fontWeight: 700, letterSpacing: '1px', textTransform: 'uppercase', padding: '4px 10px', background: 'rgba(255, 255, 255, 0.06)', border: '1px solid rgba(255, 255, 255, 0.12)', color: 'rgba(255, 255, 255, 0.8)' }}>{tag}</span>
                   ))}
                 </div>
                 <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', marginTop: '1rem' }}>
-                  <a href={CapstoneProject.url} target="_blank" rel="noreferrer" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '0.85rem 1.75rem', background: 'var(--uo-yellow)', color: 'var(--uo-green-dark)', textDecoration: 'none', fontWeight: 700, border: '2px solid var(--uo-yellow)' }}>View Project <ExternalLink size={15} /></a>
-                  <button onClick={() => setShowCapstoneSpecs(!showCapstoneSpecs)} style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '0.85rem 1.75rem', background: 'transparent', color: '#FFFFFF', border: '2px solid rgba(255, 255, 255, 0.25)', fontFamily: 'Inter, sans-serif', fontSize: '0.8rem', fontWeight: 700, letterSpacing: '1px', textTransform: 'uppercase', cursor: 'pointer' }}>{showCapstoneSpecs ? 'Hide Details' : 'View Deep Tech Specs'}</button>
+                  <a href={CapstoneProject.url} target="_blank" rel="noreferrer" style={{ borderRadius: '16px', display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '0.85rem 1.75rem', background: 'var(--uo-yellow)', color: 'var(--uo-green-dark)', textDecoration: 'none', fontWeight: 700, border: '2px solid var(--uo-yellow)' }}>View Project <ExternalLink size={15} /></a>
+                  <button onClick={() => setShowCapstoneSpecs(!showCapstoneSpecs)} style={{ borderRadius: '16px', display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '0.85rem 1.75rem', background: 'transparent', color: '#FFFFFF', border: '2px solid rgba(255, 255, 255, 0.25)', fontFamily: 'Inter, sans-serif', fontSize: '0.8rem', fontWeight: 700, letterSpacing: '1px', textTransform: 'uppercase', cursor: 'pointer' }}>{showCapstoneSpecs ? 'Hide Details' : 'View Deep Tech Specs'}</button>
                 </div>
               </div>
-              <div style={{ background: 'rgba(0, 0, 0, 0.15)', padding: '1.75rem', borderLeft: '3px solid var(--uo-yellow)' }}>
+              <div style={{ borderRadius: '16px', background: 'rgba(0, 0, 0, 0.15)', padding: '1.75rem', borderLeft: '3px solid var(--uo-yellow)' }}>
                 <div style={{ fontFamily: '"Playfair Display", serif', fontSize: '1.1rem', fontWeight: 700, color: 'var(--uo-yellow)', marginBottom: '1.25rem' }}>Project Specs</div>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
                   {CapstoneProject.metrics.map(m => (
@@ -1081,7 +1043,7 @@ const Projects = () => {
                 <motion.div initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: 'auto' }} exit={{ opacity: 0, height: 0 }} transition={{ duration: 0.4 }} style={{ overflow: 'hidden', marginTop: '2.5rem', paddingTop: '2.5rem', borderTop: '1px solid rgba(255,255,255,0.1)' }}>
                   <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem' }}>
                     {CapstoneProject.features.map(f => { const Icon = f.icon; return (
-                      <div key={f.title} style={{ display: 'flex', gap: '1rem', background: 'rgba(255, 255, 255, 0.02)', padding: '1.25rem', border: '1px solid rgba(255, 255, 255, 0.05)' }}>
+                      <div key={f.title} style={{ borderRadius: '16px', display: 'flex', gap: '1rem', background: 'rgba(255, 255, 255, 0.02)', padding: '1.25rem', border: '1px solid rgba(255, 255, 255, 0.05)' }}>
                         <div style={{ color: 'var(--uo-yellow)', marginTop: '3px' }}><Icon size={20} /></div>
                         <div>
                           <h4 style={{ fontFamily: '"Playfair Display", serif', fontSize: '1rem', fontWeight: 700, color: '#FFFFFF', marginBottom: '0.4rem' }}>{f.title}</h4>
@@ -1103,26 +1065,22 @@ const Projects = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2 }}
           className="editorial-card"
-          style={{
-            marginTop: '2.5rem',
+          style={{ borderRadius: '16px', marginTop: '2.5rem',
             background: 'var(--uo-green-dark)',
             color: '#FFFFFF',
             border: '2px solid var(--uo-yellow)',
             padding: '0',
             overflow: 'hidden',
-            boxShadow: '0 20px 40px rgba(13,46,33,0.15)'
-          }}
+            boxShadow: '0 20px 40px rgba(13,46,33,0.15)' }}
         >
-          <div style={{
-            background: 'rgba(255, 255, 255, 0.03)',
+          <div style={{ borderRadius: '16px', background: 'rgba(255, 255, 255, 0.03)',
             padding: '1.25rem 2rem',
             borderBottom: '1px solid rgba(255, 255, 255, 0.08)',
             display: 'flex',
             justifyContent: 'space-between',
             alignItems: 'center',
             flexWrap: 'wrap',
-            gap: '1rem'
-          }}>
+            gap: '1rem' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
               <span className="pulse-dot" style={{ display: 'inline-block', width: '8px', height: '8px', borderRadius: '50%', background: 'var(--uo-yellow)', boxShadow: '0 0 10px var(--uo-yellow)' }} />
               <span style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.68rem', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', color: 'var(--uo-yellow)' }}>
@@ -1157,7 +1115,7 @@ const Projects = () => {
                   </div>
                 </div>
 
-                <div style={{ width: '60px', height: '3px', background: 'var(--uo-yellow)' }} />
+                <div style={{ borderRadius: '16px', width: '60px', height: '3px', background: 'var(--uo-yellow)' }} />
 
                 <p style={{ fontFamily: 'Inter, sans-serif', fontSize: '1rem', lineHeight: 1.8, color: 'rgba(255, 255, 255, 0.85)' }}>
                   {ShopSmartCatalogProject.summary}
@@ -1165,8 +1123,7 @@ const Projects = () => {
 
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', marginTop: '0.5rem' }}>
                   {ShopSmartCatalogProject.tags.map(tag => (
-                    <span key={tag} style={{
-                      fontFamily: 'Inter, sans-serif',
+                    <span key={tag} style={{ borderRadius: '16px', fontFamily: 'Inter, sans-serif',
                       fontSize: '0.68rem',
                       fontWeight: 700,
                       letterSpacing: '1px',
@@ -1174,8 +1131,7 @@ const Projects = () => {
                       padding: '4px 10px',
                       background: 'rgba(255, 255, 255, 0.06)',
                       border: '1px solid rgba(255, 255, 255, 0.12)',
-                      color: 'rgba(255, 255, 255, 0.8)'
-                    }}>
+                      color: 'rgba(255, 255, 255, 0.8)' }}>
                       {tag}
                     </span>
                   ))}
@@ -1187,8 +1143,7 @@ const Projects = () => {
                     target="_blank"
                     rel="noreferrer"
                     className="btn-primary"
-                    style={{
-                      display: 'inline-flex',
+                    style={{ borderRadius: '16px', display: 'inline-flex',
                       alignItems: 'center',
                       gap: '8px',
                       padding: '0.85rem 1.75rem',
@@ -1196,15 +1151,13 @@ const Projects = () => {
                       color: 'var(--uo-green-dark)',
                       textDecoration: 'none',
                       fontWeight: 700,
-                      border: '2px solid var(--uo-yellow)'
-                    }}
+                      border: '2px solid var(--uo-yellow)' }}
                   >
                     Visit Site <ExternalLink size={15} />
                   </a>
                   <button
                     onClick={() => setShowShopSmartCatalogSpecs(!showShopSmartCatalogSpecs)}
-                    style={{
-                      display: 'inline-flex',
+                    style={{ borderRadius: '16px', display: 'inline-flex',
                       alignItems: 'center',
                       gap: '8px',
                       padding: '0.85rem 1.75rem',
@@ -1217,15 +1170,14 @@ const Projects = () => {
                       letterSpacing: '1px',
                       textTransform: 'uppercase',
                       cursor: 'pointer',
-                      transition: 'all 0.2s'
-                    }}
+                      transition: 'all 0.2s' }}
                   >
                     {showShopSmartCatalogSpecs ? 'Hide Details' : 'View Deep Tech Specs'}
                   </button>
                 </div>
               </div>
 
-              <div style={{ background: 'rgba(0, 0, 0, 0.15)', padding: '1.75rem', borderLeft: '3px solid var(--uo-yellow)' }}>
+              <div style={{ borderRadius: '16px', background: 'rgba(0, 0, 0, 0.15)', padding: '1.75rem', borderLeft: '3px solid var(--uo-yellow)' }}>
                 <div style={{ fontFamily: '"Playfair Display", serif', fontSize: '1.1rem', fontWeight: 700, color: 'var(--uo-yellow)', marginBottom: '1.25rem' }}>
                   Project Specs
                 </div>
@@ -1257,7 +1209,7 @@ const Projects = () => {
                     {ShopSmartCatalogProject.features.map(f => {
                       const Icon = f.icon;
                       return (
-                        <div key={f.title} style={{ display: 'flex', gap: '1rem', background: 'rgba(255, 255, 255, 0.02)', padding: '1.25rem', border: '1px solid rgba(255, 255, 255, 0.05)' }}>
+                        <div key={f.title} style={{ borderRadius: '16px', display: 'flex', gap: '1rem', background: 'rgba(255, 255, 255, 0.02)', padding: '1.25rem', border: '1px solid rgba(255, 255, 255, 0.05)' }}>
                           <div style={{ color: 'var(--uo-yellow)', marginTop: '3px' }}>
                             <Icon size={20} />
                           </div>
@@ -1286,26 +1238,22 @@ const Projects = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2 }}
           className="editorial-card"
-          style={{
-            marginTop: '2.5rem',
+          style={{ borderRadius: '16px', marginTop: '2.5rem',
             background: 'var(--uo-green-dark)',
             color: '#FFFFFF',
             border: '2px solid var(--uo-yellow)',
             padding: '0',
             overflow: 'hidden',
-            boxShadow: '0 20px 40px rgba(13,46,33,0.15)'
-          }}
+            boxShadow: '0 20px 40px rgba(13,46,33,0.15)' }}
         >
-          <div style={{
-            background: 'rgba(255, 255, 255, 0.03)',
+          <div style={{ borderRadius: '16px', background: 'rgba(255, 255, 255, 0.03)',
             padding: '1.25rem 2rem',
             borderBottom: '1px solid rgba(255, 255, 255, 0.08)',
             display: 'flex',
             justifyContent: 'space-between',
             alignItems: 'center',
             flexWrap: 'wrap',
-            gap: '1rem'
-          }}>
+            gap: '1rem' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
               <span className="pulse-dot" style={{ display: 'inline-block', width: '8px', height: '8px', borderRadius: '50%', background: 'var(--uo-yellow)', boxShadow: '0 0 10px var(--uo-yellow)' }} />
               <span style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.68rem', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', color: 'var(--uo-yellow)' }}>
@@ -1340,7 +1288,7 @@ const Projects = () => {
                   </div>
                 </div>
 
-                <div style={{ width: '60px', height: '3px', background: 'var(--uo-yellow)' }} />
+                <div style={{ borderRadius: '16px', width: '60px', height: '3px', background: 'var(--uo-yellow)' }} />
 
                 <p style={{ fontFamily: 'Inter, sans-serif', fontSize: '1rem', lineHeight: 1.8, color: 'rgba(255, 255, 255, 0.85)' }}>
                   {ShopSmartAdminProject.summary}
@@ -1348,8 +1296,7 @@ const Projects = () => {
 
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', marginTop: '0.5rem' }}>
                   {ShopSmartAdminProject.tags.map(tag => (
-                    <span key={tag} style={{
-                      fontFamily: 'Inter, sans-serif',
+                    <span key={tag} style={{ borderRadius: '16px', fontFamily: 'Inter, sans-serif',
                       fontSize: '0.68rem',
                       fontWeight: 700,
                       letterSpacing: '1px',
@@ -1357,8 +1304,7 @@ const Projects = () => {
                       padding: '4px 10px',
                       background: 'rgba(255, 255, 255, 0.06)',
                       border: '1px solid rgba(255, 255, 255, 0.12)',
-                      color: 'rgba(255, 255, 255, 0.8)'
-                    }}>
+                      color: 'rgba(255, 255, 255, 0.8)' }}>
                       {tag}
                     </span>
                   ))}
@@ -1370,8 +1316,7 @@ const Projects = () => {
                     target="_blank"
                     rel="noreferrer"
                     className="btn-primary"
-                    style={{
-                      display: 'inline-flex',
+                    style={{ borderRadius: '16px', display: 'inline-flex',
                       alignItems: 'center',
                       gap: '8px',
                       padding: '0.85rem 1.75rem',
@@ -1379,15 +1324,13 @@ const Projects = () => {
                       color: 'var(--uo-green-dark)',
                       textDecoration: 'none',
                       fontWeight: 700,
-                      border: '2px solid var(--uo-yellow)'
-                    }}
+                      border: '2px solid var(--uo-yellow)' }}
                   >
                     Visit Site <ExternalLink size={15} />
                   </a>
                   <button
                     onClick={() => setShowShopSmartAdminSpecs(!showShopSmartAdminSpecs)}
-                    style={{
-                      display: 'inline-flex',
+                    style={{ borderRadius: '16px', display: 'inline-flex',
                       alignItems: 'center',
                       gap: '8px',
                       padding: '0.85rem 1.75rem',
@@ -1400,15 +1343,14 @@ const Projects = () => {
                       letterSpacing: '1px',
                       textTransform: 'uppercase',
                       cursor: 'pointer',
-                      transition: 'all 0.2s'
-                    }}
+                      transition: 'all 0.2s' }}
                   >
                     {showShopSmartAdminSpecs ? 'Hide Details' : 'View Deep Tech Specs'}
                   </button>
                 </div>
               </div>
 
-              <div style={{ background: 'rgba(0, 0, 0, 0.15)', padding: '1.75rem', borderLeft: '3px solid var(--uo-yellow)' }}>
+              <div style={{ borderRadius: '16px', background: 'rgba(0, 0, 0, 0.15)', padding: '1.75rem', borderLeft: '3px solid var(--uo-yellow)' }}>
                 <div style={{ fontFamily: '"Playfair Display", serif', fontSize: '1.1rem', fontWeight: 700, color: 'var(--uo-yellow)', marginBottom: '1.25rem' }}>
                   Project Specs
                 </div>
@@ -1440,7 +1382,7 @@ const Projects = () => {
                     {ShopSmartAdminProject.features.map(f => {
                       const Icon = f.icon;
                       return (
-                        <div key={f.title} style={{ display: 'flex', gap: '1rem', background: 'rgba(255, 255, 255, 0.02)', padding: '1.25rem', border: '1px solid rgba(255, 255, 255, 0.05)' }}>
+                        <div key={f.title} style={{ borderRadius: '16px', display: 'flex', gap: '1rem', background: 'rgba(255, 255, 255, 0.02)', padding: '1.25rem', border: '1px solid rgba(255, 255, 255, 0.05)' }}>
                           <div style={{ color: 'var(--uo-yellow)', marginTop: '3px' }}>
                             <Icon size={20} />
                           </div>
@@ -1469,26 +1411,22 @@ const Projects = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2 }}
           className="editorial-card"
-          style={{
-            marginTop: '2.5rem',
+          style={{ borderRadius: '16px', marginTop: '2.5rem',
             background: 'var(--uo-green-dark)',
             color: '#FFFFFF',
             border: '2px solid var(--uo-yellow)',
             padding: '0',
             overflow: 'hidden',
-            boxShadow: '0 20px 40px rgba(13,46,33,0.15)'
-          }}
+            boxShadow: '0 20px 40px rgba(13,46,33,0.15)' }}
         >
-          <div style={{
-            background: 'rgba(255, 255, 255, 0.03)',
+          <div style={{ borderRadius: '16px', background: 'rgba(255, 255, 255, 0.03)',
             padding: '1.25rem 2rem',
             borderBottom: '1px solid rgba(255, 255, 255, 0.08)',
             display: 'flex',
             justifyContent: 'space-between',
             alignItems: 'center',
             flexWrap: 'wrap',
-            gap: '1rem'
-          }}>
+            gap: '1rem' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
               <span className="pulse-dot" style={{ display: 'inline-block', width: '8px', height: '8px', borderRadius: '50%', background: 'var(--uo-yellow)', boxShadow: '0 0 10px var(--uo-yellow)' }} />
               <span style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.68rem', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', color: 'var(--uo-yellow)' }}>
@@ -1523,7 +1461,7 @@ const Projects = () => {
                   </div>
                 </div>
 
-                <div style={{ width: '60px', height: '3px', background: 'var(--uo-yellow)' }} />
+                <div style={{ borderRadius: '16px', width: '60px', height: '3px', background: 'var(--uo-yellow)' }} />
 
                 <p style={{ fontFamily: 'Inter, sans-serif', fontSize: '1rem', lineHeight: 1.8, color: 'rgba(255, 255, 255, 0.85)' }}>
                   {PrintWebProject.summary}
@@ -1531,8 +1469,7 @@ const Projects = () => {
 
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', marginTop: '0.5rem' }}>
                   {PrintWebProject.tags.map(tag => (
-                    <span key={tag} style={{
-                      fontFamily: 'Inter, sans-serif',
+                    <span key={tag} style={{ borderRadius: '16px', fontFamily: 'Inter, sans-serif',
                       fontSize: '0.68rem',
                       fontWeight: 700,
                       letterSpacing: '1px',
@@ -1540,8 +1477,7 @@ const Projects = () => {
                       padding: '4px 10px',
                       background: 'rgba(255, 255, 255, 0.06)',
                       border: '1px solid rgba(255, 255, 255, 0.12)',
-                      color: 'rgba(255, 255, 255, 0.8)'
-                    }}>
+                      color: 'rgba(255, 255, 255, 0.8)' }}>
                       {tag}
                     </span>
                   ))}
@@ -1553,8 +1489,7 @@ const Projects = () => {
                     target="_blank"
                     rel="noreferrer"
                     className="btn-primary"
-                    style={{
-                      display: 'inline-flex',
+                    style={{ borderRadius: '16px', display: 'inline-flex',
                       alignItems: 'center',
                       gap: '8px',
                       padding: '0.85rem 1.75rem',
@@ -1562,15 +1497,13 @@ const Projects = () => {
                       color: 'var(--uo-green-dark)',
                       textDecoration: 'none',
                       fontWeight: 700,
-                      border: '2px solid var(--uo-yellow)'
-                    }}
+                      border: '2px solid var(--uo-yellow)' }}
                   >
                     Visit Site <ExternalLink size={15} />
                   </a>
                   <button
                     onClick={() => setShowPrintWebSpecs(!showPrintWebSpecs)}
-                    style={{
-                      display: 'inline-flex',
+                    style={{ borderRadius: '16px', display: 'inline-flex',
                       alignItems: 'center',
                       gap: '8px',
                       padding: '0.85rem 1.75rem',
@@ -1583,15 +1516,14 @@ const Projects = () => {
                       letterSpacing: '1px',
                       textTransform: 'uppercase',
                       cursor: 'pointer',
-                      transition: 'all 0.2s'
-                    }}
+                      transition: 'all 0.2s' }}
                   >
                     {showPrintWebSpecs ? 'Hide Details' : 'View Deep Tech Specs'}
                   </button>
                 </div>
               </div>
 
-              <div style={{ background: 'rgba(0, 0, 0, 0.15)', padding: '1.75rem', borderLeft: '3px solid var(--uo-yellow)' }}>
+              <div style={{ borderRadius: '16px', background: 'rgba(0, 0, 0, 0.15)', padding: '1.75rem', borderLeft: '3px solid var(--uo-yellow)' }}>
                 <div style={{ fontFamily: '"Playfair Display", serif', fontSize: '1.1rem', fontWeight: 700, color: 'var(--uo-yellow)', marginBottom: '1.25rem' }}>
                   Project Specs
                 </div>
@@ -1623,7 +1555,7 @@ const Projects = () => {
                     {PrintWebProject.features.map(f => {
                       const Icon = f.icon;
                       return (
-                        <div key={f.title} style={{ display: 'flex', gap: '1rem', background: 'rgba(255, 255, 255, 0.02)', padding: '1.25rem', border: '1px solid rgba(255, 255, 255, 0.05)' }}>
+                        <div key={f.title} style={{ borderRadius: '16px', display: 'flex', gap: '1rem', background: 'rgba(255, 255, 255, 0.02)', padding: '1.25rem', border: '1px solid rgba(255, 255, 255, 0.05)' }}>
                           <div style={{ color: 'var(--uo-yellow)', marginTop: '3px' }}>
                             <Icon size={20} />
                           </div>
@@ -1652,26 +1584,22 @@ const Projects = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2 }}
           className="editorial-card"
-          style={{
-            marginTop: '2.5rem',
+          style={{ borderRadius: '16px', marginTop: '2.5rem',
             background: 'var(--uo-green-dark)',
             color: '#FFFFFF',
             border: '2px solid var(--uo-yellow)',
             padding: '0',
             overflow: 'hidden',
-            boxShadow: '0 20px 40px rgba(13,46,33,0.15)'
-          }}
+            boxShadow: '0 20px 40px rgba(13,46,33,0.15)' }}
         >
-          <div style={{
-            background: 'rgba(255, 255, 255, 0.03)',
+          <div style={{ borderRadius: '16px', background: 'rgba(255, 255, 255, 0.03)',
             padding: '1.25rem 2rem',
             borderBottom: '1px solid rgba(255, 255, 255, 0.08)',
             display: 'flex',
             justifyContent: 'space-between',
             alignItems: 'center',
             flexWrap: 'wrap',
-            gap: '1rem'
-          }}>
+            gap: '1rem' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
               <span className="pulse-dot" style={{ display: 'inline-block', width: '8px', height: '8px', borderRadius: '50%', background: 'var(--uo-yellow)', boxShadow: '0 0 10px var(--uo-yellow)' }} />
               <span style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.68rem', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', color: 'var(--uo-yellow)' }}>
@@ -1706,7 +1634,7 @@ const Projects = () => {
                   </div>
                 </div>
 
-                <div style={{ width: '60px', height: '3px', background: 'var(--uo-yellow)' }} />
+                <div style={{ borderRadius: '16px', width: '60px', height: '3px', background: 'var(--uo-yellow)' }} />
 
                 <p style={{ fontFamily: 'Inter, sans-serif', fontSize: '1rem', lineHeight: 1.8, color: 'rgba(255, 255, 255, 0.85)' }}>
                   {CapstoneProjectRealtime.summary}
@@ -1714,8 +1642,7 @@ const Projects = () => {
 
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', marginTop: '0.5rem' }}>
                   {CapstoneProjectRealtime.tags.map(tag => (
-                    <span key={tag} style={{
-                      fontFamily: 'Inter, sans-serif',
+                    <span key={tag} style={{ borderRadius: '16px', fontFamily: 'Inter, sans-serif',
                       fontSize: '0.68rem',
                       fontWeight: 700,
                       letterSpacing: '1px',
@@ -1723,8 +1650,7 @@ const Projects = () => {
                       padding: '4px 10px',
                       background: 'rgba(255, 255, 255, 0.06)',
                       border: '1px solid rgba(255, 255, 255, 0.12)',
-                      color: 'rgba(255, 255, 255, 0.8)'
-                    }}>
+                      color: 'rgba(255, 255, 255, 0.8)' }}>
                       {tag}
                     </span>
                   ))}
@@ -1736,8 +1662,7 @@ const Projects = () => {
                     target="_blank"
                     rel="noreferrer"
                     className="btn-primary"
-                    style={{
-                      display: 'inline-flex',
+                    style={{ borderRadius: '16px', display: 'inline-flex',
                       alignItems: 'center',
                       gap: '8px',
                       padding: '0.85rem 1.75rem',
@@ -1745,15 +1670,13 @@ const Projects = () => {
                       color: 'var(--uo-green-dark)',
                       textDecoration: 'none',
                       fontWeight: 700,
-                      border: '2px solid var(--uo-yellow)'
-                    }}
+                      border: '2px solid var(--uo-yellow)' }}
                   >
                     Visit Site <ExternalLink size={15} />
                   </a>
                   <button
                     onClick={() => setShowCapstoneRealtimeSpecs(!showCapstoneRealtimeSpecs)}
-                    style={{
-                      display: 'inline-flex',
+                    style={{ borderRadius: '16px', display: 'inline-flex',
                       alignItems: 'center',
                       gap: '8px',
                       padding: '0.85rem 1.75rem',
@@ -1766,15 +1689,14 @@ const Projects = () => {
                       letterSpacing: '1px',
                       textTransform: 'uppercase',
                       cursor: 'pointer',
-                      transition: 'all 0.2s'
-                    }}
+                      transition: 'all 0.2s' }}
                   >
                     {showCapstoneRealtimeSpecs ? 'Hide Details' : 'View Deep Tech Specs'}
                   </button>
                 </div>
               </div>
 
-              <div style={{ background: 'rgba(0, 0, 0, 0.15)', padding: '1.75rem', borderLeft: '3px solid var(--uo-yellow)' }}>
+              <div style={{ borderRadius: '16px', background: 'rgba(0, 0, 0, 0.15)', padding: '1.75rem', borderLeft: '3px solid var(--uo-yellow)' }}>
                 <div style={{ fontFamily: '"Playfair Display", serif', fontSize: '1.1rem', fontWeight: 700, color: 'var(--uo-yellow)', marginBottom: '1.25rem' }}>
                   Project Specs
                 </div>
@@ -1806,7 +1728,7 @@ const Projects = () => {
                     {CapstoneProjectRealtime.features.map(f => {
                       const Icon = f.icon;
                       return (
-                        <div key={f.title} style={{ display: 'flex', gap: '1rem', background: 'rgba(255, 255, 255, 0.02)', padding: '1.25rem', border: '1px solid rgba(255, 255, 255, 0.05)' }}>
+                        <div key={f.title} style={{ borderRadius: '16px', display: 'flex', gap: '1rem', background: 'rgba(255, 255, 255, 0.02)', padding: '1.25rem', border: '1px solid rgba(255, 255, 255, 0.05)' }}>
                           <div style={{ color: 'var(--uo-yellow)', marginTop: '3px' }}>
                             <Icon size={20} />
                           </div>

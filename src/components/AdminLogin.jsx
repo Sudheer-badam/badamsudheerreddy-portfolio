@@ -65,7 +65,7 @@ const AdminLogin = ({ user }) => {
     <div style={{ padding: '2.5rem 2rem', width: '92%', maxWidth: '440px', background: '#FFFFFF', border: '1px solid var(--uo-border)', borderRadius: '24px', margin: '5vh auto', boxShadow: '0 25px 50px rgba(0,0,0,0.1)', boxSizing: 'border-box' }}>
       <img src="/BADAM SUDHEER REDDY .jpeg.png" alt="Avatar" className="animated-avatar-border" style={{ width: '110px', height: '110px', borderRadius: '50%', objectFit: 'cover', objectPosition: 'center top', display: 'block', margin: '0 auto 1.5rem' }} />
       <h3 style={{ fontFamily: '"Playfair Display", serif', color: 'var(--uo-green-dark)', marginBottom: '1.5rem', textAlign: 'center', fontSize: '2.2rem' }}>Authentication</h3>
-      {error && <p style={{ color: '#d32f2f', fontSize: '0.95rem', marginBottom: '1.5rem', textAlign: 'center', background: '#ffebee', padding: '12px', borderRadius: '8px' }}>{error}</p>}
+      {error && <p style={{ color: '#d32f2f', fontSize: '0.95rem', marginBottom: '1.5rem', textAlign: 'center', background: '#ffebee', padding: '12px', borderRadius: '16px' }}>{error}</p>}
       
       <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '24px', justifyContent: 'center' }}>
         <input 
@@ -105,14 +105,14 @@ const AdminLogin = ({ user }) => {
               <p style={{ margin: 0 }}>All portfolio content, source code, designs, and associated assets remain the intellectual property of Sudheer Badam.</p>
             </div>
 
-            <div style={{ padding: '20px 24px', borderTop: '1px solid #eee', display: 'flex', justifyContent: 'flex-end', background: '#f9f9f9', borderBottomLeftRadius: '16px', borderBottomRightRadius: '16px' }}>
+            <div style={{ borderRadius: '16px', padding: '20px 24px', borderTop: '1px solid #eee', display: 'flex', justifyContent: 'flex-end', background: '#f9f9f9', borderBottomLeftRadius: '16px', borderBottomRightRadius: '16px' }}>
               <button 
                 type="button"
                 onClick={() => {
                   setTermsAccepted(true);
                   setShowTerms(false);
                 }} 
-                style={{ padding: '12px 24px', background: '#5046e6', color: 'white', border: 'none', borderRadius: '8px', cursor: 'pointer', fontWeight: 600, fontSize: '1rem', transition: 'background 0.2s' }}
+                style={{ padding: '12px 24px', background: '#5046e6', color: 'white', border: 'none', borderRadius: '16px', cursor: 'pointer', fontWeight: 600, fontSize: '1rem', transition: 'background 0.2s' }}
               >
                 Accept & Close
               </button>

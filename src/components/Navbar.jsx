@@ -71,7 +71,7 @@ const Navbar = () => {
             background: '#d32f2f',
             color: 'white',
             border: 'none',
-            borderRadius: '4px',
+            borderRadius: '16px',
             fontFamily: 'Inter, sans-serif',
             fontSize: '0.85rem',
             fontWeight: 600,

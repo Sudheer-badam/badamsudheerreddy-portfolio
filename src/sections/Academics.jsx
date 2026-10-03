@@ -1287,11 +1287,9 @@ const HighSchoolDashboard = () => {
       {/* Short Summary Bar */}
       <button 
         onClick={() => setExpanded(!expanded)}
-        style={{
-          width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+        style={{ borderRadius: '16px', width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'space-between',
           padding: '0.85rem 1.25rem', background: 'var(--uo-green-dark)', border: 'none', cursor: 'pointer',
-          color: '#fff', borderLeft: '3px solid var(--uo-yellow)', textAlign: 'left'
-        }}
+          color: '#fff', borderLeft: '3px solid var(--uo-yellow)', textAlign: 'left' }}
       >
         <div style={{ display: 'flex', gap: '15px', alignItems: 'center', flexWrap: 'wrap' }}>
           <span style={{ fontFamily: 'Inter', fontSize: '0.75rem', fontWeight: 700, letterSpacing: '1px', textTransform: 'uppercase', color: 'var(--uo-yellow)' }}>
@@ -1302,7 +1300,7 @@ const HighSchoolDashboard = () => {
           </span>
         </div>
         <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-          <span style={{ fontFamily: 'Inter', fontSize: '0.62rem', fontWeight: 700, background: '#16a34a', color: '#fff', padding: '2px 8px', letterSpacing: '1px', textTransform: 'uppercase' }}>
+          <span style={{ borderRadius: '16px', fontFamily: 'Inter', fontSize: '0.62rem', fontWeight: 700, background: '#16a34a', color: '#fff', padding: '2px 8px', letterSpacing: '1px', textTransform: 'uppercase' }}>
             First Division
           </span>
           {expanded ? <ChevronUp size={14} /> : <ChevronDown size={14} />}
@@ -1318,7 +1316,7 @@ const HighSchoolDashboard = () => {
             transition={{ duration: 0.28 }}
             style={{ overflow: 'hidden' }}
           >
-            <div style={{ padding: '1.25rem', border: '1px solid var(--uo-border)', background: '#fafafa', borderTop: 'none' }}>
+            <div style={{ borderRadius: '16px', padding: '1.25rem', border: '1px solid var(--uo-border)', background: '#fafafa', borderTop: 'none' }}>
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1rem', marginBottom: '1.25rem' }}>
                 {[
                   { label: 'Medium', value: 'English' },
@@ -1333,10 +1331,10 @@ const HighSchoolDashboard = () => {
               </div>
 
               {/* Marks Table */}
-              <div style={{ overflowX: 'auto', border: '1px solid var(--uo-border)', background: '#fff', marginBottom: '1rem' }}>
+              <div style={{ borderRadius: '16px', overflowX: 'auto', border: '1px solid var(--uo-border)', background: '#fff', marginBottom: '1rem' }}>
                 <table style={{ width: '100%', borderCollapse: 'collapse', fontFamily: 'Inter, sans-serif', fontSize: '0.75rem', color: 'var(--uo-dark)' }}>
                   <thead>
-                    <tr style={{ background: 'var(--uo-green)', color: '#fff', textAlign: 'left' }}>
+                    <tr style={{ borderRadius: '16px', background: 'var(--uo-green)', color: '#fff', textAlign: 'left' }}>
                       <th style={{ padding: '8px 12px', fontSize: '0.62rem', fontWeight: 700, letterSpacing: '1px', textTransform: 'uppercase' }}>Subject Name</th>
                       <th style={{ padding: '8px 12px', fontSize: '0.62rem', fontWeight: 700, letterSpacing: '1px', textTransform: 'uppercase', textAlign: 'center', width: '100px' }}>Max Marks</th>
                       <th style={{ padding: '8px 12px', fontSize: '0.62rem', fontWeight: 700, letterSpacing: '1px', textTransform: 'uppercase', textAlign: 'center', width: '120px' }}>Marks Secured</th>
@@ -1345,7 +1343,7 @@ const HighSchoolDashboard = () => {
                   </thead>
                   <tbody>
                     {subjects.map((sub, idx) => (
-                      <tr key={idx} style={{ borderBottom: '1px solid var(--uo-border)', background: idx % 2 === 0 ? 'rgba(0,0,0,0.01)' : 'transparent' }}>
+                      <tr key={idx} style={{ borderRadius: '16px', borderBottom: '1px solid var(--uo-border)', background: idx % 2 === 0 ? 'rgba(0,0,0,0.01)' : 'transparent' }}>
                         <td style={{ padding: '8px 12px', fontWeight: 600, color: 'var(--uo-green)' }}>{sub.name}</td>
                         <td style={{ padding: '8px 12px', textAlign: 'center', fontWeight: 600 }}>{sub.max}</td>
                         <td style={{ padding: '8px 12px', textAlign: 'center', fontWeight: 700, color: '#16a34a' }}>{sub.secured}</td>
@@ -1367,7 +1365,7 @@ const HighSchoolDashboard = () => {
                     href={p.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    style={{ display: 'inline-flex', alignItems: 'center', gap: '5px', padding: '6px 14px', border: '1px solid var(--uo-green)', color: 'var(--uo-green)', fontFamily: 'Inter', fontSize: '0.72rem', fontWeight: 600, textDecoration: 'none', transition: 'background 0.2s, color 0.2s', background: '#fff' }}
+                    style={{ borderRadius: '16px', display: 'inline-flex', alignItems: 'center', gap: '5px', padding: '6px 14px', border: '1px solid var(--uo-green)', color: 'var(--uo-green)', fontFamily: 'Inter', fontSize: '0.72rem', fontWeight: 600, textDecoration: 'none', transition: 'background 0.2s, color 0.2s', background: '#fff' }}
                     onMouseEnter={e => { e.currentTarget.style.background = 'var(--uo-green)'; e.currentTarget.style.color = 'var(--uo-yellow)'; }}
                     onMouseLeave={e => { e.currentTarget.style.background = '#fff'; e.currentTarget.style.color = 'var(--uo-green)'; }}
                   >
@@ -1450,14 +1448,14 @@ const IntermediateDashboard = () => {
       
       <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', marginBottom: '1rem' }}>
         {years.map((y, idx) => (
-          <div key={y.label} style={{ border: '1px solid var(--uo-border)', background: 'var(--uo-white)' }}>
+          <div key={y.label} style={{ borderRadius: '16px', border: '1px solid var(--uo-border)', background: 'var(--uo-white)' }}>
             <button
               onClick={() => setExpandedYear(expandedYear === idx ? null : idx)}
               style={{ width: '100%', display: 'flex', alignItems: 'center', gap: '12px', padding: '0.85rem 1.25rem', background: 'none', border: 'none', cursor: 'pointer', textAlign: 'left' }}
             >
               <span style={{ fontFamily: 'Inter', fontSize: '0.75rem', fontWeight: 700, color: 'var(--uo-green)', flex: 1 }}>{y.label}</span>
               <span style={{ fontFamily: 'Inter', fontSize: '0.7rem', fontWeight: 600, color: 'var(--uo-grey)' }}>{y.secured} / {y.max} Marks</span>
-              <span style={{ fontFamily: 'Inter', fontSize: '0.72rem', fontWeight: 700, color: '#fff', background: '#3b82f6', padding: '2px 8px' }}>{y.percentage}</span>
+              <span style={{ borderRadius: '16px', fontFamily: 'Inter', fontSize: '0.72rem', fontWeight: 700, color: '#fff', background: '#3b82f6', padding: '2px 8px' }}>{y.percentage}</span>
               <span style={{ color: 'var(--uo-grey)', flexShrink: 0 }}>
                 {expandedYear === idx ? <ChevronUp size={14} /> : <ChevronDown size={14} />}
               </span>
@@ -1472,11 +1470,11 @@ const IntermediateDashboard = () => {
                   transition={{ duration: 0.28 }}
                   style={{ overflow: 'hidden' }}
                 >
-                  <div style={{ padding: '0 1.25rem 1.25rem', borderTop: '1px solid var(--uo-border)', background: '#fafafa' }}>
-                    <div style={{ overflowX: 'auto', border: '1px solid var(--uo-border)', background: '#fff', marginTop: '1rem' }}>
+                  <div style={{ borderRadius: '16px', padding: '0 1.25rem 1.25rem', borderTop: '1px solid var(--uo-border)', background: '#fafafa' }}>
+                    <div style={{ borderRadius: '16px', overflowX: 'auto', border: '1px solid var(--uo-border)', background: '#fff', marginTop: '1rem' }}>
                       <table style={{ width: '100%', borderCollapse: 'collapse', fontFamily: 'Inter, sans-serif', fontSize: '0.75rem', color: 'var(--uo-dark)' }}>
                         <thead>
-                          <tr style={{ background: 'var(--uo-green)', color: '#fff', textAlign: 'left' }}>
+                          <tr style={{ borderRadius: '16px', background: 'var(--uo-green)', color: '#fff', textAlign: 'left' }}>
                             <th style={{ padding: '8px 12px', fontSize: '0.62rem', fontWeight: 700, letterSpacing: '1px', textTransform: 'uppercase', width: '80px' }}>Code</th>
                             <th style={{ padding: '8px 12px', fontSize: '0.62rem', fontWeight: 700, letterSpacing: '1px', textTransform: 'uppercase' }}>Subject</th>
                             <th style={{ padding: '8px 12px', fontSize: '0.62rem', fontWeight: 700, letterSpacing: '1px', textTransform: 'uppercase', textAlign: 'center', width: '100px' }}>Max Marks</th>
@@ -1486,7 +1484,7 @@ const IntermediateDashboard = () => {
                         </thead>
                         <tbody>
                           {y.subjects.map((sub, sIdx) => (
-                            <tr key={sIdx} style={{ borderBottom: '1px solid var(--uo-border)', background: sIdx % 2 === 0 ? 'rgba(0,0,0,0.01)' : 'transparent' }}>
+                            <tr key={sIdx} style={{ borderRadius: '16px', borderBottom: '1px solid var(--uo-border)', background: sIdx % 2 === 0 ? 'rgba(0,0,0,0.01)' : 'transparent' }}>
                               <td style={{ padding: '8px 12px', fontWeight: 700, color: 'var(--uo-green)' }}>{sub.code}</td>
                               <td style={{ padding: '8px 12px', fontWeight: 500 }}>{sub.name}</td>
                               <td style={{ padding: '8px 12px', textAlign: 'center', fontWeight: 600 }}>{sub.max}</td>
@@ -1505,12 +1503,12 @@ const IntermediateDashboard = () => {
         ))}
 
         {/* Co-Curricular & Ethics Block */}
-        <div style={{ border: '1px solid var(--uo-border)', background: 'var(--uo-white)', padding: '0.85rem 1.25rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '0.75rem' }}>
+        <div style={{ borderRadius: '16px', border: '1px solid var(--uo-border)', background: 'var(--uo-white)', padding: '0.85rem 1.25rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '0.75rem' }}>
           <div style={{ display: 'flex', gap: '15px', flexWrap: 'wrap' }}>
             <span style={{ fontFamily: 'Inter', fontSize: '0.72rem', fontWeight: 700, color: 'var(--uo-green)' }}>ENVIRONMENTAL EDUCATION</span>
             <span style={{ fontFamily: 'Inter', fontSize: '0.72rem', fontWeight: 700, color: 'var(--uo-green)' }}>ETHICS &amp; HUMAN VALUES</span>
           </div>
-          <span style={{ display: 'inline-flex', alignItems: 'center', gap: '3px', fontFamily: 'Inter', fontSize: '0.62rem', fontWeight: 700, letterSpacing: '1px', textTransform: 'uppercase', color: '#16a34a', background: '#dcfce7', padding: '2px 8px' }}>
+          <span style={{ borderRadius: '16px', display: 'inline-flex', alignItems: 'center', gap: '3px', fontFamily: 'Inter', fontSize: '0.62rem', fontWeight: 700, letterSpacing: '1px', textTransform: 'uppercase', color: '#16a34a', background: '#dcfce7', padding: '2px 8px' }}>
             <CheckCircle2 size={10} /> Qualified
           </span>
         </div>
@@ -1527,7 +1525,7 @@ const IntermediateDashboard = () => {
             href={p.url}
             target="_blank"
             rel="noopener noreferrer"
-            style={{ display: 'inline-flex', alignItems: 'center', gap: '5px', padding: '6px 14px', border: '1px solid var(--uo-green)', color: 'var(--uo-green)', fontFamily: 'Inter', fontSize: '0.72rem', fontWeight: 600, textDecoration: 'none', transition: 'background 0.2s, color 0.2s', background: '#fff' }}
+            style={{ borderRadius: '16px', display: 'inline-flex', alignItems: 'center', gap: '5px', padding: '6px 14px', border: '1px solid var(--uo-green)', color: 'var(--uo-green)', fontFamily: 'Inter', fontSize: '0.72rem', fontWeight: 600, textDecoration: 'none', transition: 'background 0.2s, color 0.2s', background: '#fff' }}
             onMouseEnter={e => { e.currentTarget.style.background = 'var(--uo-green)'; e.currentTarget.style.color = 'var(--uo-yellow)'; }}
             onMouseLeave={e => { e.currentTarget.style.background = '#fff'; e.currentTarget.style.color = 'var(--uo-green)'; }}
           >
@@ -1569,7 +1567,7 @@ const UniversityDashboard = () => {
       </div>
 
       {/* SGPA Bar Chart */}
-      <div style={{ background: 'var(--uo-green-dark)', padding: '1.25rem', marginBottom: '1.25rem', borderLeft: '3px solid var(--uo-yellow)' }}>
+      <div style={{ borderRadius: '16px', background: 'var(--uo-green-dark)', padding: '1.25rem', marginBottom: '1.25rem', borderLeft: '3px solid var(--uo-yellow)' }}>
         <div style={{ fontFamily: 'Inter', fontSize: '0.65rem', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', color: 'rgba(255,255,255,0.5)', marginBottom: '1rem' }}>SGPA Progression</div>
         <div style={{ display: 'flex', alignItems: 'flex-end', gap: '8px', height: '80px' }}>
           {semesterData.map(s => {
@@ -1589,7 +1587,7 @@ const UniversityDashboard = () => {
       <div style={{ fontFamily: 'Inter', fontSize: '0.65rem', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', color: 'var(--uo-grey)', marginBottom: '0.75rem' }}>Semester Breakdown</div>
       <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
         {semesterData.map((s, i) => (
-          <div key={s.sem} style={{ border: '1px solid var(--uo-border)', background: 'var(--uo-white)' }}>
+          <div key={s.sem} style={{ borderRadius: '16px', border: '1px solid var(--uo-border)', background: 'var(--uo-white)' }}>
             {/* Row header */}
             <button
               onClick={() => setExpandedSem(expandedSem === i ? null : i)}
@@ -1602,7 +1600,7 @@ const UniversityDashboard = () => {
               <span style={{ fontFamily: 'Inter', fontSize: '0.7rem', color: 'var(--uo-grey)', flex: 1 }}>{s.period}</span>
 
               {/* SGPA badge */}
-              <span style={{ fontFamily: 'Inter', fontSize: '0.72rem', fontWeight: 700, color: '#fff', background: sgpaColor(s.sgpa), padding: '2px 8px' }}>
+              <span style={{ borderRadius: '16px', fontFamily: 'Inter', fontSize: '0.72rem', fontWeight: 700, color: '#fff', background: sgpaColor(s.sgpa), padding: '2px 8px' }}>
                 SGPA {s.sgpa}
               </span>
 
@@ -1610,7 +1608,7 @@ const UniversityDashboard = () => {
               <span style={{ fontFamily: 'Inter', fontSize: '0.7rem', fontWeight: 600, color: 'var(--uo-dark)', minWidth: '60px', textAlign: 'center' }}>{s.credits} credits</span>
 
               {/* Promoted badge */}
-              <span style={{ display: 'inline-flex', alignItems: 'center', gap: '3px', fontFamily: 'Inter', fontSize: '0.62rem', fontWeight: 700, letterSpacing: '1px', textTransform: 'uppercase', color: s.sgpa === '-' ? '#d97706' : (s.promoted ? '#16a34a' : '#dc2626'), background: s.sgpa === '-' ? '#fef3c7' : (s.promoted ? '#dcfce7' : '#fee2e2'), padding: '2px 8px' }}>
+              <span style={{ borderRadius: '16px', display: 'inline-flex', alignItems: 'center', gap: '3px', fontFamily: 'Inter', fontSize: '0.62rem', fontWeight: 700, letterSpacing: '1px', textTransform: 'uppercase', color: s.sgpa === '-' ? '#d97706' : (s.promoted ? '#16a34a' : '#dc2626'), background: s.sgpa === '-' ? '#fef3c7' : (s.promoted ? '#dcfce7' : '#fee2e2'), padding: '2px 8px' }}>
                 <CheckCircle2 size={10} /> {s.sgpa === '-' ? 'Ongoing' : (s.promoted ? 'Promoted' : 'Not Promoted')}
               </span>
 
@@ -1630,7 +1628,7 @@ const UniversityDashboard = () => {
                   transition={{ duration: 0.28 }}
                   style={{ overflow: 'hidden' }}
                 >
-                  <div style={{ padding: '0 1.25rem 1.25rem', borderTop: '1px solid var(--uo-border)', background: '#fafafa' }}>
+                  <div style={{ borderRadius: '16px', padding: '0 1.25rem 1.25rem', borderTop: '1px solid var(--uo-border)', background: '#fafafa' }}>
                     {/* Stats row */}
                     <div style={{ display: 'flex', gap: '2rem', padding: '1rem 0', flexWrap: 'wrap' }}>
                       {[
@@ -1650,10 +1648,10 @@ const UniversityDashboard = () => {
                     <div style={{ marginTop: '0.5rem' }}>
                       <div style={{ fontFamily: 'Inter', fontSize: '0.65rem', fontWeight: 700, letterSpacing: '1.5px', textTransform: 'uppercase', color: 'var(--uo-grey)', marginBottom: '0.6rem' }}>Subjects Studied</div>
                       
-                      <div style={{ overflowX: 'auto', border: '1px solid var(--uo-border)', background: '#fff' }}>
+                      <div style={{ borderRadius: '16px', overflowX: 'auto', border: '1px solid var(--uo-border)', background: '#fff' }}>
                         <table style={{ width: '100%', borderCollapse: 'collapse', fontFamily: 'Inter, sans-serif', fontSize: '0.75rem', color: 'var(--uo-dark)' }}>
                           <thead>
-                            <tr style={{ background: 'var(--uo-green)', color: '#fff', textAlign: 'left' }}>
+                            <tr style={{ borderRadius: '16px', background: 'var(--uo-green)', color: '#fff', textAlign: 'left' }}>
                               <th style={{ padding: '8px 12px', fontSize: '0.62rem', fontWeight: 700, letterSpacing: '1.5px', textTransform: 'uppercase' }}>Code</th>
                               <th style={{ padding: '8px 12px', fontSize: '0.62rem', fontWeight: 700, letterSpacing: '1.5px', textTransform: 'uppercase' }}>Course Title</th>
                               <th style={{ padding: '8px 12px', fontSize: '0.62rem', fontWeight: 700, letterSpacing: '1.5px', textTransform: 'uppercase', textAlign: 'center', width: '60px' }}>Credits</th>
@@ -1674,12 +1672,10 @@ const UniversityDashboard = () => {
                                     onClick={() => {
                                       setExpandedCourse(isExpanded ? null : courseKey);
                                     }}
-                                    style={{ 
-                                      borderBottom: '1px solid var(--uo-border)', 
+                                    style={{ borderRadius: '16px', borderBottom: '1px solid var(--uo-border)', 
                                       background: idx % 2 === 0 ? 'rgba(0,0,0,0.01)' : 'transparent',
                                       cursor: 'pointer',
-                                      transition: 'background 0.2s'
-                                    }}
+                                      transition: 'background 0.2s' }}
                                     className="course-row-hover"
                                   >
                                     <td style={{ padding: '8px 12px', fontWeight: 700, color: 'var(--uo-green)' }}>{course.code}</td>
@@ -1720,32 +1716,32 @@ const UniversityDashboard = () => {
                                         fontSize: '0.68rem',
                                         background: course.grade === 'O' ? '#dcfce7' : course.grade === 'A+' ? '#e0f2fe' : course.grade === 'A' ? '#fef9c3' : '#f3f4f6',
                                         color: course.grade === 'O' ? '#15803d' : course.grade === 'A+' ? '#0369a1' : course.grade === 'A' ? '#a16207' : '#374151',
-                                        borderRadius: '2px'
+                                        borderRadius: '16px'
                                       }}>
                                         {course.grade}
                                       </span>
                                     </td>
                                   </tr>
                                   {isExpanded && (
-                                    <tr style={{ background: '#fcfdfa' }}>
+                                    <tr style={{ borderRadius: '16px', background: '#fcfdfa' }}>
                                       <td colSpan={6} style={{ padding: '0.85rem 1.25rem', borderBottom: '1px solid var(--uo-border)' }}>
                                         <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
                                           
                                           {/* Marks breakdown if available */}
                                           {hasMarks && (
                                             <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
-                                              <div style={{ flex: '1 1 140px', background: '#fff', padding: '0.75rem 1rem', border: '1px solid var(--uo-border)', borderTop: '3px solid var(--uo-green)', borderRadius: '4px', boxShadow: '0 2px 6px rgba(0,0,0,0.02)' }}>
+                                              <div style={{ flex: '1 1 140px', background: '#fff', padding: '0.75rem 1rem', border: '1px solid var(--uo-border)', borderTop: '3px solid var(--uo-green)', borderRadius: '16px', boxShadow: '0 2px 6px rgba(0,0,0,0.02)' }}>
                                                 <span style={{ display: 'block', fontFamily: 'Inter', fontSize: '0.58rem', fontWeight: 700, color: 'var(--uo-grey)', letterSpacing: '1px', textTransform: 'uppercase', marginBottom: '4px' }}>Internal Marks</span>
                                                 <div style={{ display: 'flex', alignItems: 'baseline', gap: '4px' }}>
                                                   <span style={{ fontFamily: '"Playfair Display", serif', fontSize: '1.25rem', fontWeight: 900, color: 'var(--uo-green)' }}>{course.internal}</span>
                                                   <span style={{ fontFamily: 'Inter', fontSize: '0.7rem', color: 'var(--uo-grey)' }}>/ 60</span>
                                                 </div>
-                                                <div style={{ width: '100%', height: '4px', background: '#f3f4f6', borderRadius: '2px', marginTop: '6px', overflow: 'hidden' }}>
+                                                <div style={{ width: '100%', height: '4px', background: '#f3f4f6', borderRadius: '16px', marginTop: '6px', overflow: 'hidden' }}>
                                                   <div style={{ width: `${(course.internal / 60) * 100}%`, height: '100%', background: 'var(--uo-green)' }} />
                                                 </div>
                                               </div>
 
-                                              <div style={{ flex: '1 1 160px', background: '#fff', padding: '0.75rem 1rem', border: '1px solid var(--uo-border)', borderTop: '3px solid #3b82f6', borderRadius: '4px', boxShadow: '0 2px 6px rgba(0,0,0,0.02)' }}>
+                                              <div style={{ flex: '1 1 160px', background: '#fff', padding: '0.75rem 1rem', border: '1px solid var(--uo-border)', borderTop: '3px solid #3b82f6', borderRadius: '16px', boxShadow: '0 2px 6px rgba(0,0,0,0.02)' }}>
                                                 <span style={{ display: 'block', fontFamily: 'Inter', fontSize: '0.58rem', fontWeight: 700, color: 'var(--uo-grey)', letterSpacing: '1px', textTransform: 'uppercase', marginBottom: '4px' }}>External Marks</span>
                                                 <div style={{ display: 'flex', alignItems: 'baseline', gap: '4px' }}>
                                                   <span style={{ fontFamily: '"Playfair Display", serif', fontSize: '1.25rem', fontWeight: 900, color: '#3b82f6' }}>{course.external}</span>
@@ -1757,19 +1753,19 @@ const UniversityDashboard = () => {
                                                     {course.extTheory !== undefined && <span>Theory: <strong style={{ color: 'var(--uo-dark)' }}>{course.extTheory}</strong></span>}
                                                   </div>
                                                 ) : (
-                                                  <div style={{ width: '100%', height: '4px', background: '#f3f4f6', borderRadius: '2px', marginTop: '6px', overflow: 'hidden' }}>
+                                                  <div style={{ width: '100%', height: '4px', background: '#f3f4f6', borderRadius: '16px', marginTop: '6px', overflow: 'hidden' }}>
                                                     <div style={{ width: `${(course.external / 40) * 100}%`, height: '100%', background: '#3b82f6' }} />
                                                   </div>
                                                 )}
                                               </div>
 
-                                              <div style={{ flex: '1 1 140px', background: '#fff', padding: '0.75rem 1rem', border: '1px solid var(--uo-border)', borderTop: '3px solid var(--uo-yellow)', borderRadius: '4px', boxShadow: '0 2px 6px rgba(0,0,0,0.02)' }}>
+                                              <div style={{ flex: '1 1 140px', background: '#fff', padding: '0.75rem 1rem', border: '1px solid var(--uo-border)', borderTop: '3px solid var(--uo-yellow)', borderRadius: '16px', boxShadow: '0 2px 6px rgba(0,0,0,0.02)' }}>
                                                 <span style={{ display: 'block', fontFamily: 'Inter', fontSize: '0.58rem', fontWeight: 700, color: 'var(--uo-grey)', letterSpacing: '1px', textTransform: 'uppercase', marginBottom: '4px' }}>Total Obtained</span>
                                                 <div style={{ display: 'flex', alignItems: 'baseline', gap: '4px' }}>
                                                   <span style={{ fontFamily: '"Playfair Display", serif', fontSize: '1.25rem', fontWeight: 900, color: 'var(--uo-green)' }}>{course.total}</span>
                                                   <span style={{ fontFamily: 'Inter', fontSize: '0.7rem', color: 'var(--uo-grey)' }}>/ 100</span>
                                                 </div>
-                                                <div style={{ width: '100%', height: '4px', background: '#f3f4f6', borderRadius: '2px', marginTop: '6px', overflow: 'hidden' }}>
+                                                <div style={{ width: '100%', height: '4px', background: '#f3f4f6', borderRadius: '16px', marginTop: '6px', overflow: 'hidden' }}>
                                                   <div style={{ width: `${course.total}%`, height: '100%', background: 'var(--uo-yellow)' }} />
                                                 </div>
                                               </div>
@@ -1798,7 +1794,7 @@ const UniversityDashboard = () => {
                                                       padding: '0.75rem', 
                                                       border: '1px solid var(--uo-border)', 
                                                       borderTop: `3px solid ${isConducted || compData.faculty ? 'var(--uo-green)' : '#e5e7eb'}`, 
-                                                      borderRadius: '4px',
+                                                      borderRadius: '16px',
                                                       opacity: isConducted || compData.faculty ? 1 : 0.45
                                                     }}
                                                   >
@@ -1814,7 +1810,7 @@ const UniversityDashboard = () => {
                                                           color: pct >= 85 ? '#16a34a' : pct >= 75 ? '#d97706' : '#dc2626',
                                                           background: pct >= 85 ? '#dcfce7' : pct >= 75 ? '#fef9c3' : '#fee2e2',
                                                           padding: '1px 6px',
-                                                          borderRadius: '2px'
+                                                          borderRadius: '16px'
                                                         }}>
                                                           {pct}%
                                                         </span>
@@ -1839,7 +1835,7 @@ const UniversityDashboard = () => {
                                                                 fontFamily: 'Inter', fontSize: '0.58rem', fontWeight: 600,
                                                                 color: info.designation === 'Professor' ? '#7c3aed' : info.designation === 'Associate Professor' ? '#0369a1' : '#15803d',
                                                                 background: info.designation === 'Professor' ? '#ede9fe' : info.designation === 'Associate Professor' ? '#e0f2fe' : '#dcfce7',
-                                                                padding: '1px 7px', borderRadius: '2px', letterSpacing: '0.3px'
+                                                                padding: '1px 7px', borderRadius: '16px', letterSpacing: '0.3px'
                                                               }}>
                                                                 {info.designation}
                                                               </span>
@@ -1847,7 +1843,7 @@ const UniversityDashboard = () => {
                                                                 fontFamily: 'Inter', fontSize: '0.58rem', fontWeight: 600,
                                                                 color: info.qualification === 'Ph.D' ? '#92400e' : '#374151',
                                                                 background: info.qualification === 'Ph.D' ? '#fef3c7' : '#f3f4f6',
-                                                                padding: '1px 7px', borderRadius: '2px', letterSpacing: '0.3px'
+                                                                padding: '1px 7px', borderRadius: '16px', letterSpacing: '0.3px'
                                                               }}>
                                                                 {info.qualification}
                                                               </span>
@@ -1864,7 +1860,7 @@ const UniversityDashboard = () => {
                                                           <span>Conducted: <strong>{compData.conducted}</strong></span>
                                                           <span>Absent: <strong style={{ color: compData.absent > 0 ? '#dc2626' : 'var(--uo-grey)' }}>{compData.absent}</strong></span>
                                                         </div>
-                                                        <div style={{ width: '100%', height: '3px', background: '#f3f4f6', borderRadius: '1.5px', marginTop: '6px', overflow: 'hidden' }}>
+                                                        <div style={{ width: '100%', height: '3px', background: '#f3f4f6', borderRadius: '16px', marginTop: '6px', overflow: 'hidden' }}>
                                                           <div style={{ width: `${pct}%`, height: '100%', background: pct >= 85 ? '#16a34a' : pct >= 75 ? '#d97706' : '#dc2626' }} />
                                                         </div>
                                                       </div>
@@ -1897,7 +1893,7 @@ const UniversityDashboard = () => {
                         href={s.pdfUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        style={{ display: 'inline-flex', alignItems: 'center', gap: '5px', padding: '6px 16px', border: '1px solid var(--uo-green)', color: 'var(--uo-green)', fontFamily: 'Inter', fontSize: '0.72rem', fontWeight: 600, textDecoration: 'none', transition: 'background 0.2s, color 0.2s', background: '#fff' }}
+                        style={{ borderRadius: '16px', display: 'inline-flex', alignItems: 'center', gap: '5px', padding: '6px 16px', border: '1px solid var(--uo-green)', color: 'var(--uo-green)', fontFamily: 'Inter', fontSize: '0.72rem', fontWeight: 600, textDecoration: 'none', transition: 'background 0.2s, color 0.2s', background: '#fff' }}
                         onMouseEnter={e => { e.currentTarget.style.background = 'var(--uo-green)'; e.currentTarget.style.color = 'var(--uo-yellow)'; }}
                         onMouseLeave={e => { e.currentTarget.style.background = '#fff'; e.currentTarget.style.color = 'var(--uo-green)'; }}
                       >
@@ -1913,7 +1909,7 @@ const UniversityDashboard = () => {
       </div>
 
       {/* Total credits summary bar */}
-      <div style={{ marginTop: '1rem', background: 'var(--uo-green)', padding: '0.85rem 1.25rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '0.75rem' }}>
+      <div style={{ borderRadius: '16px', marginTop: '1rem', background: 'var(--uo-green)', padding: '0.85rem 1.25rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '0.75rem' }}>
         <span style={{ fontFamily: 'Inter', fontSize: '0.7rem', fontWeight: 700, letterSpacing: '1.5px', textTransform: 'uppercase', color: 'rgba(255,255,255,0.7)' }}>Total Cumulative Credits Completed</span>
         <span style={{ fontFamily: '"Playfair Display", serif', fontSize: '1.25rem', fontWeight: 900, color: 'var(--uo-yellow)' }}>{totalCredits} / 173 required</span>
       </div>
@@ -1923,7 +1919,7 @@ const UniversityDashboard = () => {
 
 const Academics = () => {
   return (
-    <section id="academics" style={{ background: 'var(--uo-cream)', padding: '80px 20px' }}>
+    <section id="academics" style={{ borderRadius: '16px', background: 'var(--uo-cream)', padding: '80px 20px' }}>
       <div className="section-inner">
 
         {/* Section heading */}
@@ -1936,7 +1932,7 @@ const Academics = () => {
         {/* Timeline */}
         <div style={{ position: 'relative', paddingLeft: '36px' }}>
           {/* Vertical line */}
-          <div style={{ position: 'absolute', left: '10px', top: 0, bottom: 0, width: '3px', background: 'var(--uo-green)' }} />
+          <div style={{ borderRadius: '16px', position: 'absolute', left: '10px', top: 0, bottom: 0, width: '3px', background: 'var(--uo-green)' }} />
 
           {educationTimeline.map((edu, i) => {
             const Icon = edu.icon;
@@ -1951,14 +1947,12 @@ const Academics = () => {
                 style={{ position: 'relative', marginBottom: '1.75rem', scrollMarginTop: '80px' }}
               >
                 {/* Dot */}
-                <div style={{
-                  position: 'absolute', left: '-32px', top: '20px',
+                <div style={{ borderRadius: '16px', position: 'absolute', left: '-32px', top: '20px',
                   width: '22px', height: '22px',
                   background: edu.current ? 'var(--uo-yellow)' : 'var(--uo-green)',
                   border: '3px solid var(--uo-cream)',
                   display: 'flex', alignItems: 'center', justifyContent: 'center',
-                  zIndex: 2,
-                }} />
+                  zIndex: 2, }} />
 
                 {/* Card */}
                 <div className="editorial-card" style={{ borderTopColor: edu.current ? 'var(--uo-yellow)' : 'var(--uo-green)' }}>
@@ -1969,7 +1963,7 @@ const Academics = () => {
                           width: '48px', height: '48px', flexShrink: 0,
                           background: '#fff',
                           border: '2px solid var(--uo-border)',
-                          borderRadius: '8px',
+                          borderRadius: '16px',
                           display: 'flex', alignItems: 'center', justifyContent: 'center',
                           overflow: 'hidden',
                           padding: '4px',
@@ -1989,7 +1983,7 @@ const Academics = () => {
                       </div>
                     </div>
                     {edu.current && (
-                      <span style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.62rem', fontWeight: 700, letterSpacing: '1.5px', textTransform: 'uppercase', padding: '3px 10px', background: 'var(--uo-yellow)', color: 'var(--uo-green-dark)' }}>
+                      <span style={{ borderRadius: '16px', fontFamily: 'Inter, sans-serif', fontSize: '0.62rem', fontWeight: 700, letterSpacing: '1.5px', textTransform: 'uppercase', padding: '3px 10px', background: 'var(--uo-yellow)', color: 'var(--uo-green-dark)' }}>
                         CURRENT
                       </span>
                     )}
@@ -2017,7 +2011,7 @@ const Academics = () => {
                           href={p.url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          style={{ display: 'inline-flex', alignItems: 'center', gap: '5px', padding: '5px 14px', border: '1px solid var(--uo-green)', color: 'var(--uo-green)', fontFamily: 'Inter, sans-serif', fontSize: '0.72rem', fontWeight: 600, letterSpacing: '0.5px', textDecoration: 'none', transition: 'background 0.2s, color 0.2s' }}
+                          style={{ borderRadius: '16px', display: 'inline-flex', alignItems: 'center', gap: '5px', padding: '5px 14px', border: '1px solid var(--uo-green)', color: 'var(--uo-green)', fontFamily: 'Inter, sans-serif', fontSize: '0.72rem', fontWeight: 600, letterSpacing: '0.5px', textDecoration: 'none', transition: 'background 0.2s, color 0.2s' }}
                           onMouseEnter={e => { e.currentTarget.style.background = 'var(--uo-green)'; e.currentTarget.style.color = 'var(--uo-yellow)'; }}
                           onMouseLeave={e => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.color = 'var(--uo-green)'; }}
                         >

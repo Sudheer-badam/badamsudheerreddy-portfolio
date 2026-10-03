@@ -175,7 +175,7 @@ const CertCard = ({ cert, future = false }) => {
               </div>
             )}
             {cert.code && (
-              <div style={{ backgroundColor: '#f3f4f6', padding: '10px 14px', borderRadius: '8px', fontSize: '0.8rem', color: '#4b5563', fontFamily: 'monospace', fontWeight: '500', border: '1px solid #e5e7eb' }}>
+              <div style={{ backgroundColor: '#f3f4f6', padding: '10px 14px', borderRadius: '16px', fontSize: '0.8rem', color: '#4b5563', fontFamily: 'monospace', fontWeight: '500', border: '1px solid #e5e7eb' }}>
                 Code: {cert.code}
               </div>
             )}
@@ -196,7 +196,7 @@ const SubHeading = ({ label, count }) => (
 
 const Certificates = () => {
   return (
-    <section id="certificates" style={{ background: 'var(--uo-surface)', padding: '80px 20px', alignItems: 'stretch' }}>
+    <section id="certificates" style={{ borderRadius: '16px', background: 'var(--uo-surface)', padding: '80px 20px', alignItems: 'stretch' }}>
       <div className="section-inner">
 
         {/* Section heading */}

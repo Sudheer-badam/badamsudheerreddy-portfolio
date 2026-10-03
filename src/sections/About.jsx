@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const About = () => {
   return (
-    <section id="about" style={{ background: 'var(--uo-cream)', padding: '80px 20px' }}>
+    <section id="about" style={{ borderRadius: '16px', background: 'var(--uo-cream)', padding: '80px 20px' }}>
       <div className="section-inner">
 
         {/* Section heading */}
@@ -24,25 +24,23 @@ const About = () => {
             transition={{ duration: 0.7 }}
             style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}
           >
-            <div style={{ position: 'relative', overflow: 'hidden', background: 'var(--uo-green-dark)' }}>
+            <div style={{ borderRadius: '16px', position: 'relative', overflow: 'hidden', background: 'var(--uo-green-dark)' }}>
               <img
                 src="/BADAM SUDHEER REDDY .jpeg.png"
                 alt="Badam Sudheer Reddy at KL University"
                 style={{ width: '100%', aspectRatio: '4/3', objectFit: 'cover', objectPosition: 'center top', display: 'block', filter: 'saturate(0.8)' }}
               />
-              <div style={{
-                position: 'absolute', bottom: 0, left: 0, right: 0,
+              <div style={{ borderRadius: '16px', position: 'absolute', bottom: 0, left: 0, right: 0,
                 background: 'linear-gradient(to top, rgba(13,46,33,0.9), transparent)',
                 padding: '1.5rem 1.25rem 1rem',
                 fontFamily: 'Inter, sans-serif', fontSize: '0.7rem', fontWeight: 700,
-                letterSpacing: '2px', textTransform: 'uppercase', color: 'var(--uo-yellow)'
-              }}>
+                letterSpacing: '2px', textTransform: 'uppercase', color: 'var(--uo-yellow)' }}>
                 KL University · Vaddeswaram · Guntur
               </div>
             </div>
 
             {/* Green info card */}
-            <div style={{ background: 'var(--uo-green)', padding: '1.75rem', borderLeft: '5px solid var(--uo-yellow)' }}>
+            <div style={{ borderRadius: '16px', background: 'var(--uo-green)', padding: '1.75rem', borderLeft: '5px solid var(--uo-yellow)' }}>
               {[
                 { label: 'Degree', value: 'B.Tech in CSE' },
                 { label: 'CGPA', value: '8.88 / 10.0' },
