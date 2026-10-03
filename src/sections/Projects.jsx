@@ -349,462 +349,6 @@ const Projects = () => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="editorial-card"
-          style={{ borderRadius: '16px', background: 'var(--uo-green-dark)',
-            color: '#FFFFFF',
-            border: '2px solid var(--uo-yellow)',
-            padding: '0',
-            overflow: 'hidden',
-            boxShadow: '0 20px 40px rgba(13,46,33,0.15)' }}
-        >
-          {/* Top header bar */}
-          <div style={{ borderRadius: '16px', background: 'rgba(255, 255, 255, 0.03)',
-            padding: '1.25rem 2rem',
-            borderBottom: '1px solid rgba(255, 255, 255, 0.08)',
-            display: 'flex',
-            justifyContent: 'space-between',
-            alignItems: 'center',
-            flexWrap: 'wrap',
-            gap: '1rem' }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-              <span className="pulse-dot" style={{ display: 'inline-block', width: '8px', height: '8px', borderRadius: '50%', background: 'var(--uo-yellow)', boxShadow: '0 0 10px var(--uo-yellow)' }} />
-              <span style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.68rem', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', color: 'var(--uo-yellow)' }}>
-                {PlaceMentorProject.status}
-              </span>
-            </div>
-            <span style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.72rem', fontWeight: 600, letterSpacing: '1px', textTransform: 'uppercase', color: 'rgba(255, 255, 255, 0.4)' }}>
-              {PlaceMentorProject.category}
-            </span>
-          </div>
-
-          <div style={{ padding: '2.5rem 2rem' }}>
-            <div style={{ display: 'grid', gridTemplateColumns: '3fr 2fr', gap: '3rem', alignItems: 'start' }}>
-              
-              {/* Left Column: Core Info */}
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
-                <div>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '0.25rem' }}>
-                    <div style={{
-                      width: '60px', height: '60px', borderRadius: '50%',
-                      border: '2.5px solid var(--uo-yellow)',
-                      boxShadow: '0 0 16px rgba(255,213,0,0.4)',
-                      overflow: 'hidden', flexShrink: 0, background: '#fff'
-                    }}>
-                      <img src="/PLACEMENTOR AI LOGO.png" alt="PlaceMentor AI Logo"
-                        style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                    </div>
-                    <h3 style={{ fontFamily: '"Playfair Display", Georgia, serif', fontSize: 'clamp(2rem, 4vw, 2.75rem)', fontWeight: 900, color: 'var(--uo-yellow)', lineHeight: 1.1, margin: 0 }}>
-                      {PlaceMentorProject.title}
-                    </h3>
-                  </div>
-                  <div style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.9rem', fontWeight: 600, letterSpacing: '0.5px', color: 'rgba(255,255,255,0.7)', marginTop: '0.5rem' }}>
-                    {PlaceMentorProject.tagline}
-                  </div>
-                </div>
-
-                <div style={{ borderRadius: '16px', width: '60px', height: '3px', background: 'var(--uo-yellow)' }} />
-
-                <p style={{ fontFamily: 'Inter, sans-serif', fontSize: '1rem', lineHeight: 1.8, color: 'rgba(255, 255, 255, 0.85)' }}>
-                  {PlaceMentorProject.summary}
-                </p>
-
-                {/* Tags */}
-                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', marginTop: '0.5rem' }}>
-                  {PlaceMentorProject.tags.map(tag => (
-                    <span key={tag} style={{ borderRadius: '16px', fontFamily: 'Inter, sans-serif',
-                      fontSize: '0.68rem',
-                      fontWeight: 700,
-                      letterSpacing: '1px',
-                      textTransform: 'uppercase',
-                      padding: '4px 10px',
-                      background: 'rgba(255, 255, 255, 0.06)',
-                      border: '1px solid rgba(255, 255, 255, 0.12)',
-                      color: 'rgba(255, 255, 255, 0.8)' }}>
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-
-                {/* CTA Buttons */}
-                <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', marginTop: '1rem' }}>
-                  <a
-                    href={PlaceMentorProject.url}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="btn-primary"
-                    style={{ borderRadius: '16px', display: 'inline-flex',
-                      alignItems: 'center',
-                      gap: '8px',
-                      padding: '0.85rem 1.75rem',
-                      background: 'var(--uo-yellow)',
-                      color: 'var(--uo-green-dark)',
-                      textDecoration: 'none',
-                      fontWeight: 700,
-                      border: '2px solid var(--uo-yellow)' }}
-                  >
-                    Launch Live App <ExternalLink size={15} />
-                  </a>
-                  <button
-                    onClick={() => setShowPlaceMentorSpecs(!showPlaceMentorSpecs)}
-                    style={{ borderRadius: '16px', display: 'inline-flex',
-                      alignItems: 'center',
-                      gap: '8px',
-                      padding: '0.85rem 1.75rem',
-                      background: 'transparent',
-                      color: '#FFFFFF',
-                      border: '2px solid rgba(255, 255, 255, 0.25)',
-                      fontFamily: 'Inter, sans-serif',
-                      fontSize: '0.8rem',
-                      fontWeight: 700,
-                      letterSpacing: '1px',
-                      textTransform: 'uppercase',
-                      cursor: 'pointer',
-                      transition: 'all 0.2s' }}
-                  >
-                    {showPlaceMentorSpecs ? 'Hide Details' : 'View Deep Tech Specs'}
-                  </button>
-                </div>
-              </div>
-
-              {/* Right Column: Key metrics */}
-              <div style={{ borderRadius: '16px', background: 'rgba(0, 0, 0, 0.15)', padding: '1.75rem', borderLeft: '3px solid var(--uo-yellow)' }}>
-                <div style={{ fontFamily: '"Playfair Display", serif', fontSize: '1.1rem', fontWeight: 700, color: 'var(--uo-yellow)', marginBottom: '1.25rem' }}>
-                  System Architecture Specs
-                </div>
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
-                  {PlaceMentorProject.metrics.map(m => (
-                    <div key={m.label} style={{ display: 'flex', flexDirection: 'column', borderBottom: '1px solid rgba(255,255,255,0.06)', paddingBottom: '0.75rem' }}>
-                      <span style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.62rem', fontWeight: 600, letterSpacing: '1.5px', textTransform: 'uppercase', color: 'rgba(255,255,255,0.45)' }}>
-                        {m.label}
-                      </span>
-                      <span style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.9rem', fontWeight: 700, color: '#FFFFFF', marginTop: '2px' }}>
-                        {m.value}
-                      </span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-            </div>
-
-            {/* Technical specs detailed view */}
-            <AnimatePresence>
-              {showPlaceMentorSpecs && (
-                <motion.div
-                  initial={{ opacity: 0, height: 0 }}
-                  animate={{ opacity: 1, height: 'auto' }}
-                  exit={{ opacity: 0, height: 0 }}
-                  transition={{ duration: 0.4 }}
-                  style={{ overflow: 'hidden', marginTop: '2.5rem', paddingTop: '2.5rem', borderTop: '1px solid rgba(255,255,255,0.1)' }}
-                >
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem' }}>
-                    {PlaceMentorProject.features.map(f => {
-                      const Icon = f.icon;
-                      return (
-                        <div key={f.title} style={{ borderRadius: '16px', display: 'flex', gap: '1rem', background: 'rgba(255, 255, 255, 0.02)', padding: '1.25rem', border: '1px solid rgba(255, 255, 255, 0.05)' }}>
-                          <div style={{ color: 'var(--uo-yellow)', marginTop: '3px' }}>
-                            <Icon size={20} />
-                          </div>
-                          <div>
-                            <h4 style={{ fontFamily: '"Playfair Display", serif', fontSize: '1rem', fontWeight: 700, color: '#FFFFFF', marginBottom: '0.4rem' }}>
-                              {f.title}
-                            </h4>
-                            <p style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.8rem', color: 'rgba(255,255,255,0.65)', lineHeight: 1.6 }}>
-                              {f.desc}
-                            </p>
-                          </div>
-                        </div>
-                      );
-                    })}
-                  </div>
-                </motion.div>
-              )}
-            </AnimatePresence>
-          </div>
-        </motion.div>
-
-        {/* ── Search Pvt.Ltd Card ── */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.1 }}
-          className="editorial-card"
-          style={{ borderRadius: '16px', marginTop: '2.5rem',
-            background: 'var(--uo-green-dark)',
-            color: '#FFFFFF',
-            border: '2px solid var(--uo-yellow)',
-            padding: '0',
-            overflow: 'hidden',
-            boxShadow: '0 20px 40px rgba(13,46,33,0.15)' }}
-        >
-          {/* Top header bar */}
-          <div style={{ borderRadius: '16px', background: 'rgba(255, 255, 255, 0.03)',
-            padding: '1.25rem 2rem',
-            borderBottom: '1px solid rgba(255, 255, 255, 0.08)',
-            display: 'flex',
-            justifyContent: 'space-between',
-            alignItems: 'center',
-            flexWrap: 'wrap',
-            gap: '1rem' }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-              <span className="pulse-dot" style={{ display: 'inline-block', width: '8px', height: '8px', borderRadius: '50%', background: 'var(--uo-yellow)', boxShadow: '0 0 10px var(--uo-yellow)' }} />
-              <span style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.68rem', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', color: 'var(--uo-yellow)' }}>
-                {SearchPvtLtdProject.status}
-              </span>
-            </div>
-            <span style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.72rem', fontWeight: 600, letterSpacing: '1px', textTransform: 'uppercase', color: 'rgba(255, 255, 255, 0.4)' }}>
-              {SearchPvtLtdProject.category}
-            </span>
-          </div>
-
-          <div style={{ padding: '2.5rem 2rem' }}>
-            <div style={{ display: 'grid', gridTemplateColumns: '3fr 2fr', gap: '3rem', alignItems: 'start' }}>
-              
-              {/* Left Column: Core Info */}
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
-                <div>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '0.25rem' }}>
-                    <div style={{
-                      width: '60px', height: '60px', borderRadius: '50%',
-                      border: '2.5px solid var(--uo-yellow)',
-                      boxShadow: '0 0 16px rgba(255,213,0,0.4)',
-                      overflow: 'hidden', flexShrink: 0, background: '#fff'
-                    }}>
-                      <img src="/SUDHEER PVT.LTD.png" alt="Sudheer Pvt.Ltd Logo"
-                        style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                    </div>
-                    <h3 style={{ fontFamily: '"Playfair Display", Georgia, serif', fontSize: 'clamp(2rem, 4vw, 2.75rem)', fontWeight: 900, color: 'var(--uo-yellow)', lineHeight: 1.1, margin: 0 }}>
-                      {SearchPvtLtdProject.title}
-                    </h3>
-                  </div>
-                  <div style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.9rem', fontWeight: 600, letterSpacing: '0.5px', color: 'rgba(255,255,255,0.7)', marginTop: '0.5rem' }}>
-                    {SearchPvtLtdProject.tagline}
-                  </div>
-                </div>
-
-                <div style={{ borderRadius: '16px', width: '60px', height: '3px', background: 'var(--uo-yellow)' }} />
-
-                <p style={{ fontFamily: 'Inter, sans-serif', fontSize: '1rem', lineHeight: 1.8, color: 'rgba(255, 255, 255, 0.85)' }}>
-                  {SearchPvtLtdProject.summary}
-                </p>
-
-                {/* Tags */}
-                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', marginTop: '0.5rem' }}>
-                  {SearchPvtLtdProject.tags.map(tag => (
-                    <span key={tag} style={{ borderRadius: '16px', fontFamily: 'Inter, sans-serif',
-                      fontSize: '0.68rem',
-                      fontWeight: 700,
-                      letterSpacing: '1px',
-                      textTransform: 'uppercase',
-                      padding: '4px 10px',
-                      background: 'rgba(255, 255, 255, 0.06)',
-                      border: '1px solid rgba(255, 255, 255, 0.12)',
-                      color: 'rgba(255, 255, 255, 0.8)' }}>
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-
-                {/* CTA Buttons */}
-                <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', marginTop: '1rem' }}>
-                  <a
-                    href={SearchPvtLtdProject.url}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="btn-primary"
-                    style={{ borderRadius: '16px', display: 'inline-flex',
-                      alignItems: 'center',
-                      gap: '8px',
-                      padding: '0.85rem 1.75rem',
-                      background: 'var(--uo-yellow)',
-                      color: 'var(--uo-green-dark)',
-                      textDecoration: 'none',
-                      fontWeight: 700,
-                      border: '2px solid var(--uo-yellow)' }}
-                  >
-                    Launch Live App <ExternalLink size={15} />
-                  </a>
-                  <button
-                    onClick={() => setShowSearchSpecs(!showSearchSpecs)}
-                    style={{ borderRadius: '16px', display: 'inline-flex',
-                      alignItems: 'center',
-                      gap: '8px',
-                      padding: '0.85rem 1.75rem',
-                      background: 'transparent',
-                      color: '#FFFFFF',
-                      border: '2px solid rgba(255, 255, 255, 0.25)',
-                      fontFamily: 'Inter, sans-serif',
-                      fontSize: '0.8rem',
-                      fontWeight: 700,
-                      letterSpacing: '1px',
-                      textTransform: 'uppercase',
-                      cursor: 'pointer',
-                      transition: 'all 0.2s' }}
-                  >
-                    {showSearchSpecs ? 'Hide Details' : 'View Deep Tech Specs'}
-                  </button>
-                </div>
-              </div>
-
-              {/* Right Column: Key metrics */}
-              <div style={{ borderRadius: '16px', background: 'rgba(0, 0, 0, 0.15)', padding: '1.75rem', borderLeft: '3px solid var(--uo-yellow)' }}>
-                <div style={{ fontFamily: '"Playfair Display", serif', fontSize: '1.1rem', fontWeight: 700, color: 'var(--uo-yellow)', marginBottom: '1.25rem' }}>
-                  Project Specs
-                </div>
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
-                  {SearchPvtLtdProject.metrics.map(m => (
-                    <div key={m.label} style={{ display: 'flex', flexDirection: 'column', borderBottom: '1px solid rgba(255,255,255,0.06)', paddingBottom: '0.75rem' }}>
-                      <span style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.62rem', fontWeight: 600, letterSpacing: '1.5px', textTransform: 'uppercase', color: 'rgba(255,255,255,0.45)' }}>
-                        {m.label}
-                      </span>
-                      <span style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.9rem', fontWeight: 700, color: '#FFFFFF', marginTop: '2px' }}>
-                        {m.value}
-                      </span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-            </div>
-
-            {/* Technical specs detailed view */}
-            <AnimatePresence>
-              {showSearchSpecs && (
-                <motion.div
-                  initial={{ opacity: 0, height: 0 }}
-                  animate={{ opacity: 1, height: 'auto' }}
-                  exit={{ opacity: 0, height: 0 }}
-                  transition={{ duration: 0.4 }}
-                  style={{ overflow: 'hidden', marginTop: '2.5rem', paddingTop: '2.5rem', borderTop: '1px solid rgba(255,255,255,0.1)' }}
-                >
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem' }}>
-                    {SearchPvtLtdProject.features.map(f => {
-                      const Icon = f.icon;
-                      return (
-                        <div key={f.title} style={{ borderRadius: '16px', display: 'flex', gap: '1rem', background: 'rgba(255, 255, 255, 0.02)', padding: '1.25rem', border: '1px solid rgba(255, 255, 255, 0.05)' }}>
-                          <div style={{ color: 'var(--uo-yellow)', marginTop: '3px' }}>
-                            <Icon size={20} />
-                          </div>
-                          <div>
-                            <h4 style={{ fontFamily: '"Playfair Display", serif', fontSize: '1rem', fontWeight: 700, color: '#FFFFFF', marginBottom: '0.4rem' }}>
-                              {f.title}
-                            </h4>
-                            <p style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.8rem', color: 'rgba(255,255,255,0.65)', lineHeight: 1.6 }}>
-                              {f.desc}
-                            </p>
-                          </div>
-                        </div>
-                      );
-                    })}
-                  </div>
-                </motion.div>
-              )}
-            </AnimatePresence>
-          </div>
-        </motion.div>
-
-        {/* ── Mart Project Card ── */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.15 }}
-          style={{ borderRadius: '16px', marginTop: '2.5rem',
-            background: 'var(--uo-green-dark)',
-            color: '#FFFFFF',
-            border: '2px solid var(--uo-yellow)',
-            overflow: 'hidden',
-            boxShadow: '0 20px 40px rgba(13,46,33,0.15)', }}
-        >
-          {/* Top bar */}
-          <div style={{ borderRadius: '16px', background: 'rgba(255,255,255,0.03)',
-            padding: '1.25rem 2rem',
-            borderBottom: '1px solid rgba(255,255,255,0.08)',
-            display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1rem' }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-              <span className="pulse-dot" style={{ display: 'inline-block', width: '8px', height: '8px', borderRadius: '50%', background: 'var(--uo-yellow)', boxShadow: '0 0 10px var(--uo-yellow)' }} />
-              <span style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.68rem', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', color: 'var(--uo-yellow)' }}>Live / Production Ready</span>
-            </div>
-            <span style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.72rem', fontWeight: 600, letterSpacing: '1px', textTransform: 'uppercase', color: 'rgba(255,255,255,0.4)' }}>E-Commerce / Full-Stack</span>
-          </div>
-
-          <div style={{ padding: '2.5rem 2rem' }}>
-            <div style={{ display: 'grid', gridTemplateColumns: '3fr 2fr', gap: '3rem', alignItems: 'start' }}>
-
-              {/* Left */}
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
-                <div>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '0.25rem' }}>
-                    <div style={{
-                      width: '60px', height: '60px', borderRadius: '50%',
-                      border: '2.5px solid var(--uo-yellow)',
-                      boxShadow: '0 0 16px rgba(255,213,0,0.4)',
-                      overflow: 'hidden', flexShrink: 0, background: '#fff'
-                    }}>
-                      <img src="/SUDHEER MART LOGO.png" alt="Sudheer Mart Logo"
-                        style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                    </div>
-                    <h3 style={{ fontFamily: '"Playfair Display", Georgia, serif', fontSize: 'clamp(2rem, 4vw, 2.75rem)', fontWeight: 900, color: 'var(--uo-yellow)', lineHeight: 1.1, margin: 0 }}>
-                      Badam Mart
-                    </h3>
-                  </div>
-                  <div style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.9rem', fontWeight: 600, letterSpacing: '0.5px', color: 'rgba(255,255,255,0.7)', marginTop: '0.5rem' }}>
-                    Modern E-Commerce Store &amp; Product Showcase Platform
-                  </div>
-                </div>
-                <div style={{ borderRadius: '16px', width: '60px', height: '3px', background: 'var(--uo-yellow)' }} />
-                <p style={{ fontFamily: 'Inter, sans-serif', fontSize: '1rem', lineHeight: 1.8, color: 'rgba(255,255,255,0.85)' }}>
-                  A fully deployed e-commerce web application featuring a clean product catalogue, responsive UI, and seamless shopping experience. Built and hosted live on Vercel.
-                </p>
-                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', marginTop: '0.5rem' }}>
-                  {['React', 'Vite', 'CSS', 'Vercel', 'JavaScript'].map(tag => (
-                    <span key={tag} style={{ borderRadius: '16px', fontFamily: 'Inter, sans-serif', fontSize: '0.68rem', fontWeight: 700, letterSpacing: '1px', textTransform: 'uppercase', padding: '4px 10px', background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.12)', color: 'rgba(255,255,255,0.8)' }}>{tag}</span>
-                  ))}
-                </div>
-                <div style={{ marginTop: '1rem' }}>
-                  <a
-                    href="https://badamsudheerreddy-mart.vercel.app/"
-                    target="_blank"
-                    rel="noreferrer"
-                    id="mart-live-btn"
-                    style={{ borderRadius: '16px', display: 'inline-flex', alignItems: 'center', gap: '8px',
-                      padding: '0.85rem 1.75rem',
-                      background: 'var(--uo-yellow)', color: 'var(--uo-green-dark)',
-                      textDecoration: 'none', fontFamily: 'Inter, sans-serif',
-                      fontSize: '0.8rem', fontWeight: 700, letterSpacing: '1px', textTransform: 'uppercase', }}
-                  >
-                    Visit Live Site <ExternalLink size={15} />
-                  </a>
-                </div>
-              </div>
-
-              {/* Right — specs */}
-              <div style={{ borderRadius: '16px', background: 'rgba(0,0,0,0.15)', padding: '1.75rem', borderLeft: '3px solid var(--uo-yellow)' }}>
-                <div style={{ fontFamily: '"Playfair Display", serif', fontSize: '1.1rem', fontWeight: 700, color: 'var(--uo-yellow)', marginBottom: '1.25rem' }}>Project Specs</div>
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
-                  {[
-                    { label: 'Type', value: 'E-Commerce Store' },
-                    { label: 'Hosting', value: 'Vercel (Live)' },
-                    { label: 'Developer', value: 'Badam Sudheer Reddy' },
-                  ].map(m => (
-                    <div key={m.label} style={{ display: 'flex', flexDirection: 'column', borderBottom: '1px solid rgba(255,255,255,0.06)', paddingBottom: '0.75rem' }}>
-                      <span style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.62rem', fontWeight: 600, letterSpacing: '1.5px', textTransform: 'uppercase', color: 'rgba(255,255,255,0.45)' }}>{m.label}</span>
-                      <span style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.9rem', fontWeight: 700, color: '#FFFFFF', marginTop: '2px' }}>{m.value}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-        </motion.div>
-
-        {/* ── Narasingapadu Temple Card ── */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2 }}
           className="editorial-card"
           style={{ borderRadius: '16px', marginTop: '2.5rem',
@@ -987,6 +531,178 @@ const Projects = () => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="editorial-card"
+          style={{ borderRadius: '16px', marginTop: '2.5rem',
+            background: 'var(--uo-green-dark)',
+            color: '#FFFFFF',
+            border: '2px solid var(--uo-yellow)',
+            padding: '0',
+            overflow: 'hidden',
+            boxShadow: '0 20px 40px rgba(13,46,33,0.15)' }}
+        >
+          <div style={{ borderRadius: '16px', background: 'rgba(255, 255, 255, 0.03)',
+            padding: '1.25rem 2rem',
+            borderBottom: '1px solid rgba(255, 255, 255, 0.08)',
+            display: 'flex',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+            flexWrap: 'wrap',
+            gap: '1rem' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+              <span className="pulse-dot" style={{ display: 'inline-block', width: '8px', height: '8px', borderRadius: '50%', background: 'var(--uo-yellow)', boxShadow: '0 0 10px var(--uo-yellow)' }} />
+              <span style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.68rem', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', color: 'var(--uo-yellow)' }}>
+                {CapstoneProjectRealtime.status}
+              </span>
+            </div>
+            <span style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.72rem', fontWeight: 600, letterSpacing: '1px', textTransform: 'uppercase', color: 'rgba(255, 255, 255, 0.4)' }}>
+              {CapstoneProjectRealtime.category}
+            </span>
+          </div>
+
+          <div style={{ padding: '2.5rem 2rem' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: '3fr 2fr', gap: '3rem', alignItems: 'start' }}>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
+                <div>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '0.25rem' }}>
+                    <div style={{
+                      width: '60px', height: '60px', borderRadius: '50%',
+                      border: '2.5px solid var(--uo-yellow)',
+                      boxShadow: '0 0 16px rgba(255,213,0,0.4)',
+                      overflow: 'hidden', flexShrink: 0, background: '#fff'
+                    }}>
+                      <img src="/CAPSTONE_PROJECT_LOGO.jpeg" alt="CAPSTONE PROJECT 220 REALTIME Logo"
+                        style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                    </div>
+                    <h3 style={{ fontFamily: '"Playfair Display", Georgia, serif', fontSize: 'clamp(1.6rem, 3.5vw, 2.4rem)', fontWeight: 900, color: 'var(--uo-yellow)', lineHeight: 1.1, margin: 0 }}>
+                      {CapstoneProjectRealtime.title}
+                    </h3>
+                  </div>
+                  <div style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.9rem', fontWeight: 600, letterSpacing: '0.5px', color: 'rgba(255,255,255,0.7)', marginTop: '0.5rem' }}>
+                    {CapstoneProjectRealtime.tagline}
+                  </div>
+                </div>
+
+                <div style={{ borderRadius: '16px', width: '60px', height: '3px', background: 'var(--uo-yellow)' }} />
+
+                <p style={{ fontFamily: 'Inter, sans-serif', fontSize: '1rem', lineHeight: 1.8, color: 'rgba(255, 255, 255, 0.85)' }}>
+                  {CapstoneProjectRealtime.summary}
+                </p>
+
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', marginTop: '0.5rem' }}>
+                  {CapstoneProjectRealtime.tags.map(tag => (
+                    <span key={tag} style={{ borderRadius: '16px', fontFamily: 'Inter, sans-serif',
+                      fontSize: '0.68rem',
+                      fontWeight: 700,
+                      letterSpacing: '1px',
+                      textTransform: 'uppercase',
+                      padding: '4px 10px',
+                      background: 'rgba(255, 255, 255, 0.06)',
+                      border: '1px solid rgba(255, 255, 255, 0.12)',
+                      color: 'rgba(255, 255, 255, 0.8)' }}>
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+
+                <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', marginTop: '1rem' }}>
+                  <a
+                    href={CapstoneProjectRealtime.url}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="btn-primary"
+                    style={{ borderRadius: '16px', display: 'inline-flex',
+                      alignItems: 'center',
+                      gap: '8px',
+                      padding: '0.85rem 1.75rem',
+                      background: 'var(--uo-yellow)',
+                      color: 'var(--uo-green-dark)',
+                      textDecoration: 'none',
+                      fontWeight: 700,
+                      border: '2px solid var(--uo-yellow)' }}
+                  >
+                    Visit Site <ExternalLink size={15} />
+                  </a>
+                  <button
+                    onClick={() => setShowCapstoneRealtimeSpecs(!showCapstoneRealtimeSpecs)}
+                    style={{ borderRadius: '16px', display: 'inline-flex',
+                      alignItems: 'center',
+                      gap: '8px',
+                      padding: '0.85rem 1.75rem',
+                      background: 'transparent',
+                      color: '#FFFFFF',
+                      border: '2px solid rgba(255, 255, 255, 0.25)',
+                      fontFamily: 'Inter, sans-serif',
+                      fontSize: '0.8rem',
+                      fontWeight: 700,
+                      letterSpacing: '1px',
+                      textTransform: 'uppercase',
+                      cursor: 'pointer',
+                      transition: 'all 0.2s' }}
+                  >
+                    {showCapstoneRealtimeSpecs ? 'Hide Details' : 'View Deep Tech Specs'}
+                  </button>
+                </div>
+              </div>
+
+              <div style={{ borderRadius: '16px', background: 'rgba(0, 0, 0, 0.15)', padding: '1.75rem', borderLeft: '3px solid var(--uo-yellow)' }}>
+                <div style={{ fontFamily: '"Playfair Display", serif', fontSize: '1.1rem', fontWeight: 700, color: 'var(--uo-yellow)', marginBottom: '1.25rem' }}>
+                  Project Specs
+                </div>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
+                  {CapstoneProjectRealtime.metrics.map(m => (
+                    <div key={m.label} style={{ display: 'flex', flexDirection: 'column', borderBottom: '1px solid rgba(255,255,255,0.06)', paddingBottom: '0.75rem' }}>
+                      <span style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.62rem', fontWeight: 600, letterSpacing: '1.5px', textTransform: 'uppercase', color: 'rgba(255,255,255,0.45)' }}>
+                        {m.label}
+                      </span>
+                      <span style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.9rem', fontWeight: 700, color: '#FFFFFF', marginTop: '2px' }}>
+                        {m.value}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            <AnimatePresence>
+              {showCapstoneRealtimeSpecs && (
+                <motion.div
+                  initial={{ opacity: 0, height: 0 }}
+                  animate={{ opacity: 1, height: 'auto' }}
+                  exit={{ opacity: 0, height: 0 }}
+                  transition={{ duration: 0.4 }}
+                  style={{ overflow: 'hidden', marginTop: '2.5rem', paddingTop: '2.5rem', borderTop: '1px solid rgba(255,255,255,0.1)' }}
+                >
+                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem' }}>
+                    {CapstoneProjectRealtime.features.map(f => {
+                      const Icon = f.icon;
+                      return (
+                        <div key={f.title} style={{ borderRadius: '16px', display: 'flex', gap: '1rem', background: 'rgba(255, 255, 255, 0.02)', padding: '1.25rem', border: '1px solid rgba(255, 255, 255, 0.05)' }}>
+                          <div style={{ color: 'var(--uo-yellow)', marginTop: '3px' }}>
+                            <Icon size={20} />
+                          </div>
+                          <div>
+                            <h4 style={{ fontFamily: '"Playfair Display", serif', fontSize: '1rem', fontWeight: 700, color: '#FFFFFF', marginBottom: '0.4rem' }}>
+                              {f.title}
+                            </h4>
+                            <p style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.8rem', color: 'rgba(255,255,255,0.65)', lineHeight: 1.6 }}>
+                              {f.desc}
+                            </p>
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.15 }}
           style={{ borderRadius: '16px', marginTop: '2.5rem',
             background: 'var(--uo-green-dark)',
@@ -1059,6 +775,186 @@ const Projects = () => {
         </motion.div>
 
         {/* ── ShopSmartCatalogProject Card ── */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="editorial-card"
+          style={{ borderRadius: '16px', background: 'var(--uo-green-dark)',
+            color: '#FFFFFF',
+            border: '2px solid var(--uo-yellow)',
+            padding: '0',
+            overflow: 'hidden',
+            boxShadow: '0 20px 40px rgba(13,46,33,0.15)' }}
+        >
+          {/* Top header bar */}
+          <div style={{ borderRadius: '16px', background: 'rgba(255, 255, 255, 0.03)',
+            padding: '1.25rem 2rem',
+            borderBottom: '1px solid rgba(255, 255, 255, 0.08)',
+            display: 'flex',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+            flexWrap: 'wrap',
+            gap: '1rem' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+              <span className="pulse-dot" style={{ display: 'inline-block', width: '8px', height: '8px', borderRadius: '50%', background: 'var(--uo-yellow)', boxShadow: '0 0 10px var(--uo-yellow)' }} />
+              <span style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.68rem', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', color: 'var(--uo-yellow)' }}>
+                {PlaceMentorProject.status}
+              </span>
+            </div>
+            <span style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.72rem', fontWeight: 600, letterSpacing: '1px', textTransform: 'uppercase', color: 'rgba(255, 255, 255, 0.4)' }}>
+              {PlaceMentorProject.category}
+            </span>
+          </div>
+
+          <div style={{ padding: '2.5rem 2rem' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: '3fr 2fr', gap: '3rem', alignItems: 'start' }}>
+              
+              {/* Left Column: Core Info */}
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
+                <div>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '0.25rem' }}>
+                    <div style={{
+                      width: '60px', height: '60px', borderRadius: '50%',
+                      border: '2.5px solid var(--uo-yellow)',
+                      boxShadow: '0 0 16px rgba(255,213,0,0.4)',
+                      overflow: 'hidden', flexShrink: 0, background: '#fff'
+                    }}>
+                      <img src="/PLACEMENTOR AI LOGO.png" alt="PlaceMentor AI Logo"
+                        style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                    </div>
+                    <h3 style={{ fontFamily: '"Playfair Display", Georgia, serif', fontSize: 'clamp(2rem, 4vw, 2.75rem)', fontWeight: 900, color: 'var(--uo-yellow)', lineHeight: 1.1, margin: 0 }}>
+                      {PlaceMentorProject.title}
+                    </h3>
+                  </div>
+                  <div style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.9rem', fontWeight: 600, letterSpacing: '0.5px', color: 'rgba(255,255,255,0.7)', marginTop: '0.5rem' }}>
+                    {PlaceMentorProject.tagline}
+                  </div>
+                </div>
+
+                <div style={{ borderRadius: '16px', width: '60px', height: '3px', background: 'var(--uo-yellow)' }} />
+
+                <p style={{ fontFamily: 'Inter, sans-serif', fontSize: '1rem', lineHeight: 1.8, color: 'rgba(255, 255, 255, 0.85)' }}>
+                  {PlaceMentorProject.summary}
+                </p>
+
+                {/* Tags */}
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', marginTop: '0.5rem' }}>
+                  {PlaceMentorProject.tags.map(tag => (
+                    <span key={tag} style={{ borderRadius: '16px', fontFamily: 'Inter, sans-serif',
+                      fontSize: '0.68rem',
+                      fontWeight: 700,
+                      letterSpacing: '1px',
+                      textTransform: 'uppercase',
+                      padding: '4px 10px',
+                      background: 'rgba(255, 255, 255, 0.06)',
+                      border: '1px solid rgba(255, 255, 255, 0.12)',
+                      color: 'rgba(255, 255, 255, 0.8)' }}>
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+
+                {/* CTA Buttons */}
+                <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', marginTop: '1rem' }}>
+                  <a
+                    href={PlaceMentorProject.url}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="btn-primary"
+                    style={{ borderRadius: '16px', display: 'inline-flex',
+                      alignItems: 'center',
+                      gap: '8px',
+                      padding: '0.85rem 1.75rem',
+                      background: 'var(--uo-yellow)',
+                      color: 'var(--uo-green-dark)',
+                      textDecoration: 'none',
+                      fontWeight: 700,
+                      border: '2px solid var(--uo-yellow)' }}
+                  >
+                    Launch Live App <ExternalLink size={15} />
+                  </a>
+                  <button
+                    onClick={() => setShowPlaceMentorSpecs(!showPlaceMentorSpecs)}
+                    style={{ borderRadius: '16px', display: 'inline-flex',
+                      alignItems: 'center',
+                      gap: '8px',
+                      padding: '0.85rem 1.75rem',
+                      background: 'transparent',
+                      color: '#FFFFFF',
+                      border: '2px solid rgba(255, 255, 255, 0.25)',
+                      fontFamily: 'Inter, sans-serif',
+                      fontSize: '0.8rem',
+                      fontWeight: 700,
+                      letterSpacing: '1px',
+                      textTransform: 'uppercase',
+                      cursor: 'pointer',
+                      transition: 'all 0.2s' }}
+                  >
+                    {showPlaceMentorSpecs ? 'Hide Details' : 'View Deep Tech Specs'}
+                  </button>
+                </div>
+              </div>
+
+              {/* Right Column: Key metrics */}
+              <div style={{ borderRadius: '16px', background: 'rgba(0, 0, 0, 0.15)', padding: '1.75rem', borderLeft: '3px solid var(--uo-yellow)' }}>
+                <div style={{ fontFamily: '"Playfair Display", serif', fontSize: '1.1rem', fontWeight: 700, color: 'var(--uo-yellow)', marginBottom: '1.25rem' }}>
+                  System Architecture Specs
+                </div>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
+                  {PlaceMentorProject.metrics.map(m => (
+                    <div key={m.label} style={{ display: 'flex', flexDirection: 'column', borderBottom: '1px solid rgba(255,255,255,0.06)', paddingBottom: '0.75rem' }}>
+                      <span style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.62rem', fontWeight: 600, letterSpacing: '1.5px', textTransform: 'uppercase', color: 'rgba(255,255,255,0.45)' }}>
+                        {m.label}
+                      </span>
+                      <span style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.9rem', fontWeight: 700, color: '#FFFFFF', marginTop: '2px' }}>
+                        {m.value}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+            </div>
+
+            {/* Technical specs detailed view */}
+            <AnimatePresence>
+              {showPlaceMentorSpecs && (
+                <motion.div
+                  initial={{ opacity: 0, height: 0 }}
+                  animate={{ opacity: 1, height: 'auto' }}
+                  exit={{ opacity: 0, height: 0 }}
+                  transition={{ duration: 0.4 }}
+                  style={{ overflow: 'hidden', marginTop: '2.5rem', paddingTop: '2.5rem', borderTop: '1px solid rgba(255,255,255,0.1)' }}
+                >
+                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem' }}>
+                    {PlaceMentorProject.features.map(f => {
+                      const Icon = f.icon;
+                      return (
+                        <div key={f.title} style={{ borderRadius: '16px', display: 'flex', gap: '1rem', background: 'rgba(255, 255, 255, 0.02)', padding: '1.25rem', border: '1px solid rgba(255, 255, 255, 0.05)' }}>
+                          <div style={{ color: 'var(--uo-yellow)', marginTop: '3px' }}>
+                            <Icon size={20} />
+                          </div>
+                          <div>
+                            <h4 style={{ fontFamily: '"Playfair Display", serif', fontSize: '1rem', fontWeight: 700, color: '#FFFFFF', marginBottom: '0.4rem' }}>
+                              {f.title}
+                            </h4>
+                            <p style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.8rem', color: 'rgba(255,255,255,0.65)', lineHeight: 1.6 }}>
+                              {f.desc}
+                            </p>
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
+        </motion.div>
+
+        {/* ── Search Pvt.Ltd Card ── */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -1409,6 +1305,282 @@ const Projects = () => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.15 }}
+          style={{ borderRadius: '16px', marginTop: '2.5rem',
+            background: 'var(--uo-green-dark)',
+            color: '#FFFFFF',
+            border: '2px solid var(--uo-yellow)',
+            overflow: 'hidden',
+            boxShadow: '0 20px 40px rgba(13,46,33,0.15)', }}
+        >
+          {/* Top bar */}
+          <div style={{ borderRadius: '16px', background: 'rgba(255,255,255,0.03)',
+            padding: '1.25rem 2rem',
+            borderBottom: '1px solid rgba(255,255,255,0.08)',
+            display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1rem' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+              <span className="pulse-dot" style={{ display: 'inline-block', width: '8px', height: '8px', borderRadius: '50%', background: 'var(--uo-yellow)', boxShadow: '0 0 10px var(--uo-yellow)' }} />
+              <span style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.68rem', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', color: 'var(--uo-yellow)' }}>Live / Production Ready</span>
+            </div>
+            <span style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.72rem', fontWeight: 600, letterSpacing: '1px', textTransform: 'uppercase', color: 'rgba(255,255,255,0.4)' }}>E-Commerce / Full-Stack</span>
+          </div>
+
+          <div style={{ padding: '2.5rem 2rem' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: '3fr 2fr', gap: '3rem', alignItems: 'start' }}>
+
+              {/* Left */}
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
+                <div>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '0.25rem' }}>
+                    <div style={{
+                      width: '60px', height: '60px', borderRadius: '50%',
+                      border: '2.5px solid var(--uo-yellow)',
+                      boxShadow: '0 0 16px rgba(255,213,0,0.4)',
+                      overflow: 'hidden', flexShrink: 0, background: '#fff'
+                    }}>
+                      <img src="/SUDHEER MART LOGO.png" alt="Sudheer Mart Logo"
+                        style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                    </div>
+                    <h3 style={{ fontFamily: '"Playfair Display", Georgia, serif', fontSize: 'clamp(2rem, 4vw, 2.75rem)', fontWeight: 900, color: 'var(--uo-yellow)', lineHeight: 1.1, margin: 0 }}>
+                      Badam Mart
+                    </h3>
+                  </div>
+                  <div style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.9rem', fontWeight: 600, letterSpacing: '0.5px', color: 'rgba(255,255,255,0.7)', marginTop: '0.5rem' }}>
+                    Modern E-Commerce Store &amp; Product Showcase Platform
+                  </div>
+                </div>
+                <div style={{ borderRadius: '16px', width: '60px', height: '3px', background: 'var(--uo-yellow)' }} />
+                <p style={{ fontFamily: 'Inter, sans-serif', fontSize: '1rem', lineHeight: 1.8, color: 'rgba(255,255,255,0.85)' }}>
+                  A fully deployed e-commerce web application featuring a clean product catalogue, responsive UI, and seamless shopping experience. Built and hosted live on Vercel.
+                </p>
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', marginTop: '0.5rem' }}>
+                  {['React', 'Vite', 'CSS', 'Vercel', 'JavaScript'].map(tag => (
+                    <span key={tag} style={{ borderRadius: '16px', fontFamily: 'Inter, sans-serif', fontSize: '0.68rem', fontWeight: 700, letterSpacing: '1px', textTransform: 'uppercase', padding: '4px 10px', background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.12)', color: 'rgba(255,255,255,0.8)' }}>{tag}</span>
+                  ))}
+                </div>
+                <div style={{ marginTop: '1rem' }}>
+                  <a
+                    href="https://badamsudheerreddy-mart.vercel.app/"
+                    target="_blank"
+                    rel="noreferrer"
+                    id="mart-live-btn"
+                    style={{ borderRadius: '16px', display: 'inline-flex', alignItems: 'center', gap: '8px',
+                      padding: '0.85rem 1.75rem',
+                      background: 'var(--uo-yellow)', color: 'var(--uo-green-dark)',
+                      textDecoration: 'none', fontFamily: 'Inter, sans-serif',
+                      fontSize: '0.8rem', fontWeight: 700, letterSpacing: '1px', textTransform: 'uppercase', }}
+                  >
+                    Visit Live Site <ExternalLink size={15} />
+                  </a>
+                </div>
+              </div>
+
+              {/* Right — specs */}
+              <div style={{ borderRadius: '16px', background: 'rgba(0,0,0,0.15)', padding: '1.75rem', borderLeft: '3px solid var(--uo-yellow)' }}>
+                <div style={{ fontFamily: '"Playfair Display", serif', fontSize: '1.1rem', fontWeight: 700, color: 'var(--uo-yellow)', marginBottom: '1.25rem' }}>Project Specs</div>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
+                  {[
+                    { label: 'Type', value: 'E-Commerce Store' },
+                    { label: 'Hosting', value: 'Vercel (Live)' },
+                    { label: 'Developer', value: 'Badam Sudheer Reddy' },
+                  ].map(m => (
+                    <div key={m.label} style={{ display: 'flex', flexDirection: 'column', borderBottom: '1px solid rgba(255,255,255,0.06)', paddingBottom: '0.75rem' }}>
+                      <span style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.62rem', fontWeight: 600, letterSpacing: '1.5px', textTransform: 'uppercase', color: 'rgba(255,255,255,0.45)' }}>{m.label}</span>
+                      <span style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.9rem', fontWeight: 700, color: '#FFFFFF', marginTop: '2px' }}>{m.value}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* ── Narasingapadu Temple Card ── */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.1 }}
+          className="editorial-card"
+          style={{ borderRadius: '16px', marginTop: '2.5rem',
+            background: 'var(--uo-green-dark)',
+            color: '#FFFFFF',
+            border: '2px solid var(--uo-yellow)',
+            padding: '0',
+            overflow: 'hidden',
+            boxShadow: '0 20px 40px rgba(13,46,33,0.15)' }}
+        >
+          {/* Top header bar */}
+          <div style={{ borderRadius: '16px', background: 'rgba(255, 255, 255, 0.03)',
+            padding: '1.25rem 2rem',
+            borderBottom: '1px solid rgba(255, 255, 255, 0.08)',
+            display: 'flex',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+            flexWrap: 'wrap',
+            gap: '1rem' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+              <span className="pulse-dot" style={{ display: 'inline-block', width: '8px', height: '8px', borderRadius: '50%', background: 'var(--uo-yellow)', boxShadow: '0 0 10px var(--uo-yellow)' }} />
+              <span style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.68rem', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', color: 'var(--uo-yellow)' }}>
+                {SearchPvtLtdProject.status}
+              </span>
+            </div>
+            <span style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.72rem', fontWeight: 600, letterSpacing: '1px', textTransform: 'uppercase', color: 'rgba(255, 255, 255, 0.4)' }}>
+              {SearchPvtLtdProject.category}
+            </span>
+          </div>
+
+          <div style={{ padding: '2.5rem 2rem' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: '3fr 2fr', gap: '3rem', alignItems: 'start' }}>
+              
+              {/* Left Column: Core Info */}
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
+                <div>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '0.25rem' }}>
+                    <div style={{
+                      width: '60px', height: '60px', borderRadius: '50%',
+                      border: '2.5px solid var(--uo-yellow)',
+                      boxShadow: '0 0 16px rgba(255,213,0,0.4)',
+                      overflow: 'hidden', flexShrink: 0, background: '#fff'
+                    }}>
+                      <img src="/SUDHEER PVT.LTD.png" alt="Sudheer Pvt.Ltd Logo"
+                        style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                    </div>
+                    <h3 style={{ fontFamily: '"Playfair Display", Georgia, serif', fontSize: 'clamp(2rem, 4vw, 2.75rem)', fontWeight: 900, color: 'var(--uo-yellow)', lineHeight: 1.1, margin: 0 }}>
+                      {SearchPvtLtdProject.title}
+                    </h3>
+                  </div>
+                  <div style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.9rem', fontWeight: 600, letterSpacing: '0.5px', color: 'rgba(255,255,255,0.7)', marginTop: '0.5rem' }}>
+                    {SearchPvtLtdProject.tagline}
+                  </div>
+                </div>
+
+                <div style={{ borderRadius: '16px', width: '60px', height: '3px', background: 'var(--uo-yellow)' }} />
+
+                <p style={{ fontFamily: 'Inter, sans-serif', fontSize: '1rem', lineHeight: 1.8, color: 'rgba(255, 255, 255, 0.85)' }}>
+                  {SearchPvtLtdProject.summary}
+                </p>
+
+                {/* Tags */}
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', marginTop: '0.5rem' }}>
+                  {SearchPvtLtdProject.tags.map(tag => (
+                    <span key={tag} style={{ borderRadius: '16px', fontFamily: 'Inter, sans-serif',
+                      fontSize: '0.68rem',
+                      fontWeight: 700,
+                      letterSpacing: '1px',
+                      textTransform: 'uppercase',
+                      padding: '4px 10px',
+                      background: 'rgba(255, 255, 255, 0.06)',
+                      border: '1px solid rgba(255, 255, 255, 0.12)',
+                      color: 'rgba(255, 255, 255, 0.8)' }}>
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+
+                {/* CTA Buttons */}
+                <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', marginTop: '1rem' }}>
+                  <a
+                    href={SearchPvtLtdProject.url}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="btn-primary"
+                    style={{ borderRadius: '16px', display: 'inline-flex',
+                      alignItems: 'center',
+                      gap: '8px',
+                      padding: '0.85rem 1.75rem',
+                      background: 'var(--uo-yellow)',
+                      color: 'var(--uo-green-dark)',
+                      textDecoration: 'none',
+                      fontWeight: 700,
+                      border: '2px solid var(--uo-yellow)' }}
+                  >
+                    Launch Live App <ExternalLink size={15} />
+                  </a>
+                  <button
+                    onClick={() => setShowSearchSpecs(!showSearchSpecs)}
+                    style={{ borderRadius: '16px', display: 'inline-flex',
+                      alignItems: 'center',
+                      gap: '8px',
+                      padding: '0.85rem 1.75rem',
+                      background: 'transparent',
+                      color: '#FFFFFF',
+                      border: '2px solid rgba(255, 255, 255, 0.25)',
+                      fontFamily: 'Inter, sans-serif',
+                      fontSize: '0.8rem',
+                      fontWeight: 700,
+                      letterSpacing: '1px',
+                      textTransform: 'uppercase',
+                      cursor: 'pointer',
+                      transition: 'all 0.2s' }}
+                  >
+                    {showSearchSpecs ? 'Hide Details' : 'View Deep Tech Specs'}
+                  </button>
+                </div>
+              </div>
+
+              {/* Right Column: Key metrics */}
+              <div style={{ borderRadius: '16px', background: 'rgba(0, 0, 0, 0.15)', padding: '1.75rem', borderLeft: '3px solid var(--uo-yellow)' }}>
+                <div style={{ fontFamily: '"Playfair Display", serif', fontSize: '1.1rem', fontWeight: 700, color: 'var(--uo-yellow)', marginBottom: '1.25rem' }}>
+                  Project Specs
+                </div>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
+                  {SearchPvtLtdProject.metrics.map(m => (
+                    <div key={m.label} style={{ display: 'flex', flexDirection: 'column', borderBottom: '1px solid rgba(255,255,255,0.06)', paddingBottom: '0.75rem' }}>
+                      <span style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.62rem', fontWeight: 600, letterSpacing: '1.5px', textTransform: 'uppercase', color: 'rgba(255,255,255,0.45)' }}>
+                        {m.label}
+                      </span>
+                      <span style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.9rem', fontWeight: 700, color: '#FFFFFF', marginTop: '2px' }}>
+                        {m.value}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+            </div>
+
+            {/* Technical specs detailed view */}
+            <AnimatePresence>
+              {showSearchSpecs && (
+                <motion.div
+                  initial={{ opacity: 0, height: 0 }}
+                  animate={{ opacity: 1, height: 'auto' }}
+                  exit={{ opacity: 0, height: 0 }}
+                  transition={{ duration: 0.4 }}
+                  style={{ overflow: 'hidden', marginTop: '2.5rem', paddingTop: '2.5rem', borderTop: '1px solid rgba(255,255,255,0.1)' }}
+                >
+                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem' }}>
+                    {SearchPvtLtdProject.features.map(f => {
+                      const Icon = f.icon;
+                      return (
+                        <div key={f.title} style={{ borderRadius: '16px', display: 'flex', gap: '1rem', background: 'rgba(255, 255, 255, 0.02)', padding: '1.25rem', border: '1px solid rgba(255, 255, 255, 0.05)' }}>
+                          <div style={{ color: 'var(--uo-yellow)', marginTop: '3px' }}>
+                            <Icon size={20} />
+                          </div>
+                          <div>
+                            <h4 style={{ fontFamily: '"Playfair Display", serif', fontSize: '1rem', fontWeight: 700, color: '#FFFFFF', marginBottom: '0.4rem' }}>
+                              {f.title}
+                            </h4>
+                            <p style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.8rem', color: 'rgba(255,255,255,0.65)', lineHeight: 1.6 }}>
+                              {f.desc}
+                            </p>
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
+        </motion.div>
+
+        {/* ── Mart Project Card ── */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2 }}
           className="editorial-card"
           style={{ borderRadius: '16px', marginTop: '2.5rem',
@@ -1578,177 +1750,7 @@ const Projects = () => {
         </motion.div>
 
         {/* ── Capstone Project Realtime Card ── */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="editorial-card"
-          style={{ borderRadius: '16px', marginTop: '2.5rem',
-            background: 'var(--uo-green-dark)',
-            color: '#FFFFFF',
-            border: '2px solid var(--uo-yellow)',
-            padding: '0',
-            overflow: 'hidden',
-            boxShadow: '0 20px 40px rgba(13,46,33,0.15)' }}
-        >
-          <div style={{ borderRadius: '16px', background: 'rgba(255, 255, 255, 0.03)',
-            padding: '1.25rem 2rem',
-            borderBottom: '1px solid rgba(255, 255, 255, 0.08)',
-            display: 'flex',
-            justifyContent: 'space-between',
-            alignItems: 'center',
-            flexWrap: 'wrap',
-            gap: '1rem' }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-              <span className="pulse-dot" style={{ display: 'inline-block', width: '8px', height: '8px', borderRadius: '50%', background: 'var(--uo-yellow)', boxShadow: '0 0 10px var(--uo-yellow)' }} />
-              <span style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.68rem', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', color: 'var(--uo-yellow)' }}>
-                {CapstoneProjectRealtime.status}
-              </span>
-            </div>
-            <span style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.72rem', fontWeight: 600, letterSpacing: '1px', textTransform: 'uppercase', color: 'rgba(255, 255, 255, 0.4)' }}>
-              {CapstoneProjectRealtime.category}
-            </span>
-          </div>
-
-          <div style={{ padding: '2.5rem 2rem' }}>
-            <div style={{ display: 'grid', gridTemplateColumns: '3fr 2fr', gap: '3rem', alignItems: 'start' }}>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
-                <div>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '0.25rem' }}>
-                    <div style={{
-                      width: '60px', height: '60px', borderRadius: '50%',
-                      border: '2.5px solid var(--uo-yellow)',
-                      boxShadow: '0 0 16px rgba(255,213,0,0.4)',
-                      overflow: 'hidden', flexShrink: 0, background: '#fff'
-                    }}>
-                      <img src="/CAPSTONE_PROJECT_LOGO.jpeg" alt="CAPSTONE PROJECT 220 REALTIME Logo"
-                        style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                    </div>
-                    <h3 style={{ fontFamily: '"Playfair Display", Georgia, serif', fontSize: 'clamp(1.6rem, 3.5vw, 2.4rem)', fontWeight: 900, color: 'var(--uo-yellow)', lineHeight: 1.1, margin: 0 }}>
-                      {CapstoneProjectRealtime.title}
-                    </h3>
-                  </div>
-                  <div style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.9rem', fontWeight: 600, letterSpacing: '0.5px', color: 'rgba(255,255,255,0.7)', marginTop: '0.5rem' }}>
-                    {CapstoneProjectRealtime.tagline}
-                  </div>
-                </div>
-
-                <div style={{ borderRadius: '16px', width: '60px', height: '3px', background: 'var(--uo-yellow)' }} />
-
-                <p style={{ fontFamily: 'Inter, sans-serif', fontSize: '1rem', lineHeight: 1.8, color: 'rgba(255, 255, 255, 0.85)' }}>
-                  {CapstoneProjectRealtime.summary}
-                </p>
-
-                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', marginTop: '0.5rem' }}>
-                  {CapstoneProjectRealtime.tags.map(tag => (
-                    <span key={tag} style={{ borderRadius: '16px', fontFamily: 'Inter, sans-serif',
-                      fontSize: '0.68rem',
-                      fontWeight: 700,
-                      letterSpacing: '1px',
-                      textTransform: 'uppercase',
-                      padding: '4px 10px',
-                      background: 'rgba(255, 255, 255, 0.06)',
-                      border: '1px solid rgba(255, 255, 255, 0.12)',
-                      color: 'rgba(255, 255, 255, 0.8)' }}>
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-
-                <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', marginTop: '1rem' }}>
-                  <a
-                    href={CapstoneProjectRealtime.url}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="btn-primary"
-                    style={{ borderRadius: '16px', display: 'inline-flex',
-                      alignItems: 'center',
-                      gap: '8px',
-                      padding: '0.85rem 1.75rem',
-                      background: 'var(--uo-yellow)',
-                      color: 'var(--uo-green-dark)',
-                      textDecoration: 'none',
-                      fontWeight: 700,
-                      border: '2px solid var(--uo-yellow)' }}
-                  >
-                    Visit Site <ExternalLink size={15} />
-                  </a>
-                  <button
-                    onClick={() => setShowCapstoneRealtimeSpecs(!showCapstoneRealtimeSpecs)}
-                    style={{ borderRadius: '16px', display: 'inline-flex',
-                      alignItems: 'center',
-                      gap: '8px',
-                      padding: '0.85rem 1.75rem',
-                      background: 'transparent',
-                      color: '#FFFFFF',
-                      border: '2px solid rgba(255, 255, 255, 0.25)',
-                      fontFamily: 'Inter, sans-serif',
-                      fontSize: '0.8rem',
-                      fontWeight: 700,
-                      letterSpacing: '1px',
-                      textTransform: 'uppercase',
-                      cursor: 'pointer',
-                      transition: 'all 0.2s' }}
-                  >
-                    {showCapstoneRealtimeSpecs ? 'Hide Details' : 'View Deep Tech Specs'}
-                  </button>
-                </div>
-              </div>
-
-              <div style={{ borderRadius: '16px', background: 'rgba(0, 0, 0, 0.15)', padding: '1.75rem', borderLeft: '3px solid var(--uo-yellow)' }}>
-                <div style={{ fontFamily: '"Playfair Display", serif', fontSize: '1.1rem', fontWeight: 700, color: 'var(--uo-yellow)', marginBottom: '1.25rem' }}>
-                  Project Specs
-                </div>
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
-                  {CapstoneProjectRealtime.metrics.map(m => (
-                    <div key={m.label} style={{ display: 'flex', flexDirection: 'column', borderBottom: '1px solid rgba(255,255,255,0.06)', paddingBottom: '0.75rem' }}>
-                      <span style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.62rem', fontWeight: 600, letterSpacing: '1.5px', textTransform: 'uppercase', color: 'rgba(255,255,255,0.45)' }}>
-                        {m.label}
-                      </span>
-                      <span style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.9rem', fontWeight: 700, color: '#FFFFFF', marginTop: '2px' }}>
-                        {m.value}
-                      </span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-
-            <AnimatePresence>
-              {showCapstoneRealtimeSpecs && (
-                <motion.div
-                  initial={{ opacity: 0, height: 0 }}
-                  animate={{ opacity: 1, height: 'auto' }}
-                  exit={{ opacity: 0, height: 0 }}
-                  transition={{ duration: 0.4 }}
-                  style={{ overflow: 'hidden', marginTop: '2.5rem', paddingTop: '2.5rem', borderTop: '1px solid rgba(255,255,255,0.1)' }}
-                >
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem' }}>
-                    {CapstoneProjectRealtime.features.map(f => {
-                      const Icon = f.icon;
-                      return (
-                        <div key={f.title} style={{ borderRadius: '16px', display: 'flex', gap: '1rem', background: 'rgba(255, 255, 255, 0.02)', padding: '1.25rem', border: '1px solid rgba(255, 255, 255, 0.05)' }}>
-                          <div style={{ color: 'var(--uo-yellow)', marginTop: '3px' }}>
-                            <Icon size={20} />
-                          </div>
-                          <div>
-                            <h4 style={{ fontFamily: '"Playfair Display", serif', fontSize: '1rem', fontWeight: 700, color: '#FFFFFF', marginBottom: '0.4rem' }}>
-                              {f.title}
-                            </h4>
-                            <p style={{ fontFamily: 'Inter, sans-serif', fontSize: '0.8rem', color: 'rgba(255,255,255,0.65)', lineHeight: 1.6 }}>
-                              {f.desc}
-                            </p>
-                          </div>
-                        </div>
-                      );
-                    })}
-                  </div>
-                </motion.div>
-              )}
-            </AnimatePresence>
-          </div>
-        </motion.div>
+        
 
         {/* CSS override for pulse animation */}
         <style>{`
